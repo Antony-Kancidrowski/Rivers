@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <SceneKit/SceneKit.h>
 
-@interface MainMenuViewController : UIViewController
+#import "RiversViewController.h"
+
+@interface MainMenuViewController : RiversViewController
 
 @end

@@ -32,6 +32,9 @@
 		0A5FAD801F69665700FE0A40 /* CameraNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD791F69665700FE0A40 /* CameraNode.m */; };
 		0A5FAD811F69665700FE0A40 /* ImageNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD7B1F69665700FE0A40 /* ImageNode.m */; };
 		0A5FAD821F69665700FE0A40 /* LabelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD7D1F69665700FE0A40 /* LabelNode.m */; };
+		0A5FAD8B1F696F2600FE0A40 /* ButtonNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD881F696F2600FE0A40 /* ButtonNode.m */; };
+		0A5FAD8C1F696F2600FE0A40 /* ImageButtonNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD8A1F696F2600FE0A40 /* ImageButtonNode.m */; };
+		0A5FAD901F696F4300FE0A40 /* PanelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD8F1F696F4300FE0A40 /* PanelNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +109,12 @@
 		0A5FAD831F69669E00FE0A40 /* AppSpecificValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSpecificValues.h; sourceTree = "<group>"; };
 		0A5FAD841F69669E00FE0A40 /* GraphicsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicsHelper.h; sourceTree = "<group>"; };
 		0A5FAD851F69677900FE0A40 /* MathHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathHelper.h; sourceTree = "<group>"; };
+		0A5FAD871F696F2600FE0A40 /* ButtonNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonNode.h; sourceTree = "<group>"; };
+		0A5FAD881F696F2600FE0A40 /* ButtonNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonNode.m; sourceTree = "<group>"; };
+		0A5FAD891F696F2600FE0A40 /* ImageButtonNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageButtonNode.h; sourceTree = "<group>"; };
+		0A5FAD8A1F696F2600FE0A40 /* ImageButtonNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageButtonNode.m; sourceTree = "<group>"; };
+		0A5FAD8E1F696F4300FE0A40 /* PanelNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelNode.h; sourceTree = "<group>"; };
+		0A5FAD8F1F696F4300FE0A40 /* PanelNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,8 +294,30 @@
 				0A5FAD7B1F69665700FE0A40 /* ImageNode.m */,
 				0A5FAD7C1F69665700FE0A40 /* LabelNode.h */,
 				0A5FAD7D1F69665700FE0A40 /* LabelNode.m */,
+				0A5FAD861F696F0700FE0A40 /* Buttons */,
+				0A5FAD8D1F696F3100FE0A40 /* Panels */,
 			);
 			name = Nodes;
+			sourceTree = "<group>";
+		};
+		0A5FAD861F696F0700FE0A40 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FAD871F696F2600FE0A40 /* ButtonNode.h */,
+				0A5FAD881F696F2600FE0A40 /* ButtonNode.m */,
+				0A5FAD891F696F2600FE0A40 /* ImageButtonNode.h */,
+				0A5FAD8A1F696F2600FE0A40 /* ImageButtonNode.m */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		0A5FAD8D1F696F3100FE0A40 /* Panels */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FAD8E1F696F4300FE0A40 /* PanelNode.h */,
+				0A5FAD8F1F696F4300FE0A40 /* PanelNode.m */,
+			);
+			name = Panels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A5FAD6F1F69650800FE0A40 /* SwitchMenuItemView.m in Sources */,
+				0A5FAD8B1F696F2600FE0A40 /* ButtonNode.m in Sources */,
 				0A5FAD7F1F69665700FE0A40 /* BackgroundNode.m in Sources */,
 				0A5FAD801F69665700FE0A40 /* CameraNode.m in Sources */,
 				0A5FAD4F1F69245C00FE0A40 /* DebugOptions.m in Sources */,
@@ -435,6 +467,8 @@
 				0A5FAD6E1F69650800FE0A40 /* StepperMenuItemView.m in Sources */,
 				0A5FAD811F69665700FE0A40 /* ImageNode.m in Sources */,
 				0A5FAD601F69648A00FE0A40 /* GridMenuItem.m in Sources */,
+				0A5FAD901F696F4300FE0A40 /* PanelNode.m in Sources */,
+				0A5FAD8C1F696F2600FE0A40 /* ImageButtonNode.m in Sources */,
 				0A5FAD7E1F69665700FE0A40 /* ActorNode.m in Sources */,
 				0A5FAD581F6963CC00FE0A40 /* RiversViewController.m in Sources */,
 				0A5FAD1A1F69205500FE0A40 /* AppDelegate.m in Sources */,

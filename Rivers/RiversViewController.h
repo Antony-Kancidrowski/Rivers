@@ -14,7 +14,7 @@
 #import "CameraNode.h"
 #import "BackgroundNode.h"
 
-@interface FlyTheFlagViewController : UIViewController <GridMenuDelegate, UIGestureRecognizerDelegate, SCNSceneRendererDelegate>
+@interface RiversViewController : UIViewController <GridMenuDelegate, UIGestureRecognizerDelegate, SCNSceneRendererDelegate>
 
 @property (strong, nonatomic) SCNScene *scene;
 

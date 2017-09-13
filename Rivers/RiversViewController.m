@@ -16,14 +16,14 @@
 
 #import "MathHelper.h"
 
-@interface FlyTheFlagViewController ()
+@interface RiversViewController ()
 {
     NSDate *nextFrameCounterReset;
 }
 
 @end
 
-@implementation FlyTheFlagViewController
+@implementation RiversViewController
 
 @synthesize scene;
 

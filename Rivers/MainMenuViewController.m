@@ -8,129 +8,260 @@
 
 #import "MainMenuViewController.h"
 
+#import "ButtonNode.h"
+
+#import "DebugOptions.h"
+
 @interface MainMenuViewController ()
+{
+    ButtonNode *selectedButton;
+}
 
 @end
 
 @implementation MainMenuViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
+    
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
     
-    // create a new scene
-    SCNScene *scene = [SCNScene sceneNamed:@"art.scnassets/ship.scn"];
+    [self.camera setPosition:SCNVector3Make(0.0f, 0.0f, 0.75f)];
     
-    // create and add a camera to the scene
-    SCNNode *cameraNode = [SCNNode node];
-    cameraNode.camera = [SCNCamera camera];
-    [scene.rootNode addChildNode:cameraNode];
+    self.allowCameraControl = NO;
     
-    // place the camera
-    cameraNode.position = SCNVector3Make(0, 0, 15);
+    self.paused = NO;
     
-    // create and add a light to the scene
-    SCNNode *lightNode = [SCNNode node];
-    lightNode.light = [SCNLight light];
-    lightNode.light.type = SCNLightTypeOmni;
-    lightNode.position = SCNVector3Make(0, 10, 10);
-    [scene.rootNode addChildNode:lightNode];
+    selectedButton = nil;
     
-    // create and add an ambient light to the scene
-    SCNNode *ambientLightNode = [SCNNode node];
-    ambientLightNode.light = [SCNLight light];
-    ambientLightNode.light.type = SCNLightTypeAmbient;
-    ambientLightNode.light.color = [UIColor darkGrayColor];
-    [scene.rootNode addChildNode:ambientLightNode];
-    
-    // retrieve the ship node
-    SCNNode *ship = [scene.rootNode childNodeWithName:@"ship" recursively:YES];
-    
-    // animate the 3d object
-    [ship runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0 y:2 z:0 duration:1]]];
+    ////////////////////////////////////////////////////////////////////////////////////////////
     
     // retrieve the SCNView
     SCNView *scnView = (SCNView *)self.view;
     
     // set the scene to the view
-    scnView.scene = scene;
+    scnView.scene = self.scene;
     
-    // allows the user to manipulate the camera
-    scnView.allowsCameraControl = YES;
-    
-    // show statistics such as fps and timing information
-    scnView.showsStatistics = YES;
+    scnView.pointOfView = [self.camera mainCameraNode];
     
     // configure the view
-    scnView.backgroundColor = [UIColor blackColor];
-    
-    // add a tap gesture recognizer
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
-    NSMutableArray *gestureRecognizers = [NSMutableArray array];
-    [gestureRecognizers addObject:tapGesture];
-    [gestureRecognizers addObjectsFromArray:scnView.gestureRecognizers];
-    scnView.gestureRecognizers = gestureRecognizers;
+    scnView.backgroundColor = [UIColor colorWithWhite:0.05 alpha:1.0];
+  
+
+
 }
 
-- (void) handleTap:(UIGestureRecognizer*)gestureRecognize
-{
-    // retrieve the SCNView
+- (void)didReceiveMemoryWarning {
+    
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    [self setlayout];
+    
+
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
+    
+    [self setlayout];
+    
+    // TODO: Activate
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    
+    // TODO: Deactivate
+    
+    [super viewDidDisappear:animated];
+}
+
+
+#pragma mark - Autorotation and Layout
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration {
+    
+    [self setlayout];
+}
+
+- (void)setlayout {
+    
+    // Retrieve the SCNView
     SCNView *scnView = (SCNView *)self.view;
     
-    // check what nodes are tapped
-    CGPoint p = [gestureRecognize locationInView:scnView];
-    NSArray *hitResults = [scnView hitTest:p options:nil];
+    SCNCamera *cam = scnView.pointOfView.camera;
     
-    // check that we clicked on at least one object
-    if([hitResults count] > 0){
-        // retrieved the first clicked object
-        SCNHitTestResult *result = [hitResults objectAtIndex:0];
+    SCNMatrix4 pt = cam.projectionTransform;
+    
+    UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+    
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
         
-        // get its material
-        SCNMaterial *material = result.node.geometry.firstMaterial;
+        self.xmultiplier = self.view.frame.size.width / 320.0f;
+        self.ymultiplier = self.view.frame.size.height / 480.0f;
+    } else if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
         
-        // highlight it
-        [SCNTransaction begin];
-        [SCNTransaction setAnimationDuration:0.5];
-        
-        // on completion - unhighlight
-        [SCNTransaction setCompletionBlock:^{
-            [SCNTransaction begin];
-            [SCNTransaction setAnimationDuration:0.5];
-            
-            material.emission.contents = [UIColor blackColor];
-            
-            [SCNTransaction commit];
-        }];
-        
-        material.emission.contents = [UIColor redColor];
-        
-        [SCNTransaction commit];
+        self.xmultiplier = self.view.frame.size.width / 768.0f;
+        self.ymultiplier = self.view.frame.size.height / 1024.0f;
     }
-}
-
-- (BOOL)shouldAutorotate
-{
-    return YES;
-}
-
-- (BOOL)prefersStatusBarHidden {
-    return YES;
-}
-
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return UIInterfaceOrientationMaskAllButUpsideDown;
+    
+    if (interfaceOrientation == UIInterfaceOrientationPortrait) {
+        
+        if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
+            NSLog(@"UIInterfaceOrientationPortrait");
     } else {
-        return UIInterfaceOrientationMaskAll;
+        
+        self.xmultiplier *= self.view.frame.size.width / self.view.frame.size.height;
+        self.ymultiplier *= self.view.frame.size.width / self.view.frame.size.height;
+        
+        if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
+            NSLog(@"UIInterfaceOrientationLandscape");
+    }
+    
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
+        
+        // TODO: Layout iPhone
+        
+    } else if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        
+        // TODO: Layout iPad
+        
+    }
+    
+    if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
+        NSLog(@"Camera projection transform %f, %f", pt.m33, pt.m43);
+}
+
+#pragma mark - Gestures
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    
+    if ([super gestureRecognizerShouldBegin:gestureRecognizer]) {
+        
+        if ((self.paused) &&
+            (![gestureRecognizer isKindOfClass:[UILongPressGestureRecognizer class]])) {
+            
+            return NO;
+        }
+        
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (IBAction)longPressAction:(UILongPressGestureRecognizer *)gestureRecognize {
+    
+    if (gestureRecognize.state == UIGestureRecognizerStateBegan) {
+        
+        // Retrieve the SCNView
+        SCNView *scnView = (SCNView *)self.view;
+        
+        // Check what nodes are tapped
+        CGPoint p = [gestureRecognize locationInView:scnView];
+        
+        NSArray *hitResults = [scnView hitTest:p options:nil];
+        
+        // Check that we clicked on at least one object
+        if([hitResults count] > 0) {
+            
+            selectedButton = nil;
+            
+            for (int i = 0; i < [hitResults count]; ++i) {
+                
+                SCNHitTestResult *result = [hitResults objectAtIndex:i];
+                
+                if ([result.node.parentNode isKindOfClass:[ButtonNode class]]) {
+                    
+                    selectedButton = (ButtonNode *)result.node.parentNode;
+                } else {
+                    
+                    continue;
+                }
+            }
+            
+            if (selectedButton != nil) {
+                
+                [selectedButton pressButton];
+            }
+        }
+        
+    } else if (gestureRecognize.state == UIGestureRecognizerStateChanged) {
+        
+        if (selectedButton != nil) {
+            
+            // Retrieve the SCNView
+            SCNView *scnView = (SCNView *)self.view;
+            
+            CGPoint point = [gestureRecognize locationInView:scnView];
+            
+            NSArray *hitResults = [scnView hitTest:point options:nil];
+            
+            // Check that we clicked on at least one object
+            if([hitResults count] > 0) {
+                
+                ButtonNode *current;
+                
+                for (int i = 0; i < [hitResults count]; ++i) {
+                    
+                    SCNHitTestResult *result = [hitResults objectAtIndex:i];
+                    
+                    if ([result.node.parentNode isKindOfClass:[ButtonNode class]]) {
+                        
+                        current = (ButtonNode *)result.node.parentNode;
+                        
+                        if (current == selectedButton) {
+                            
+                            return;
+                        }
+                    } else {
+                        
+                        continue;
+                    }
+                }
+            }
+            
+            [selectedButton cancelButton];
+            
+            selectedButton = nil;
+        }
+        
+    } else if (gestureRecognize.state == UIGestureRecognizerStateEnded) {
+        
+        if (selectedButton != nil) {
+            
+            [selectedButton releaseButton];
+            selectedButton = nil;
+        }
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
+#pragma mark - UIStateRestoration
+
+- (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
+    
+    if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
+        NSLog(@"GameSceneViewController: encodeRestorableStateWithCoder");
+    
+    // TODO: Encode restorable state
+    
+    [super encodeRestorableStateWithCoder:coder];
+}
+
+- (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
+    
+    if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
+        NSLog(@"GameSceneViewController: decodeRestorableStateWithCoder");
+    
+    // TODO: Decode restoraable state
+    
+    [super decodeRestorableStateWithCoder:coder];
 }
 
 @end
