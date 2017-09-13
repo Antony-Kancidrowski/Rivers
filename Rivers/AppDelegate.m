@@ -8,15 +8,41 @@
 
 #import "AppDelegate.h"
 
+#import "Configuration.h"
+#import "DebugOptions.h"
+
+#import "Types.h"
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
+void exceptionHandler(NSException *exception) {
+    
+    NSLog(@"Uncaught exception: %@\nReason: %@\nUser Info: %@\nCall Stack: %@",
+          exception.name, exception.reason, exception.userInfo, exception.callStackSymbols);
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSDictionary* userDefaultsValuesDict = [NSDictionary dictionaryWithObjectsAndKeys:
+                                            [NSNumber numberWithFloat:0.5], kSoundPreference,
+                                            [NSNumber numberWithFloat:0.5], kMusicPreference,
+                                            nil];
+    
+    // set them in the standard user defaults
+    [[NSUserDefaults standardUserDefaults] registerDefaults:userDefaultsValuesDict];
+    
+    RANDOM_SEED();
+    
+    DebugOptions *options = [DebugOptions sharedDebugOptions];
+    [options readOptions];
+    
+    NSSetUncaughtExceptionHandler(&exceptionHandler);
+    
     return YES;
 }
 

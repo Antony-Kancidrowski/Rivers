@@ -16,6 +16,7 @@
 		0A5FAD271F69205600FE0A40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAD251F69205600FE0A40 /* LaunchScreen.storyboard */; };
 		0A5FAD321F69205600FE0A40 /* RiversTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD311F69205600FE0A40 /* RiversTests.m */; };
 		0A5FAD3D1F69205600FE0A40 /* RiversUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD3C1F69205600FE0A40 /* RiversUITests.m */; };
+		0A5FAD4F1F69245C00FE0A40 /* DebugOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD4E1F69245C00FE0A40 /* DebugOptions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,10 @@
 		0A5FAD381F69205600FE0A40 /* RiversUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiversUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5FAD3C1F69205600FE0A40 /* RiversUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RiversUITests.m; sourceTree = "<group>"; };
 		0A5FAD3E1F69205600FE0A40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A5FAD4D1F69245C00FE0A40 /* DebugOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugOptions.h; sourceTree = "<group>"; };
+		0A5FAD4E1F69245C00FE0A40 /* DebugOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugOptions.m; sourceTree = "<group>"; };
+		0A5FAD501F69258000FE0A40 /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
+		0A5FAD511F69266100FE0A40 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +110,13 @@
 			children = (
 				0A5FAD181F69205500FE0A40 /* AppDelegate.h */,
 				0A5FAD191F69205500FE0A40 /* AppDelegate.m */,
-				0A5FAD1B1F69205600FE0A40 /* art.scnassets */,
-				0A5FAD1D1F69205600FE0A40 /* GameViewController.h */,
-				0A5FAD1E1F69205600FE0A40 /* GameViewController.m */,
+				0A5FAD511F69266100FE0A40 /* Types.h */,
+				0A5FAD501F69258000FE0A40 /* Configuration.h */,
+				0A5FAD4D1F69245C00FE0A40 /* DebugOptions.h */,
+				0A5FAD4E1F69245C00FE0A40 /* DebugOptions.m */,
+				0A5FAD4B1F6920D800FE0A40 /* Resources */,
+				0A5FAD4A1F6920B600FE0A40 /* ViewControllers */,
 				0A5FAD201F69205600FE0A40 /* Main.storyboard */,
-				0A5FAD231F69205600FE0A40 /* Assets.xcassets */,
 				0A5FAD251F69205600FE0A40 /* LaunchScreen.storyboard */,
 				0A5FAD281F69205600FE0A40 /* Info.plist */,
 				0A5FAD151F69205500FE0A40 /* Supporting Files */,
@@ -141,6 +148,32 @@
 				0A5FAD3E1F69205600FE0A40 /* Info.plist */,
 			);
 			path = RiversUITests;
+			sourceTree = "<group>";
+		};
+		0A5FAD4A1F6920B600FE0A40 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FAD4C1F69210A00FE0A40 /* Game */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0A5FAD4B1F6920D800FE0A40 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FAD1B1F69205600FE0A40 /* art.scnassets */,
+				0A5FAD231F69205600FE0A40 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0A5FAD4C1F69210A00FE0A40 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FAD1D1F69205600FE0A40 /* GameViewController.h */,
+				0A5FAD1E1F69205600FE0A40 /* GameViewController.m */,
+			);
+			name = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5FAD4F1F69245C00FE0A40 /* DebugOptions.m in Sources */,
 				0A5FAD1A1F69205500FE0A40 /* AppDelegate.m in Sources */,
 				0A5FAD1F1F69205600FE0A40 /* GameViewController.m in Sources */,
 				0A5FAD171F69205500FE0A40 /* main.m in Sources */,
