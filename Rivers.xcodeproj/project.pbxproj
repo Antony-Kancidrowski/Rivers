@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A5FAD171F69205500FE0A40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD161F69205500FE0A40 /* main.m */; };
+		0A5FAD1A1F69205500FE0A40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD191F69205500FE0A40 /* AppDelegate.m */; };
+		0A5FAD1C1F69205600FE0A40 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAD1B1F69205600FE0A40 /* art.scnassets */; };
+		0A5FAD1F1F69205600FE0A40 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD1E1F69205600FE0A40 /* GameViewController.m */; };
+		0A5FAD221F69205600FE0A40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAD201F69205600FE0A40 /* Main.storyboard */; };
+		0A5FAD241F69205600FE0A40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAD231F69205600FE0A40 /* Assets.xcassets */; };
+		0A5FAD271F69205600FE0A40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAD251F69205600FE0A40 /* LaunchScreen.storyboard */; };
+		0A5FAD321F69205600FE0A40 /* RiversTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD311F69205600FE0A40 /* RiversTests.m */; };
+		0A5FAD3D1F69205600FE0A40 /* RiversUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD3C1F69205600FE0A40 /* RiversUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0A5FAD2E1F69205600FE0A40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A5FAD0A1F69205500FE0A40 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A5FAD111F69205500FE0A40;
+			remoteInfo = Rivers;
+		};
+		0A5FAD391F69205600FE0A40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A5FAD0A1F69205500FE0A40 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A5FAD111F69205500FE0A40;
+			remoteInfo = Rivers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A5FAD121F69205500FE0A40 /* Rivers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rivers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A5FAD161F69205500FE0A40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0A5FAD181F69205500FE0A40 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0A5FAD191F69205500FE0A40 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0A5FAD1B1F69205600FE0A40 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		0A5FAD1D1F69205600FE0A40 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		0A5FAD1E1F69205600FE0A40 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		0A5FAD211F69205600FE0A40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0A5FAD231F69205600FE0A40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0A5FAD261F69205600FE0A40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0A5FAD281F69205600FE0A40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A5FAD2D1F69205600FE0A40 /* RiversTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiversTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A5FAD311F69205600FE0A40 /* RiversTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RiversTests.m; sourceTree = "<group>"; };
+		0A5FAD331F69205600FE0A40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A5FAD381F69205600FE0A40 /* RiversUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiversUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A5FAD3C1F69205600FE0A40 /* RiversUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RiversUITests.m; sourceTree = "<group>"; };
+		0A5FAD3E1F69205600FE0A40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A5FAD0F1F69205500FE0A40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A5FAD2A1F69205600FE0A40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A5FAD351F69205600FE0A40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A5FAD091F69205500FE0A40 = {
+			isa = PBXGroup;
+			children = (
+				0A5FAD141F69205500FE0A40 /* Rivers */,
+				0A5FAD301F69205600FE0A40 /* RiversTests */,
+				0A5FAD3B1F69205600FE0A40 /* RiversUITests */,
+				0A5FAD131F69205500FE0A40 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0A5FAD131F69205500FE0A40 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FAD121F69205500FE0A40 /* Rivers.app */,
+				0A5FAD2D1F69205600FE0A40 /* RiversTests.xctest */,
+				0A5FAD381F69205600FE0A40 /* RiversUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A5FAD141F69205500FE0A40 /* Rivers */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FAD181F69205500FE0A40 /* AppDelegate.h */,
+				0A5FAD191F69205500FE0A40 /* AppDelegate.m */,
+				0A5FAD1B1F69205600FE0A40 /* art.scnassets */,
+				0A5FAD1D1F69205600FE0A40 /* GameViewController.h */,
+				0A5FAD1E1F69205600FE0A40 /* GameViewController.m */,
+				0A5FAD201F69205600FE0A40 /* Main.storyboard */,
+				0A5FAD231F69205600FE0A40 /* Assets.xcassets */,
+				0A5FAD251F69205600FE0A40 /* LaunchScreen.storyboard */,
+				0A5FAD281F69205600FE0A40 /* Info.plist */,
+				0A5FAD151F69205500FE0A40 /* Supporting Files */,
+			);
+			path = Rivers;
+			sourceTree = "<group>";
+		};
+		0A5FAD151F69205500FE0A40 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FAD161F69205500FE0A40 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0A5FAD301F69205600FE0A40 /* RiversTests */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FAD311F69205600FE0A40 /* RiversTests.m */,
+				0A5FAD331F69205600FE0A40 /* Info.plist */,
+			);
+			path = RiversTests;
+			sourceTree = "<group>";
+		};
+		0A5FAD3B1F69205600FE0A40 /* RiversUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FAD3C1F69205600FE0A40 /* RiversUITests.m */,
+				0A5FAD3E1F69205600FE0A40 /* Info.plist */,
+			);
+			path = RiversUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A5FAD111F69205500FE0A40 /* Rivers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A5FAD411F69205600FE0A40 /* Build configuration list for PBXNativeTarget "Rivers" */;
+			buildPhases = (
+				0A5FAD0E1F69205500FE0A40 /* Sources */,
+				0A5FAD0F1F69205500FE0A40 /* Frameworks */,
+				0A5FAD101F69205500FE0A40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rivers;
+			productName = Rivers;
+			productReference = 0A5FAD121F69205500FE0A40 /* Rivers.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0A5FAD2C1F69205600FE0A40 /* RiversTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A5FAD441F69205600FE0A40 /* Build configuration list for PBXNativeTarget "RiversTests" */;
+			buildPhases = (
+				0A5FAD291F69205600FE0A40 /* Sources */,
+				0A5FAD2A1F69205600FE0A40 /* Frameworks */,
+				0A5FAD2B1F69205600FE0A40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A5FAD2F1F69205600FE0A40 /* PBXTargetDependency */,
+			);
+			name = RiversTests;
+			productName = RiversTests;
+			productReference = 0A5FAD2D1F69205600FE0A40 /* RiversTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0A5FAD371F69205600FE0A40 /* RiversUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A5FAD471F69205600FE0A40 /* Build configuration list for PBXNativeTarget "RiversUITests" */;
+			buildPhases = (
+				0A5FAD341F69205600FE0A40 /* Sources */,
+				0A5FAD351F69205600FE0A40 /* Frameworks */,
+				0A5FAD361F69205600FE0A40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A5FAD3A1F69205600FE0A40 /* PBXTargetDependency */,
+			);
+			name = RiversUITests;
+			productName = RiversUITests;
+			productReference = 0A5FAD381F69205600FE0A40 /* RiversUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A5FAD0A1F69205500FE0A40 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Cidrosoft;
+				TargetAttributes = {
+					0A5FAD111F69205500FE0A40 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = G383QJKTQ7;
+						ProvisioningStyle = Automatic;
+					};
+					0A5FAD2C1F69205600FE0A40 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = G383QJKTQ7;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0A5FAD111F69205500FE0A40;
+					};
+					0A5FAD371F69205600FE0A40 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = G383QJKTQ7;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0A5FAD111F69205500FE0A40;
+					};
+				};
+			};
+			buildConfigurationList = 0A5FAD0D1F69205500FE0A40 /* Build configuration list for PBXProject "Rivers" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0A5FAD091F69205500FE0A40;
+			productRefGroup = 0A5FAD131F69205500FE0A40 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A5FAD111F69205500FE0A40 /* Rivers */,
+				0A5FAD2C1F69205600FE0A40 /* RiversTests */,
+				0A5FAD371F69205600FE0A40 /* RiversUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A5FAD101F69205500FE0A40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A5FAD1C1F69205600FE0A40 /* art.scnassets in Resources */,
+				0A5FAD271F69205600FE0A40 /* LaunchScreen.storyboard in Resources */,
+				0A5FAD241F69205600FE0A40 /* Assets.xcassets in Resources */,
+				0A5FAD221F69205600FE0A40 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A5FAD2B1F69205600FE0A40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A5FAD361F69205600FE0A40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A5FAD0E1F69205500FE0A40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A5FAD1A1F69205500FE0A40 /* AppDelegate.m in Sources */,
+				0A5FAD1F1F69205600FE0A40 /* GameViewController.m in Sources */,
+				0A5FAD171F69205500FE0A40 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A5FAD291F69205600FE0A40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A5FAD321F69205600FE0A40 /* RiversTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A5FAD341F69205600FE0A40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A5FAD3D1F69205600FE0A40 /* RiversUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0A5FAD2F1F69205600FE0A40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A5FAD111F69205500FE0A40 /* Rivers */;
+			targetProxy = 0A5FAD2E1F69205600FE0A40 /* PBXContainerItemProxy */;
+		};
+		0A5FAD3A1F69205600FE0A40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A5FAD111F69205500FE0A40 /* Rivers */;
+			targetProxy = 0A5FAD391F69205600FE0A40 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0A5FAD201F69205600FE0A40 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A5FAD211F69205600FE0A40 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0A5FAD251F69205600FE0A40 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A5FAD261F69205600FE0A40 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0A5FAD3F1F69205600FE0A40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0A5FAD401F69205600FE0A40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0A5FAD421F69205600FE0A40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G383QJKTQ7;
+				INFOPLIST_FILE = Rivers/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cidrosoft.Rivers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0A5FAD431F69205600FE0A40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G383QJKTQ7;
+				INFOPLIST_FILE = Rivers/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cidrosoft.Rivers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0A5FAD451F69205600FE0A40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = G383QJKTQ7;
+				INFOPLIST_FILE = RiversTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cidrosoft.RiversTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rivers.app/Rivers";
+			};
+			name = Debug;
+		};
+		0A5FAD461F69205600FE0A40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = G383QJKTQ7;
+				INFOPLIST_FILE = RiversTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cidrosoft.RiversTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rivers.app/Rivers";
+			};
+			name = Release;
+		};
+		0A5FAD481F69205600FE0A40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = G383QJKTQ7;
+				INFOPLIST_FILE = RiversUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cidrosoft.RiversUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Rivers;
+			};
+			name = Debug;
+		};
+		0A5FAD491F69205600FE0A40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = G383QJKTQ7;
+				INFOPLIST_FILE = RiversUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cidrosoft.RiversUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Rivers;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A5FAD0D1F69205500FE0A40 /* Build configuration list for PBXProject "Rivers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A5FAD3F1F69205600FE0A40 /* Debug */,
+				0A5FAD401F69205600FE0A40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A5FAD411F69205600FE0A40 /* Build configuration list for PBXNativeTarget "Rivers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A5FAD421F69205600FE0A40 /* Debug */,
+				0A5FAD431F69205600FE0A40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0A5FAD441F69205600FE0A40 /* Build configuration list for PBXNativeTarget "RiversTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A5FAD451F69205600FE0A40 /* Debug */,
+				0A5FAD461F69205600FE0A40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0A5FAD471F69205600FE0A40 /* Build configuration list for PBXNativeTarget "RiversUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A5FAD481F69205600FE0A40 /* Debug */,
+				0A5FAD491F69205600FE0A40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0A5FAD0A1F69205500FE0A40 /* Project object */;
+}
