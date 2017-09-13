@@ -1,14 +1,18 @@
 //
-//  GameViewController.m
+//  GameSceneViewController.m
 //  Rivers
 //
 //  Created by Antony Kancidrowski on 13/09/2017.
 //  Copyright © 2017 Cidrosoft. All rights reserved.
 //
 
-#import "GameViewController.h"
+#import "GameSceneViewController.h"
 
-@implementation GameViewController
+@interface GameSceneViewController ()
+
+@end
+
+@implementation GameSceneViewController
 
 - (void)viewDidLoad
 {

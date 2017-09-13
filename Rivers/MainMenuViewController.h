@@ -1,5 +1,5 @@
 //
-//  GameViewController.h
+//  MainMenuViewController.h
 //  Rivers
 //
 //  Created by Antony Kancidrowski on 13/09/2017.
@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <SceneKit/SceneKit.h>
 
-@interface GameViewController : UIViewController
+@interface MainMenuViewController : UIViewController
 
 @end
