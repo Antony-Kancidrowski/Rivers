@@ -37,6 +37,7 @@
 		0A5FAD901F696F4300FE0A40 /* PanelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD8F1F696F4300FE0A40 /* PanelNode.m */; };
 		0A5FAD991F69757300FE0A40 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAD951F69757300FE0A40 /* InfoPlist.strings */; };
 		0A5FAD9A1F69757300FE0A40 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAD971F69757300FE0A40 /* Localizable.strings */; };
+		0A5FAD9E1F6C0D2C00FE0A40 /* Rivers-en.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAD9D1F6C0D2C00FE0A40 /* Rivers-en.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		0A5FAD981F69757300FE0A40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0A5FAD9B1F69757A00FE0A40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0A5FAD9C1F69758600FE0A40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0A5FAD9D1F6C0D2C00FE0A40 /* Rivers-en.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rivers-en.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 		0A5FAD4B1F6920D800FE0A40 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0A5FAD9D1F6C0D2C00FE0A40 /* Rivers-en.png */,
 				0A5FAD1B1F69205600FE0A40 /* art.scnassets */,
 				0A5FAD231F69205600FE0A40 /* Assets.xcassets */,
 			);
@@ -444,6 +447,7 @@
 				0A5FAD271F69205600FE0A40 /* LaunchScreen.storyboard in Resources */,
 				0A5FAD241F69205600FE0A40 /* Assets.xcassets in Resources */,
 				0A5FAD221F69205600FE0A40 /* Main.storyboard in Resources */,
+				0A5FAD9E1F6C0D2C00FE0A40 /* Rivers-en.png in Resources */,
 				0A5FAD991F69757300FE0A40 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

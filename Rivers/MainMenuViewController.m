@@ -8,6 +8,8 @@
 
 #import "MainMenuViewController.h"
 
+#import "LabelNode.h"
+#import "ImageNode.h"
 #import "ButtonNode.h"
 
 #import "DebugOptions.h"
@@ -16,6 +18,11 @@
 {
     ButtonNode *selectedButton;
 }
+
+@property (nonatomic, strong) SCNNode *overlay;
+
+@property (nonatomic, strong) ImageNode *applicationImage;
+@property (nonatomic, strong) LabelNode *copyrightLabel;
 
 @end
 
@@ -47,8 +54,32 @@
     // configure the view
     scnView.backgroundColor = [UIColor colorWithWhite:0.05 alpha:1.0];
   
+    _overlay = [SCNNode node];
+    
+    [_overlay setPosition:SCNVector3Make(0.0f, 0.0f, 6.0f)];
+    [self.scene.rootNode addChildNode:_overlay];
+    [_overlay setScale:SCNVector3Make(0.55f, 0.55f, 0.55f)];
+    
+    NSString *applicationImageName = [NSString stringWithFormat:@"%@.png", NSLocalizedString(@"MAIN_MENU_IMAGE", nil)];
+    
+    _applicationImage = [ImageNode imageWithTextureNamed:applicationImageName];
+    [_applicationImage setScale:SCNVector3Make(0.68f, 0.20f, 1.0f)];
+    
+    [_applicationImage setup:_overlay];
+    
+    NSShadow *myShadow = [NSShadow new];
+    [myShadow setShadowColor:[UIColor blackColor]];
+    [myShadow setShadowBlurRadius:5.0];
+    [myShadow setShadowOffset:CGSizeMake(2, 2)];
+    
+    _copyrightLabel = [LabelNode setLabelWithText:@"© 2017 Cidrosoft. All rights reserved." withFontNamed:@"Futura" fontSize:36 fontColor:[UIColor whiteColor]];
+    [_copyrightLabel setShadow:myShadow];
+    
+    [_copyrightLabel setScale:SCNVector3Make(0.38f, 0.03f, 1.0f)];
+    
+    [_copyrightLabel setup:_overlay];
 
-
+    self.camera.mainCameraNode.constraints = @[[SCNLookAtConstraint lookAtConstraintWithTarget:_overlay]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,7 +94,10 @@
     
     [self setlayout];
     
-
+    // Activate
+    [_applicationImage activate];
+    
+    [_copyrightLabel activate];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -71,13 +105,14 @@
     [super viewDidAppear:animated];
     
     [self setlayout];
-    
-    // TODO: Activate
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     
-    // TODO: Deactivate
+    // Deactivate
+    [_applicationImage deactivate];
+    
+    [_copyrightLabel deactivate];
     
     [super viewDidDisappear:animated];
 }
@@ -126,12 +161,14 @@
     
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
         
-        // TODO: Layout iPhone
-        
+        [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43 * 0.45f * self.ymultiplier, 0.0f)];
+
+        [_copyrightLabel setPosition:SCNVector3Make(0.0f, -pt.m43 * 0.345f * self.ymultiplier, 0.15f)];
     } else if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
         
-        // TODO: Layout iPad
+        [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43 * 0.525f * self.ymultiplier, 0.0f)];
         
+        [_copyrightLabel setPosition:SCNVector3Make(0.0f, -pt.m43 * 0.405f * self.ymultiplier, 0.15f)];
     }
     
     if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
