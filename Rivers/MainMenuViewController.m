@@ -163,12 +163,12 @@
         
         [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43 * 1.15f * self.ymultiplier, 0.0f)];
 
-        [_copyrightLabel setPosition:SCNVector3Make(0.0f, -pt.m43 * 0.945f * self.ymultiplier, 0.15f)];
+        [_copyrightLabel setPosition:SCNVector3Make(0.0f, pt.m43 * 1.25f * self.ymultiplier, 0.0f)];
     } else if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
         
         [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43 * 1.225f * self.ymultiplier, 0.0f)];
         
-        [_copyrightLabel setPosition:SCNVector3Make(0.0f, -pt.m43 * 1.005f * self.ymultiplier, 0.15f)];
+        [_copyrightLabel setPosition:SCNVector3Make(0.0f, pt.m43 * 1.325f * self.ymultiplier, 0.0f)];
     }
     
     if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
