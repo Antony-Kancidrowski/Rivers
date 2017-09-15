@@ -134,56 +134,11 @@
     
     SCNMatrix4 pt = cam.projectionTransform;
     
-    UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+    CGFloat z = (pt.m11 / 2.0f) * self.aspectRatio;
     
-    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
-        
-        self.xmultiplier = self.view.frame.size.width / 320.0f;
-        self.ymultiplier = self.view.frame.size.height / 480.0f;
-    } else if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
-        
-        self.xmultiplier = self.view.frame.size.width / 768.0f;
-        self.ymultiplier = self.view.frame.size.height / 1024.0f;
-    }
-    
-    if (interfaceOrientation == UIInterfaceOrientationPortrait) {
-        
-        if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
-            NSLog(@"UIInterfaceOrientationPortrait");
-    } else {
-        
-        self.xmultiplier *= self.view.frame.size.width / self.view.frame.size.height;
-        self.ymultiplier *= self.view.frame.size.width / self.view.frame.size.height;
-        
-        if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
-            NSLog(@"UIInterfaceOrientationLandscape");
-    }
-    
-    if (IS_IPHONE_5) {
-        
-        [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43 * 1.25f * self.ymultiplier, 0.0f)];
+    [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43, z)];
 
-        [_copyrightLabel setPosition:SCNVector3Make(0.0f, pt.m43 * 1.35f * self.ymultiplier, 0.0f)];
-        
-    } else if (IS_IPHONE_6) {
-        
-        [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43 * 1.15f * self.ymultiplier, 0.0f)];
-        
-        [_copyrightLabel setPosition:SCNVector3Make(0.0f, pt.m43 * 1.15f * self.ymultiplier, 0.0f)];
-        
-    } else if (IS_IPHONE) {
-        
-        [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43 * 1.25f * self.ymultiplier, 0.0f)];
-        
-        [_copyrightLabel setPosition:SCNVector3Make(0.0f, pt.m43 * 1.35f * self.ymultiplier, 0.0f)];
-        
-    } else if (IS_IPAD) {
-        
-        [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43 * 1.225f * self.ymultiplier, 0.0f)];
-        
-        [_copyrightLabel setPosition:SCNVector3Make(0.0f, pt.m43 * 1.325f * self.ymultiplier, 0.0f)];
-        
-    }
+    [_copyrightLabel setPosition:SCNVector3Make(0.0f, pt.m43, z)];
     
     if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
         NSLog(@"Camera projection transform %f, %f", pt.m33, pt.m43);

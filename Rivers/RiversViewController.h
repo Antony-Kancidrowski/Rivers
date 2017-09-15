@@ -23,9 +23,6 @@
 
 @property (assign, nonatomic) CGFloat aspectRatio;
 
-@property (assign, nonatomic) CGFloat xmultiplier;
-@property (assign, nonatomic) CGFloat ymultiplier;
-
 @property (assign, nonatomic) NSUInteger frameCount;
 
 @property (assign, nonatomic) BOOL disableGestures;

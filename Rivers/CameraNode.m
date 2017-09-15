@@ -43,16 +43,6 @@
     mainCameraNode.camera = [SCNCamera camera];
     
     mainCameraNode.camera.zFar = 100;
-    
-    mainCameraNode.camera.yFov = 46;
-    
-    // create and add a light to the scene
-//    SCNNode *lightNode = [SCNNode node];
-//    lightNode.light = [SCNLight light];
-//    lightNode.light.type = SCNLightTypeOmni;
-//    lightNode.position = SCNVector3Make(0.0f, 0.0f, 0.0f);
-//    
-//    [mainCameraNode addChildNode:lightNode];
 }
 
 - (void)zoomOut {

@@ -52,42 +52,12 @@
     
     if (interfaceOrientation == UIInterfaceOrientationPortrait) {
         
-        if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
-            
-            // TODO: 375 x 667
-            
-            self.xmultiplier = self.view.frame.size.width / 320.0f;
-            self.ymultiplier = self.view.frame.size.height / 480.0f;
-        } else if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
-            
-            self.xmultiplier = self.view.frame.size.width / 768.0f;
-            self.ymultiplier = self.view.frame.size.height / 1024.0f;
-        }
-        
         self.aspectRatio = (self.view.frame.size.height / self.view.frame.size.width);
         
     } else  {
         
-        if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
-            
-            // TODO: 667 x 375
-            
-            self.ymultiplier = self.view.frame.size.width / 480.0f;
-            self.xmultiplier = self.view.frame.size.height / 320.0f;
-        } else if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
-            
-            self.ymultiplier = self.view.frame.size.width / 1024.0f;
-            self.xmultiplier = self.view.frame.size.height / 768.0f;
-        }
-        
         self.aspectRatio = (self.view.frame.size.width / self.view.frame.size.height);
     }
-    
-    self.xmultiplier = 1.0f;
-    self.ymultiplier = 1.0f;
-    
-    if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
-        NSLog(@"Multiplier (%f, %f)", self.xmultiplier, self.ymultiplier);
     
     if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
         NSLog(@"Aspect ratio (%f)", self.aspectRatio);
@@ -100,7 +70,6 @@
     
     self.camera = [CameraNode node];
     
-//    [self.camera setPosition:SCNVector3Make(0.0f, 0.25f, 0.75f)];
     [self.camera setPosition:SCNVector3Make(0.0f, 0.0f, 0.0f)];
     [self.camera setEulerAngles:SCNVector3Make(-M_PI_2, 0.0f, 0.0f)];
     
