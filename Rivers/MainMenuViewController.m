@@ -159,16 +159,30 @@
             NSLog(@"UIInterfaceOrientationLandscape");
     }
     
-    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
+    if (IS_IPHONE_5) {
+        
+        [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43 * 1.25f * self.ymultiplier, 0.0f)];
+
+        [_copyrightLabel setPosition:SCNVector3Make(0.0f, pt.m43 * 1.35f * self.ymultiplier, 0.0f)];
+        
+    } else if (IS_IPHONE_6) {
         
         [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43 * 1.15f * self.ymultiplier, 0.0f)];
-
-        [_copyrightLabel setPosition:SCNVector3Make(0.0f, pt.m43 * 1.25f * self.ymultiplier, 0.0f)];
-    } else if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        
+        [_copyrightLabel setPosition:SCNVector3Make(0.0f, pt.m43 * 1.15f * self.ymultiplier, 0.0f)];
+        
+    } else if (IS_IPHONE) {
+        
+        [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43 * 1.25f * self.ymultiplier, 0.0f)];
+        
+        [_copyrightLabel setPosition:SCNVector3Make(0.0f, pt.m43 * 1.35f * self.ymultiplier, 0.0f)];
+        
+    } else if (IS_IPAD) {
         
         [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43 * 1.225f * self.ymultiplier, 0.0f)];
         
         [_copyrightLabel setPosition:SCNVector3Make(0.0f, pt.m43 * 1.325f * self.ymultiplier, 0.0f)];
+        
     }
     
     if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])

@@ -42,6 +42,7 @@ typedef void (^dispatch_block_float_t)(CGFloat value);
 #define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 #define IS_IPHONE_5 (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 568.0)
+#define IS_IPHONE_6 (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 667.0)
 #define IS_RETINA ([[UIScreen mainScreen] scale] == 2.0)
 
 #define DEG_TO_RAD(__DEG__) (__DEG__ * M_PI / 180)
