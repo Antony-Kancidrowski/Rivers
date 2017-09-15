@@ -56,14 +56,14 @@
   
     _overlay = [SCNNode node];
     
-    [_overlay setPosition:SCNVector3Make(0.0f, 0.0f, 6.0f)];
+    [_overlay setPosition:SCNVector3Make(0.0f, 0.0f, 0.0f)];
     [self.scene.rootNode addChildNode:_overlay];
-    [_overlay setScale:SCNVector3Make(0.55f, 0.55f, 0.55f)];
+    [_overlay setScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
     
     NSString *applicationImageName = [NSString stringWithFormat:@"%@.png", NSLocalizedString(@"MAIN_MENU_IMAGE", nil)];
     
     _applicationImage = [ImageNode imageWithTextureNamed:applicationImageName];
-    [_applicationImage setScale:SCNVector3Make(0.68f, 0.20f, 1.0f)];
+    [_applicationImage setScale:SCNVector3Make(1.36f, 0.40f, 1.0f)];
     
     [_applicationImage setup:_overlay];
     
@@ -75,7 +75,7 @@
     _copyrightLabel = [LabelNode setLabelWithText:@"© 2017 Cidrosoft. All rights reserved." withFontNamed:@"Futura" fontSize:36 fontColor:[UIColor whiteColor]];
     [_copyrightLabel setShadow:myShadow];
     
-    [_copyrightLabel setScale:SCNVector3Make(0.38f, 0.03f, 1.0f)];
+    [_copyrightLabel setScale:SCNVector3Make(1.14f, 0.09f, 1.0f)];
     
     [_copyrightLabel setup:_overlay];
 
@@ -161,14 +161,14 @@
     
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
         
-        [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43 * 0.45f * self.ymultiplier, 0.0f)];
+        [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43 * 1.25f * self.ymultiplier, 0.0f)];
 
-        [_copyrightLabel setPosition:SCNVector3Make(0.0f, -pt.m43 * 0.345f * self.ymultiplier, 0.15f)];
+        [_copyrightLabel setPosition:SCNVector3Make(0.0f, -pt.m43 * 1.045f * self.ymultiplier, 0.15f)];
     } else if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
         
-        [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43 * 0.525f * self.ymultiplier, 0.0f)];
+        [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43 * 1.325f * self.ymultiplier, 0.0f)];
         
-        [_copyrightLabel setPosition:SCNVector3Make(0.0f, -pt.m43 * 0.405f * self.ymultiplier, 0.15f)];
+        [_copyrightLabel setPosition:SCNVector3Make(0.0f, -pt.m43 * 1.105f * self.ymultiplier, 0.15f)];
     }
     
     if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
