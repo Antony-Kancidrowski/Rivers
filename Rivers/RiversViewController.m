@@ -161,6 +161,11 @@
     [super viewDidDisappear:animated];
 }
 
+- (BOOL)prefersStatusBarHidden {
+    
+    return YES;
+}
+
 #pragma mark Notifications
 
 - (void)applicationWillResignActive {
