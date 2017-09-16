@@ -43,6 +43,8 @@
     mainCameraNode.camera = [SCNCamera camera];
     
     mainCameraNode.camera.zFar = 100;
+    
+    mainCameraNode.camera.yFov = 60;
 }
 
 - (void)zoomOut {
