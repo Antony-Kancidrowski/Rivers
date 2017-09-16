@@ -19,6 +19,9 @@
 @interface RiversViewController ()
 {
     NSDate *nextFrameCounterReset;
+    
+    BOOL debugMenuShown;
+    BOOL debugMenuEnabled;
 }
 
 @end
@@ -35,7 +38,6 @@
 @synthesize disableGestures;
 @synthesize allowCameraControl;
 
-@synthesize gridMenuShown;
 @synthesize paused;
 
 - (void)viewDidLoad
@@ -86,7 +88,13 @@
     
     [scnView setAllowsCameraControl:self.allowCameraControl];
     
-    gridMenuShown = NO;
+#ifndef __OPTIMIZE__
+    debugMenuEnabled = TRUE;
+#else
+    debugMenuEnabled = FALSE;
+#endif
+    
+    debugMenuShown = NO;
     
     self.disableGestures = NO;
 }
@@ -193,12 +201,32 @@
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
     
-    if ((gridMenuShown) || (self.disableGestures)) {
+    if ((debugMenuShown) || (self.disableGestures)) {
         
         return NO;
     }
     
     return YES;
+}
+
+- (IBAction)pinchAction:(UIPinchGestureRecognizer *)gestureRecognizer {
+    
+    if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+        
+        if (debugMenuEnabled) {
+            // Show Menu
+            if (gestureRecognizer.scale > 1.0f) {
+                
+                // Only show the menu if it isn't already showing a menu
+                if ([[self childViewControllers] count] == 0) {
+                    
+                    CGPoint location = [gestureRecognizer locationInView:[gestureRecognizer view]];
+                    
+                    [self showGridWithHeaderFromPoint:location];
+                }
+            }
+        }
+    }
 }
 
 #pragma mark Debug Options
@@ -226,8 +254,6 @@
     NSNumber *value = [NSNumber numberWithFloat:zoom];
     [options setObject:value forKey:@"Zoom"];
 }
-
-#pragma mark Grid
 
 #pragma mark - Grid
 
@@ -259,7 +285,7 @@
     SCNView *scnView = (SCNView *)self.view;
     [scnView setAllowsCameraControl:NO];
     
-    self.gridMenuShown = YES;
+    debugMenuShown = YES;
 }
 
 - (void)gridMenu:(GridMenuViewController *)gridMenu willDismissWithSelectedItem:(GridMenuItem *)item atIndex:(NSInteger)itemIndex {
@@ -274,7 +300,7 @@
             SCNView *scnView = (SCNView *)self.view;
             [scnView setAllowsCameraControl:self.allowCameraControl];
             
-            self.gridMenuShown = NO;
+            debugMenuShown = NO;
         }
         
         return;
@@ -313,7 +339,7 @@
         SCNView *scnView = (SCNView *)self.view;
         [scnView setAllowsCameraControl:self.allowCameraControl];
         
-        self.gridMenuShown = NO;
+        debugMenuShown = NO;
     }
 }
 
@@ -322,7 +348,7 @@
     SCNView *scnView = (SCNView *)self.view;
     [scnView setAllowsCameraControl:self.allowCameraControl];
     
-    gridMenuShown = NO;
+    debugMenuShown = NO;
     
     if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
         NSLog(@"Grid Menu %@ dismissed.", gridMenu.title);

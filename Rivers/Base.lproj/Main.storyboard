@@ -16,9 +16,18 @@
                     <sceneKitView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="dDQ-bR-3ni">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="QFP-G4-X8T" appends="YES" id="Ffb-ld-hze"/>
+                        </connections>
                     </sceneKitView>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QpN-HI-80w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer cancelsTouchesInView="NO" delaysTouchesEnded="NO" id="QFP-G4-X8T">
+                    <connections>
+                        <action selector="pinchAction:" destination="gwW-gJ-8Zg" id="MAI-GG-qwZ"/>
+                        <outlet property="delegate" destination="gwW-gJ-8Zg" id="ZaB-gd-sfX"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-825" y="37"/>
         </scene>

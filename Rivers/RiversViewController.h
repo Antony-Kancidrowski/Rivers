@@ -28,8 +28,6 @@
 @property (assign, nonatomic) BOOL disableGestures;
 @property (assign, nonatomic) BOOL allowCameraControl;
 
-@property (assign, nonatomic) BOOL gridMenuShown;
-
 @property (assign, nonatomic) BOOL paused;
 
 - (BOOL)toggleDebugOption:(NSString *)optionId;
