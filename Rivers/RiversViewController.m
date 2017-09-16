@@ -247,12 +247,24 @@
     return show.boolValue;
 }
 
-- (void)setZoom:(CGFloat)zoom {
+- (void)setSound:(CGFloat)volume {
     
-    DebugOptions *options = [DebugOptions sharedDebugOptions];
+    NSAssert(((volume >= 0.0f) && (volume <= 1.0f)), @"Invalid volume: range 0.0 to 1.0");
     
-    NSNumber *value = [NSNumber numberWithFloat:zoom];
-    [options setObject:value forKey:@"Zoom"];
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    
+//    [defaults setFloat:volume forKey:kSoundPreference];
+}
+
+- (void)setMusic:(CGFloat)volume {
+    
+    NSAssert(((volume >= 0.0f) && (volume <= 1.0f)), @"Invalid volume: range 0.0 to 1.0");
+    
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    
+//    [defaults setFloat:volume forKey:kMusicPreference];
+//    
+//    [[SoundManager sharedSoundManager] setMusicVolume:volume];
 }
 
 #pragma mark - Grid
@@ -260,6 +272,7 @@
 - (void)showGridWithHeaderFromPoint:(CGPoint)point {
     
     NSArray *items = @[
+                       [[GridMenuItem alloc] initWithType:MENU_ITEM_IMAGE withImage:[UIImage imageNamed:@"dm_enter"] title:@"General" dismisses:YES],
                        [[GridMenuItem alloc] initWithType:MENU_ITEM_IMAGE withImage:[UIImage imageNamed:@"dm_pause"] title:@"Pause" dismisses:YES],
                        [[GridMenuItem alloc] initWithType:MENU_ITEM_IMAGE withImage:[UIImage imageNamed:@"dm_reset"] title:@"Reset" dismisses:YES],
                        [[GridMenuItem alloc] initWithType:MENU_ITEM_IMAGE withImage:[UIImage imageNamed:@"dm_back"] title:@"Back" dismisses:YES]
@@ -311,7 +324,35 @@
     switch (itemIndex) {
         case 0:
         {
-            // TODO:
+            NSArray *items = @[
+                               [[GridMenuItem alloc] initWithType:MENU_ITEM_SWITCH withValue:[DebugOptions optionForKey:@"ShowDebugInformation"] title:@"Debug Info" dismisses:NO action:^ { [self toggleDebugOption:@"ShowDebugInformation"]; }],
+                               [[GridMenuItem alloc] initWithType:MENU_ITEM_SLIDER withValue:[[NSUserDefaults standardUserDefaults] valueForKey:kSoundPreference] andMin:0.0f andMax:1.0f title:@"Sound" dismisses:NO floatAction:^(CGFloat value) { [self setSound:value]; }],
+                               [[GridMenuItem alloc] initWithType:MENU_ITEM_SLIDER withValue:[[NSUserDefaults standardUserDefaults] valueForKey:kMusicPreference] andMin:0.0f andMax:1.0f title:@"Music" dismisses:NO floatAction:^(CGFloat value) { [self setMusic:value]; }],
+                               [[GridMenuItem alloc] initWithType:MENU_ITEM_SWITCH withValue:[DebugOptions optionForKey:@"EnableLog"] title:@"Log" dismisses:YES action:^ { [self toggleDebugOption:@"EnableLog"]; }]
+                               ];
+            
+            NSInteger numberOfOptions = [items count];
+            
+            GridMenuViewController *av = [[GridMenuViewController alloc] initWithItems:[items subarrayWithRange:NSMakeRange(0, numberOfOptions)]];
+            av.title = NSLocalizedString(@"GENERAL", nil);
+            av.delegate = self;
+            
+            av.bounces = NO;
+            av.itemFont = [UIFont boldSystemFontOfSize:14];
+            av.itemSize = CGSizeMake(220, 40);
+            av.animationDuration = 0.2;
+            
+            UILabel *header = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 44)];
+            header.text = NSLocalizedString(av.title, nil);
+            header.font = [UIFont boldSystemFontOfSize:18];
+            header.backgroundColor = [UIColor blackColor];
+            header.textColor = [UIColor grayColor];
+            header.textAlignment = NSTextAlignmentCenter;
+            av.headerView = header;
+            
+            [av showInViewController:self center:CGPointMake(self.view.bounds.size.width/2.f, self.view.bounds.size.height/2.f)];
+            
+            newMenu = YES;
         }
             break;
             
@@ -322,6 +363,12 @@
             break;
             
         case 2:
+        {
+            // TODO:
+        }
+            break;
+            
+        case 3:
         {
             // TODO:
         }
