@@ -53,6 +53,7 @@
 		0A5FADC31F6D2A5A00FE0A40 /* dm_pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FADB41F6D2A5A00FE0A40 /* dm_pause.png */; };
 		0A5FADC41F6D2A5A00FE0A40 /* dm_previous.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FADB51F6D2A5A00FE0A40 /* dm_previous.png */; };
 		0A5FADC51F6D2A5A00FE0A40 /* dm_reset.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FADB61F6D2A5A00FE0A40 /* dm_reset.png */; };
+		0A5FADC91F6F1D8300FE0A40 /* gray-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FADC81F6F1D8300FE0A40 /* gray-background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +156,7 @@
 		0A5FADB41F6D2A5A00FE0A40 /* dm_pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dm_pause.png; path = Images/Debug/dm_pause.png; sourceTree = "<group>"; };
 		0A5FADB51F6D2A5A00FE0A40 /* dm_previous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dm_previous.png; path = Images/Debug/dm_previous.png; sourceTree = "<group>"; };
 		0A5FADB61F6D2A5A00FE0A40 /* dm_reset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dm_reset.png; path = Images/Debug/dm_reset.png; sourceTree = "<group>"; };
+		0A5FADC81F6F1D8300FE0A40 /* gray-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gray-background.png"; path = "Images/gray-background.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				0A5FAD9D1F6C0D2C00FE0A40 /* Rivers-en.png */,
+				0A5FADC81F6F1D8300FE0A40 /* gray-background.png */,
 				0A5FADA71F6D2A3D00FE0A40 /* DebugMenu */,
 				0A5FAD1B1F69205600FE0A40 /* art.scnassets */,
 				0A5FAD231F69205600FE0A40 /* Assets.xcassets */,
@@ -510,6 +513,7 @@
 				0A5FADC51F6D2A5A00FE0A40 /* dm_reset.png in Resources */,
 				0A5FADC21F6D2A5A00FE0A40 /* dm_next.png in Resources */,
 				0A5FADBC1F6D2A5A00FE0A40 /* dm_context.png in Resources */,
+				0A5FADC91F6F1D8300FE0A40 /* gray-background.png in Resources */,
 				0A5FAD991F69757300FE0A40 /* InfoPlist.strings in Resources */,
 				0A5FADBD1F6D2A5A00FE0A40 /* dm_cube.png in Resources */,
 				0A5FADC11F6D2A5A00FE0A40 /* dm_github.png in Resources */,

@@ -53,6 +53,14 @@
     
     // configure the view
     scnView.backgroundColor = [UIColor colorWithWhite:0.05 alpha:1.0];
+    
+    self.background = [BackgroundNode backgroundWithTextureNamed:@"gray-background.png"];
+    [self.background colorizeWithColor:[UIColor brownColor]];
+    
+    [self.background setScale:SCNVector3Make(8.0f, 8.0f, 1.0f)];
+    [self.background setPosition:SCNVector3Make(0, 0, 0)];
+    
+    [self.background setup:self.scene.rootNode];
   
     _overlay = [SCNNode node];
     
@@ -95,6 +103,9 @@
     [self setlayout];
     
     // Activate
+    [self.background activate];
+    [self.background fly];
+    
     [_applicationImage activate];
     
     [_copyrightLabel activate];
@@ -110,6 +121,8 @@
 - (void)viewDidDisappear:(BOOL)animated {
     
     // Deactivate
+    [self.background deactivate];
+    
     [_applicationImage deactivate];
     
     [_copyrightLabel deactivate];

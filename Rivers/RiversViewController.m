@@ -328,6 +328,7 @@
                                [[GridMenuItem alloc] initWithType:MENU_ITEM_SWITCH withValue:[DebugOptions optionForKey:@"ShowDebugInformation"] title:@"Debug Info" dismisses:NO action:^ { [self toggleDebugOption:@"ShowDebugInformation"]; }],
                                [[GridMenuItem alloc] initWithType:MENU_ITEM_SLIDER withValue:[[NSUserDefaults standardUserDefaults] valueForKey:kSoundPreference] andMin:0.0f andMax:1.0f title:@"Sound" dismisses:NO floatAction:^(CGFloat value) { [self setSound:value]; }],
                                [[GridMenuItem alloc] initWithType:MENU_ITEM_SLIDER withValue:[[NSUserDefaults standardUserDefaults] valueForKey:kMusicPreference] andMin:0.0f andMax:1.0f title:@"Music" dismisses:NO floatAction:^(CGFloat value) { [self setMusic:value]; }],
+                               [[GridMenuItem alloc] initWithType:MENU_ITEM_SWITCH withValue:[DebugOptions optionForKey:@"ShowBackgroundLayer"] title:@"Background" dismisses:NO action:^ { [self toggleDebugOption:@"ShowBackgroundLayer"]; }],
                                [[GridMenuItem alloc] initWithType:MENU_ITEM_SWITCH withValue:[DebugOptions optionForKey:@"EnableLog"] title:@"Log" dismisses:YES action:^ { [self toggleDebugOption:@"EnableLog"]; }]
                                ];
             
