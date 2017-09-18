@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "Types.h"
+
 #ifndef Rivers_MathHelper_h
 #define Rivers_MathHelper_h
 
@@ -51,6 +53,11 @@ static inline float RoundTof(float value, float roundingValue) {
         return newvalueup;
     else
         return newvaluedown;
+}
+
+static inline int Manhattan(AStarPoint neighbour, AStarPoint end) {
+    
+    return (abs(neighbour.x - end.x) + abs(neighbour.y - end.y));
 }
 
 #endif /* Rivers_MathHelper_h */

@@ -22,6 +22,16 @@ typedef signed int		gsDWORD;
 
 //-------------------------------------------------------------
 
+struct AStarPoint {
+    int x;
+    int y;
+    int g;
+    int f;
+};
+typedef struct AStarPoint AStarPoint;
+
+//-------------------------------------------------------------
+
 typedef NS_ENUM(gsUDWORD, NodeDirection) {
     
     MOVES_LEFT = 1,           // 1

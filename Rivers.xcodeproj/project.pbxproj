@@ -58,6 +58,8 @@
 		0A5FADD41F6FBAD400FE0A40 /* home_panel.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FADD21F6FBAD400FE0A40 /* home_panel.wav */; };
 		0A5FADD51F6FBAD400FE0A40 /* menu_selection.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FADD31F6FBAD400FE0A40 /* menu_selection.wav */; };
 		0A5FADD81F6FBDB700FE0A40 /* main_menu.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FADD71F6FBC2500FE0A40 /* main_menu.m4a */; };
+		0A5FADDB1F6FCF8E00FE0A40 /* AStar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FADDA1F6FCF8E00FE0A40 /* AStar.m */; };
+		0A5FADDF1F6FD4AA00FE0A40 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5FADDE1F6FD4AA00FE0A40 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +168,9 @@
 		0A5FADD21F6FBAD400FE0A40 /* home_panel.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = home_panel.wav; path = Sounds/home_panel.wav; sourceTree = "<group>"; };
 		0A5FADD31F6FBAD400FE0A40 /* menu_selection.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = menu_selection.wav; path = Sounds/menu_selection.wav; sourceTree = "<group>"; };
 		0A5FADD71F6FBC2500FE0A40 /* main_menu.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = main_menu.m4a; path = Music/main_menu.m4a; sourceTree = "<group>"; };
+		0A5FADD91F6FCF8E00FE0A40 /* AStar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AStar.h; sourceTree = "<group>"; };
+		0A5FADDA1F6FCF8E00FE0A40 /* AStar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AStar.m; sourceTree = "<group>"; };
+		0A5FADDE1F6FD4AA00FE0A40 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5FADDF1F6FD4AA00FE0A40 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +206,7 @@
 				0A5FAD301F69205600FE0A40 /* RiversTests */,
 				0A5FAD3B1F69205600FE0A40 /* RiversUITests */,
 				0A5FAD131F69205500FE0A40 /* Products */,
+				0A5FADDD1F6FD4AA00FE0A40 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -225,6 +232,7 @@
 				0A5FAD841F69669E00FE0A40 /* GraphicsHelper.h */,
 				0A5FAD851F69677900FE0A40 /* MathHelper.h */,
 				0A5FAD511F69266100FE0A40 /* Types.h */,
+				0A5FADDC1F6FCFA300FE0A40 /* Algorithms */,
 				0A5FAD731F6965DC00FE0A40 /* Nodes */,
 				0A5FAD4B1F6920D800FE0A40 /* Resources */,
 				0A5FADCC1F6FB71200FE0A40 /* SoundManager */,
@@ -435,6 +443,23 @@
 			name = Music;
 			sourceTree = "<group>";
 		};
+		0A5FADDC1F6FCFA300FE0A40 /* Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FADD91F6FCF8E00FE0A40 /* AStar.h */,
+				0A5FADDA1F6FCF8E00FE0A40 /* AStar.m */,
+			);
+			name = Algorithms;
+			sourceTree = "<group>";
+		};
+		0A5FADDD1F6FD4AA00FE0A40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FADDE1F6FD4AA00FE0A40 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -615,6 +640,7 @@
 				0A5FAD1F1F69205600FE0A40 /* GameSceneViewController.m in Sources */,
 				0A5FAD821F69665700FE0A40 /* LabelNode.m in Sources */,
 				0A5FAD171F69205500FE0A40 /* main.m in Sources */,
+				0A5FADDB1F6FCF8E00FE0A40 /* AStar.m in Sources */,
 				0A5FAD6C1F69650800FE0A40 /* ImageMenuItemView.m in Sources */,
 				0A5FAD551F692DB400FE0A40 /* MainMenuViewController.m in Sources */,
 			);
