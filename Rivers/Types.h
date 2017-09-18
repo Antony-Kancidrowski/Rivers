@@ -30,6 +30,14 @@ struct AStarPoint {
 };
 typedef struct AStarPoint AStarPoint;
 
+typedef NS_ENUM(gsUDWORD, AStarMapType) {
+    
+    ASTAR_MAP_EMPTY = 0,
+    ASTAR_MAP_BLOCK = 1,
+    ASTAR_MAP_START = 2,
+    ASTAR_MAP_END = 3
+};
+
 //-------------------------------------------------------------
 
 typedef NS_ENUM(gsUDWORD, NodeDirection) {

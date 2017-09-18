@@ -11,10 +11,7 @@
 #import "MathHelper.h"
 #import "Types.h"
 
-#define MAP_EMPTY   0
-#define MAP_BLOCK   1
-#define MAP_START   2
-#define MAP_END     3
+
 #define MAP_WIDTH   40
 #define MAP_HEIGHT  40
 #define MAP_OFFSETX 20
@@ -62,22 +59,24 @@
     endPoint.y = rand()%MAP_HEIGHT;
     
     for (int x = 0; x < MAP_WIDTH; x++) {
+        
         for (int y = 0; y < MAP_HEIGHT; y++) {
+            
             if(startPoint.x == x && startPoint.y == y)
             {
-                mapArray[x][y] = MAP_START;
+                mapArray[x][y] = ASTAR_MAP_START;
             }
             else if(endPoint.x == x && endPoint.y == y)
             {
-                mapArray[x][y] = MAP_END;
+                mapArray[x][y] = ASTAR_MAP_END;
             }
             else if (rand()%100 < 20)
             {
-                mapArray[x][y] = MAP_BLOCK;
+                mapArray[x][y] = ASTAR_MAP_BLOCK;
             }
             else
             {
-                mapArray[x][y] = MAP_EMPTY;
+                mapArray[x][y] = ASTAR_MAP_EMPTY;
             }
             gArray[x][y] = -1;
         }
@@ -139,6 +138,7 @@
         if(currentPoint.g <= gArray[currentPoint.x][currentPoint.y])
         {
             AStarPoint neighbour;
+            
             if (diagonalsAuthorized) {
                 // déplacement sur x
                 for(int i = -1; i < 2; i++) {
@@ -152,7 +152,7 @@
                             if( neighbour.x >= 0 && neighbour.x < MAP_WIDTH &&
                                neighbour.y >= 0 && neighbour.y < MAP_HEIGHT &&
                                // obstacle
-                               mapArray[neighbour.x][neighbour.y] != MAP_BLOCK) {
+                               mapArray[neighbour.x][neighbour.y] != ASTAR_MAP_BLOCK) {
                                 neighbour.f = currentPoint.g + 1 + Manhattan(neighbour, endPoint);
                                 if (gArray[neighbour.x][neighbour.y] == -1 ||
                                     gArray[neighbour.x][neighbour.y] > (currentPoint.g + 1)
@@ -183,7 +183,7 @@
                             if( neighbour.x >= 0 && neighbour.x < MAP_WIDTH &&
                                neighbour.y >= 0 && neighbour.y < MAP_HEIGHT &&
                                // obstacle
-                               mapArray[neighbour.x][neighbour.y] != MAP_BLOCK) {
+                               mapArray[neighbour.x][neighbour.y] != ASTAR_MAP_BLOCK) {
                                 neighbour.f = currentPoint.g + 1 + Manhattan(neighbour, endPoint);
                                 if (gArray[neighbour.x][neighbour.y] == -1 ||
                                     gArray[neighbour.x][neighbour.y] > (currentPoint.g + 1)
@@ -202,6 +202,7 @@
         
         if([listPoints count] > 0) {
             AStarPoint point;
+            
             [[listPoints objectAtIndex:0] getValue:&point];
             currentPoint = point;
             
@@ -235,12 +236,13 @@
 - (void)drawPathOnMap {
     
     AStarPoint current;
-    AStarPoint voisin;
+    AStarPoint neighbour;
     BOOL next;
     
     current = endPoint;
     
-    for (int g = gArray[endPoint.x][endPoint.y]; g > 0; g--) {
+    for (int g = (int)gArray[endPoint.x][endPoint.y]; g > 0; g--) {
+        
         next = NO;
         // déplacement sur x
         for(int i = -1; i < 2; i++) {
@@ -248,16 +250,16 @@
             for(int j = -1; j < 2; j++) {
                 // on ne fait pas sur le même point
                 if((i != 0 || j != 0) && !next) {
-                    voisin.x = current.x+i;
-                    voisin.y = current.y+j;
-                    voisin.g = gArray[current.x+i][current.y+j];
-                    if( voisin.g == g-1 )
+                    neighbour.x = current.x+i;
+                    neighbour.y = current.y+j;
+                    neighbour.g = (int)gArray[current.x+i][current.y+j];
+                    if( neighbour.g == g-1 )
                     {
 //                        UIImageView *tmp = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"going.png"]];
 //                        [tmp setFrame:CGRectMake(voisin.x*7+MAP_OFFSETX, voisin.y*7+MAP_OFFSETY, 6, 6)];
 //                        tmp.tag = 777;
 //                        [self.view addSubview:tmp];
-                        current = voisin;
+                        current = neighbour;
                         next = YES;
                     }
                 }
