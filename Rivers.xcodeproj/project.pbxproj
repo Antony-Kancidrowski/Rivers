@@ -54,6 +54,10 @@
 		0A5FADC41F6D2A5A00FE0A40 /* dm_previous.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FADB51F6D2A5A00FE0A40 /* dm_previous.png */; };
 		0A5FADC51F6D2A5A00FE0A40 /* dm_reset.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FADB61F6D2A5A00FE0A40 /* dm_reset.png */; };
 		0A5FADC91F6F1D8300FE0A40 /* gray-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FADC81F6F1D8300FE0A40 /* gray-background.png */; };
+		0A5FADCF1F6FB7AE00FE0A40 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FADCE1F6FB7AE00FE0A40 /* SoundManager.m */; };
+		0A5FADD41F6FBAD400FE0A40 /* home_panel.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FADD21F6FBAD400FE0A40 /* home_panel.wav */; };
+		0A5FADD51F6FBAD400FE0A40 /* menu_selection.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FADD31F6FBAD400FE0A40 /* menu_selection.wav */; };
+		0A5FADD81F6FBDB700FE0A40 /* main_menu.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FADD71F6FBC2500FE0A40 /* main_menu.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +161,11 @@
 		0A5FADB51F6D2A5A00FE0A40 /* dm_previous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dm_previous.png; path = Images/Debug/dm_previous.png; sourceTree = "<group>"; };
 		0A5FADB61F6D2A5A00FE0A40 /* dm_reset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dm_reset.png; path = Images/Debug/dm_reset.png; sourceTree = "<group>"; };
 		0A5FADC81F6F1D8300FE0A40 /* gray-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gray-background.png"; path = "Images/gray-background.png"; sourceTree = "<group>"; };
+		0A5FADCD1F6FB7AE00FE0A40 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
+		0A5FADCE1F6FB7AE00FE0A40 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
+		0A5FADD21F6FBAD400FE0A40 /* home_panel.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = home_panel.wav; path = Sounds/home_panel.wav; sourceTree = "<group>"; };
+		0A5FADD31F6FBAD400FE0A40 /* menu_selection.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = menu_selection.wav; path = Sounds/menu_selection.wav; sourceTree = "<group>"; };
+		0A5FADD71F6FBC2500FE0A40 /* main_menu.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = main_menu.m4a; path = Music/main_menu.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +227,7 @@
 				0A5FAD511F69266100FE0A40 /* Types.h */,
 				0A5FAD731F6965DC00FE0A40 /* Nodes */,
 				0A5FAD4B1F6920D800FE0A40 /* Resources */,
+				0A5FADCC1F6FB71200FE0A40 /* SoundManager */,
 				0A5FAD4A1F6920B600FE0A40 /* ViewControllers */,
 				0A5FAD201F69205600FE0A40 /* Main.storyboard */,
 				0A5FAD251F69205600FE0A40 /* LaunchScreen.storyboard */,
@@ -270,11 +280,9 @@
 		0A5FAD4B1F6920D800FE0A40 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0A5FAD9D1F6C0D2C00FE0A40 /* Rivers-en.png */,
-				0A5FADC81F6F1D8300FE0A40 /* gray-background.png */,
-				0A5FADA71F6D2A3D00FE0A40 /* DebugMenu */,
-				0A5FAD1B1F69205600FE0A40 /* art.scnassets */,
-				0A5FAD231F69205600FE0A40 /* Assets.xcassets */,
+				0A5FADD01F6FB7DE00FE0A40 /* Graphics */,
+				0A5FADD61F6FBBD900FE0A40 /* Music */,
+				0A5FADD11F6FB7F200FE0A40 /* Sounds */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -389,6 +397,44 @@
 			name = DebugMenu;
 			sourceTree = "<group>";
 		};
+		0A5FADCC1F6FB71200FE0A40 /* SoundManager */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FADCD1F6FB7AE00FE0A40 /* SoundManager.h */,
+				0A5FADCE1F6FB7AE00FE0A40 /* SoundManager.m */,
+			);
+			name = SoundManager;
+			sourceTree = "<group>";
+		};
+		0A5FADD01F6FB7DE00FE0A40 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FAD9D1F6C0D2C00FE0A40 /* Rivers-en.png */,
+				0A5FADC81F6F1D8300FE0A40 /* gray-background.png */,
+				0A5FADA71F6D2A3D00FE0A40 /* DebugMenu */,
+				0A5FAD1B1F69205600FE0A40 /* art.scnassets */,
+				0A5FAD231F69205600FE0A40 /* Assets.xcassets */,
+			);
+			name = Graphics;
+			sourceTree = "<group>";
+		};
+		0A5FADD11F6FB7F200FE0A40 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FADD21F6FBAD400FE0A40 /* home_panel.wav */,
+				0A5FADD31F6FBAD400FE0A40 /* menu_selection.wav */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		0A5FADD61F6FBBD900FE0A40 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FADD71F6FBC2500FE0A40 /* main_menu.m4a */,
+			);
+			name = Music;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -498,12 +544,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5FADD81F6FBDB700FE0A40 /* main_menu.m4a in Resources */,
 				0A5FADBE1F6D2A5A00FE0A40 /* dm_download.png in Resources */,
 				0A5FADC31F6D2A5A00FE0A40 /* dm_pause.png in Resources */,
 				0A5FAD1C1F69205600FE0A40 /* art.scnassets in Resources */,
 				0A5FADBB1F6D2A5A00FE0A40 /* dm_bluetooth.png in Resources */,
 				0A5FAD9A1F69757300FE0A40 /* Localizable.strings in Resources */,
 				0A5FADB71F6D2A5A00FE0A40 /* dm_arrow.png in Resources */,
+				0A5FADD41F6FBAD400FE0A40 /* home_panel.wav in Resources */,
 				0A5FAD271F69205600FE0A40 /* LaunchScreen.storyboard in Resources */,
 				0A5FADC41F6D2A5A00FE0A40 /* dm_previous.png in Resources */,
 				0A5FADBA1F6D2A5A00FE0A40 /* dm_block.png in Resources */,
@@ -515,6 +563,7 @@
 				0A5FADBC1F6D2A5A00FE0A40 /* dm_context.png in Resources */,
 				0A5FADC91F6F1D8300FE0A40 /* gray-background.png in Resources */,
 				0A5FAD991F69757300FE0A40 /* InfoPlist.strings in Resources */,
+				0A5FADD51F6FBAD400FE0A40 /* menu_selection.wav in Resources */,
 				0A5FADBD1F6D2A5A00FE0A40 /* dm_cube.png in Resources */,
 				0A5FADC11F6D2A5A00FE0A40 /* dm_github.png in Resources */,
 				0A5FADBF1F6D2A5A00FE0A40 /* dm_enter.png in Resources */,
@@ -552,6 +601,7 @@
 				0A5FAD4F1F69245C00FE0A40 /* DebugOptions.m in Sources */,
 				0A5FAD721F69659E00FE0A40 /* MenuItemView.m in Sources */,
 				0A5FAD6D1F69650800FE0A40 /* SliderMenuItemView.m in Sources */,
+				0A5FADCF1F6FB7AE00FE0A40 /* SoundManager.m in Sources */,
 				0A5FAD6E1F69650800FE0A40 /* StepperMenuItemView.m in Sources */,
 				0A5FAD811F69665700FE0A40 /* ImageNode.m in Sources */,
 				0A5FAD601F69648A00FE0A40 /* GridMenuItem.m in Sources */,

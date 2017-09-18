@@ -267,6 +267,14 @@
 //    [[SoundManager sharedSoundManager] setMusicVolume:volume];
 }
 
+- (void)setZoom:(CGFloat)zoom {
+    
+    DebugOptions *options = [DebugOptions sharedDebugOptions];
+    
+    NSNumber *value = [NSNumber numberWithFloat:zoom];
+    [options setObject:value forKey:@"Zoom"];
+}
+
 #pragma mark - Grid
 
 - (void)showGridWithHeaderFromPoint:(CGPoint)point {
@@ -329,6 +337,7 @@
                                [[GridMenuItem alloc] initWithType:MENU_ITEM_SLIDER withValue:[[NSUserDefaults standardUserDefaults] valueForKey:kSoundPreference] andMin:0.0f andMax:1.0f title:@"Sound" dismisses:NO floatAction:^(CGFloat value) { [self setSound:value]; }],
                                [[GridMenuItem alloc] initWithType:MENU_ITEM_SLIDER withValue:[[NSUserDefaults standardUserDefaults] valueForKey:kMusicPreference] andMin:0.0f andMax:1.0f title:@"Music" dismisses:NO floatAction:^(CGFloat value) { [self setMusic:value]; }],
                                [[GridMenuItem alloc] initWithType:MENU_ITEM_SWITCH withValue:[DebugOptions optionForKey:@"ShowBackgroundLayer"] title:@"Background" dismisses:NO action:^ { [self toggleDebugOption:@"ShowBackgroundLayer"]; }],
+                               [[GridMenuItem alloc] initWithType:MENU_ITEM_SLIDER withValue:[DebugOptions optionForKey:@"Zoom"] andMin:0.5f andMax:1.5f title:@"Zoom" dismisses:NO floatAction:^(CGFloat value) { [self setZoom:value]; [self.camera setYFov:(value - 1.0f) * 25.0f]; }],
                                [[GridMenuItem alloc] initWithType:MENU_ITEM_SWITCH withValue:[DebugOptions optionForKey:@"EnableLog"] title:@"Log" dismisses:YES action:^ { [self toggleDebugOption:@"EnableLog"]; }]
                                ];
             

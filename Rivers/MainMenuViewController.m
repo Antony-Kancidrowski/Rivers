@@ -12,6 +12,8 @@
 #import "ImageNode.h"
 #import "ButtonNode.h"
 
+#import "SoundManager.h"
+
 #import "DebugOptions.h"
 
 @interface MainMenuViewController ()
@@ -100,6 +102,9 @@
     
     [super viewWillAppear:animated];
     
+    [self.scene.rootNode runAction:[[SoundManager sharedSoundManager] rampUpMusic:1.25]];
+    [self.scene.rootNode runAction:[[SoundManager sharedSoundManager] musicActionForKey:@"main_menu_music" loop:-1 autostart:YES]];
+    
     [self setlayout];
     
     // Activate
@@ -116,6 +121,16 @@
     [super viewDidAppear:animated];
     
     [self setlayout];
+    
+    [[SoundManager sharedSoundManager] playMusic];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    
+    // Ramp down music
+    [self.scene.rootNode runAction:[[SoundManager sharedSoundManager] rampDownMusic:1.25]];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -126,6 +141,8 @@
     [_applicationImage deactivate];
     
     [_copyrightLabel deactivate];
+    
+    [[SoundManager sharedSoundManager] stopMusic];
     
     [super viewDidDisappear:animated];
 }
