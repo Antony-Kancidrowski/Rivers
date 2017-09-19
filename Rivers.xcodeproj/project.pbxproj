@@ -98,6 +98,12 @@
 		0A5FAE4B1F716F5000FE0A40 /* selectionArrowRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAE481F716F5000FE0A40 /* selectionArrowRight.png */; };
 		0A5FAE511F71706200FE0A40 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAE4E1F71706200FE0A40 /* Game.m */; };
 		0A5FAE521F71706200FE0A40 /* GamesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAE501F71706200FE0A40 /* GamesManager.m */; };
+		0A5FAE5B1F71765B00FE0A40 /* restore-disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAE551F71765B00FE0A40 /* restore-disabled.png */; };
+		0A5FAE5C1F71765B00FE0A40 /* restore.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAE561F71765B00FE0A40 /* restore.png */; };
+		0A5FAE5D1F71765B00FE0A40 /* shop-disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAE571F71765B00FE0A40 /* shop-disabled.png */; };
+		0A5FAE5E1F71765B00FE0A40 /* shop.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAE581F71765B00FE0A40 /* shop.png */; };
+		0A5FAE5F1F71765B00FE0A40 /* store-open-closed.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAE591F71765B00FE0A40 /* store-open-closed.png */; };
+		0A5FAE601F71765B00FE0A40 /* store-panel.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAE5A1F71765B00FE0A40 /* store-panel.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -268,6 +274,12 @@
 		0A5FAE4E1F71706200FE0A40 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		0A5FAE4F1F71706200FE0A40 /* GamesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamesManager.h; sourceTree = "<group>"; };
 		0A5FAE501F71706200FE0A40 /* GamesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamesManager.m; sourceTree = "<group>"; };
+		0A5FAE551F71765B00FE0A40 /* restore-disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "restore-disabled.png"; path = "Images/Store/restore-disabled.png"; sourceTree = "<group>"; };
+		0A5FAE561F71765B00FE0A40 /* restore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = restore.png; path = Images/Store/restore.png; sourceTree = "<group>"; };
+		0A5FAE571F71765B00FE0A40 /* shop-disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "shop-disabled.png"; path = "Images/Store/shop-disabled.png"; sourceTree = "<group>"; };
+		0A5FAE581F71765B00FE0A40 /* shop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shop.png; path = Images/Store/shop.png; sourceTree = "<group>"; };
+		0A5FAE591F71765B00FE0A40 /* store-open-closed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "store-open-closed.png"; path = "Images/Store/store-open-closed.png"; sourceTree = "<group>"; };
+		0A5FAE5A1F71765B00FE0A40 /* store-panel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "store-panel.png"; path = "Images/Store/store-panel.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -536,6 +548,7 @@
 				0A5FADA71F6D2A3D00FE0A40 /* DebugMenu */,
 				0A5FAE4C1F716F5800FE0A40 /* Selection */,
 				0A5FADED1F710DFC00FE0A40 /* Settings */,
+				0A5FAE541F71764200FE0A40 /* Store */,
 				0A5FAD1B1F69205600FE0A40 /* art.scnassets */,
 				0A5FAD231F69205600FE0A40 /* Assets.xcassets */,
 			);
@@ -756,6 +769,19 @@
 			name = Game;
 			sourceTree = "<group>";
 		};
+		0A5FAE541F71764200FE0A40 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FAE551F71765B00FE0A40 /* restore-disabled.png */,
+				0A5FAE561F71765B00FE0A40 /* restore.png */,
+				0A5FAE571F71765B00FE0A40 /* shop-disabled.png */,
+				0A5FAE581F71765B00FE0A40 /* shop.png */,
+				0A5FAE591F71765B00FE0A40 /* store-open-closed.png */,
+				0A5FAE5A1F71765B00FE0A40 /* store-panel.png */,
+			);
+			name = Store;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -881,19 +907,25 @@
 				0A5FADBB1F6D2A5A00FE0A40 /* dm_bluetooth.png in Resources */,
 				0A5FADF61F710E1B00FE0A40 /* speaker_high.png in Resources */,
 				0A5FADF51F710E1B00FE0A40 /* slider_selection.png in Resources */,
+				0A5FAE5B1F71765B00FE0A40 /* restore-disabled.png in Resources */,
 				0A5FAD9A1F69757300FE0A40 /* Localizable.strings in Resources */,
 				0A5FADB71F6D2A5A00FE0A40 /* dm_arrow.png in Resources */,
+				0A5FAE5C1F71765B00FE0A40 /* restore.png in Resources */,
 				0A5FADD41F6FBAD400FE0A40 /* home_panel.wav in Resources */,
 				0A5FAE4A1F716F5000FE0A40 /* selectionArrowLeft.png in Resources */,
 				0A5FAD271F69205600FE0A40 /* LaunchScreen.storyboard in Resources */,
 				0A5FADC41F6D2A5A00FE0A40 /* dm_previous.png in Resources */,
+				0A5FAE5E1F71765B00FE0A40 /* shop.png in Resources */,
 				0A5FADBA1F6D2A5A00FE0A40 /* dm_block.png in Resources */,
+				0A5FAE601F71765B00FE0A40 /* store-panel.png in Resources */,
 				0A5FAD241F69205600FE0A40 /* Assets.xcassets in Resources */,
 				0A5FAD221F69205600FE0A40 /* Main.storyboard in Resources */,
 				0A5FAD9E1F6C0D2C00FE0A40 /* Rivers-en.png in Resources */,
 				0A5FADC51F6D2A5A00FE0A40 /* dm_reset.png in Resources */,
 				0A5FADF41F710E1B00FE0A40 /* slider_bar.png in Resources */,
+				0A5FAE5F1F71765B00FE0A40 /* store-open-closed.png in Resources */,
 				0A5FAE001F710F9100FE0A40 /* themes_v2.plist in Resources */,
+				0A5FAE5D1F71765B00FE0A40 /* shop-disabled.png in Resources */,
 				0A5FAE0C1F71122B00FE0A40 /* selection_slide.wav in Resources */,
 				0A5FADF31F710E1B00FE0A40 /* settings-panel.png in Resources */,
 				0A5FADC21F6D2A5A00FE0A40 /* dm_next.png in Resources */,
