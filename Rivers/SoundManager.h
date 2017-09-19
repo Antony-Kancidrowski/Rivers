@@ -15,13 +15,14 @@
 
 + (void)preloadHomePanel;
 + (void)preloadMenuSelection;
++ (void)preloadSelectionSlide;
 
 + (void)preloadMainMenuMusic;
 
 
 + (SCNAction *)homePanelSoundActionWithWaitForCompletion:(BOOL)wait;
 + (SCNAction *)menuselectionSoundActionWithWaitForCompletion:(BOOL)wait;
-
++ (SCNAction *)selectionSlideSoundActionWithWaitForCompletion:(BOOL)wait;
 
 - (void)preloadSoundFromFilename:(NSString *)filename withKey:(id)key;
 

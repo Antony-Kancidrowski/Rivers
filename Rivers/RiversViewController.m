@@ -11,6 +11,8 @@
 #import "Configuration.h"
 #import "DebugOptions.h"
 
+#import "SoundManager.h"
+
 #import "AppSpecificValues.h"
 #import "Configuration.h"
 
@@ -251,20 +253,20 @@
     
     NSAssert(((volume >= 0.0f) && (volume <= 1.0f)), @"Invalid volume: range 0.0 to 1.0");
     
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    
-//    [defaults setFloat:volume forKey:kSoundPreference];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    [defaults setFloat:volume forKey:kSoundPreference];
 }
 
 - (void)setMusic:(CGFloat)volume {
     
     NSAssert(((volume >= 0.0f) && (volume <= 1.0f)), @"Invalid volume: range 0.0 to 1.0");
     
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    
-//    [defaults setFloat:volume forKey:kMusicPreference];
-//    
-//    [[SoundManager sharedSoundManager] setMusicVolume:volume];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    [defaults setFloat:volume forKey:kMusicPreference];
+    
+    [[SoundManager sharedSoundManager] setMusicVolume:volume];
 }
 
 - (void)setZoom:(CGFloat)zoom {

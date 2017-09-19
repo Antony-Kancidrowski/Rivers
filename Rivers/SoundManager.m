@@ -52,6 +52,16 @@
     return [[SoundManager sharedSoundManager] soundActionForKey:@"menu_selection_sound" waitForCompletion:wait];
 }
 
++ (void)preloadSelectionSlide {
+    
+    [[SoundManager sharedSoundManager] preloadSoundFromFilename:@"selection_slide.wav" withKey:@"selection_slide_sound"];
+}
+
++ (SCNAction *)selectionSlideSoundActionWithWaitForCompletion:(BOOL)wait {
+    
+    return [[SoundManager sharedSoundManager] soundActionForKey:@"selection_slide_sound" waitForCompletion:wait];
+}
+
 #pragma mark Music
 
 + (void)preloadMainMenuMusic {

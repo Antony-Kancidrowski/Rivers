@@ -60,6 +60,22 @@
 		0A5FADD81F6FBDB700FE0A40 /* main_menu.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FADD71F6FBC2500FE0A40 /* main_menu.m4a */; };
 		0A5FADDB1F6FCF8E00FE0A40 /* AStar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FADDA1F6FCF8E00FE0A40 /* AStar.m */; };
 		0A5FADDF1F6FD4AA00FE0A40 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5FADDE1F6FD4AA00FE0A40 /* CoreGraphics.framework */; };
+		0A5FADE11F7084B700FE0A40 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FADE01F7084B700FE0A40 /* Settings.bundle */; };
+		0A5FADE51F710BD400FE0A40 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FADE41F710BD400FE0A40 /* SettingsViewController.m */; };
+		0A5FADEA1F710CB800FE0A40 /* SliderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FADE71F710CB800FE0A40 /* SliderNode.m */; };
+		0A5FADEB1F710CB800FE0A40 /* VolumeSliderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FADE91F710CB800FE0A40 /* VolumeSliderNode.m */; };
+		0A5FADF31F710E1B00FE0A40 /* settings-panel.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FADEE1F710E1B00FE0A40 /* settings-panel.png */; };
+		0A5FADF41F710E1B00FE0A40 /* slider_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FADEF1F710E1B00FE0A40 /* slider_bar.png */; };
+		0A5FADF51F710E1B00FE0A40 /* slider_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FADF01F710E1B00FE0A40 /* slider_selection.png */; };
+		0A5FADF61F710E1B00FE0A40 /* speaker_high.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FADF11F710E1B00FE0A40 /* speaker_high.png */; };
+		0A5FADF71F710E1B00FE0A40 /* speaker_low.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FADF21F710E1B00FE0A40 /* speaker_low.png */; };
+		0A5FADFB1F710F6C00FE0A40 /* ThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FADFA1F710F6C00FE0A40 /* ThemeManager.m */; };
+		0A5FADFF1F710F9100FE0A40 /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FADFD1F710F9100FE0A40 /* Theme.m */; };
+		0A5FAE001F710F9100FE0A40 /* themes_v2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FADFE1F710F9100FE0A40 /* themes_v2.plist */; };
+		0A5FAE081F71108400FE0A40 /* ThemeBoxManagerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAE031F71108400FE0A40 /* ThemeBoxManagerNode.m */; };
+		0A5FAE091F71108400FE0A40 /* ThemePanelManagerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAE051F71108400FE0A40 /* ThemePanelManagerNode.m */; };
+		0A5FAE0A1F71108400FE0A40 /* ThemePanelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAE071F71108400FE0A40 /* ThemePanelNode.m */; };
+		0A5FAE0C1F71122B00FE0A40 /* selection_slide.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAE0B1F71122B00FE0A40 /* selection_slide.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,8 +156,6 @@
 		0A5FAD8A1F696F2600FE0A40 /* ImageButtonNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageButtonNode.m; sourceTree = "<group>"; };
 		0A5FAD8E1F696F4300FE0A40 /* PanelNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelNode.h; sourceTree = "<group>"; };
 		0A5FAD8F1F696F4300FE0A40 /* PanelNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelNode.m; sourceTree = "<group>"; };
-		0A5FAD921F69752C00FE0A40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		0A5FAD941F69753E00FE0A40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		0A5FAD961F69757300FE0A40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0A5FAD981F69757300FE0A40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0A5FAD9B1F69757A00FE0A40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -171,6 +185,30 @@
 		0A5FADD91F6FCF8E00FE0A40 /* AStar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AStar.h; sourceTree = "<group>"; };
 		0A5FADDA1F6FCF8E00FE0A40 /* AStar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AStar.m; sourceTree = "<group>"; };
 		0A5FADDE1F6FD4AA00FE0A40 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0A5FADE01F7084B700FE0A40 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Rivers/Settings.bundle; sourceTree = "<group>"; };
+		0A5FADE31F710BD400FE0A40 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		0A5FADE41F710BD400FE0A40 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		0A5FADE61F710CB800FE0A40 /* SliderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderNode.h; sourceTree = "<group>"; };
+		0A5FADE71F710CB800FE0A40 /* SliderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderNode.m; sourceTree = "<group>"; };
+		0A5FADE81F710CB800FE0A40 /* VolumeSliderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumeSliderNode.h; sourceTree = "<group>"; };
+		0A5FADE91F710CB800FE0A40 /* VolumeSliderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumeSliderNode.m; sourceTree = "<group>"; };
+		0A5FADEE1F710E1B00FE0A40 /* settings-panel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings-panel.png"; path = "Images/Settings/settings-panel.png"; sourceTree = "<group>"; };
+		0A5FADEF1F710E1B00FE0A40 /* slider_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slider_bar.png; path = Images/Settings/slider_bar.png; sourceTree = "<group>"; };
+		0A5FADF01F710E1B00FE0A40 /* slider_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slider_selection.png; path = Images/Settings/slider_selection.png; sourceTree = "<group>"; };
+		0A5FADF11F710E1B00FE0A40 /* speaker_high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speaker_high.png; path = Images/Settings/speaker_high.png; sourceTree = "<group>"; };
+		0A5FADF21F710E1B00FE0A40 /* speaker_low.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speaker_low.png; path = Images/Settings/speaker_low.png; sourceTree = "<group>"; };
+		0A5FADF91F710F6C00FE0A40 /* ThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeManager.h; sourceTree = "<group>"; };
+		0A5FADFA1F710F6C00FE0A40 /* ThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeManager.m; sourceTree = "<group>"; };
+		0A5FADFC1F710F9100FE0A40 /* Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
+		0A5FADFD1F710F9100FE0A40 /* Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theme.m; sourceTree = "<group>"; };
+		0A5FADFE1F710F9100FE0A40 /* themes_v2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = themes_v2.plist; sourceTree = "<group>"; };
+		0A5FAE021F71108400FE0A40 /* ThemeBoxManagerNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeBoxManagerNode.h; sourceTree = "<group>"; };
+		0A5FAE031F71108400FE0A40 /* ThemeBoxManagerNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeBoxManagerNode.m; sourceTree = "<group>"; };
+		0A5FAE041F71108400FE0A40 /* ThemePanelManagerNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemePanelManagerNode.h; sourceTree = "<group>"; };
+		0A5FAE051F71108400FE0A40 /* ThemePanelManagerNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemePanelManagerNode.m; sourceTree = "<group>"; };
+		0A5FAE061F71108400FE0A40 /* ThemePanelNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemePanelNode.h; sourceTree = "<group>"; };
+		0A5FAE071F71108400FE0A40 /* ThemePanelNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemePanelNode.m; sourceTree = "<group>"; };
+		0A5FAE0B1F71122B00FE0A40 /* selection_slide.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = selection_slide.wav; path = Sounds/selection_slide.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +240,7 @@
 		0A5FAD091F69205500FE0A40 = {
 			isa = PBXGroup;
 			children = (
+				0A5FADE01F7084B700FE0A40 /* Settings.bundle */,
 				0A5FAD141F69205500FE0A40 /* Rivers */,
 				0A5FAD301F69205600FE0A40 /* RiversTests */,
 				0A5FAD3B1F69205600FE0A40 /* RiversUITests */,
@@ -236,6 +275,7 @@
 				0A5FAD731F6965DC00FE0A40 /* Nodes */,
 				0A5FAD4B1F6920D800FE0A40 /* Resources */,
 				0A5FADCC1F6FB71200FE0A40 /* SoundManager */,
+				0A5FADF81F710F0200FE0A40 /* Themes */,
 				0A5FAD4A1F6920B600FE0A40 /* ViewControllers */,
 				0A5FAD201F69205600FE0A40 /* Main.storyboard */,
 				0A5FAD251F69205600FE0A40 /* LaunchScreen.storyboard */,
@@ -281,6 +321,7 @@
 				0A5FAD4C1F69210A00FE0A40 /* Game */,
 				0A5FAD591F69645100FE0A40 /* GridMenu */,
 				0A5FAD521F692D6E00FE0A40 /* MainMenu */,
+				0A5FADE21F710B9700FE0A40 /* Settings */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -359,6 +400,8 @@
 				0A5FAD7D1F69665700FE0A40 /* LabelNode.m */,
 				0A5FAD861F696F0700FE0A40 /* Buttons */,
 				0A5FAD8D1F696F3100FE0A40 /* Panels */,
+				0A5FADEC1F710CC000FE0A40 /* Slider */,
+				0A5FAE011F71105700FE0A40 /* Themes */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";
@@ -420,6 +463,7 @@
 				0A5FAD9D1F6C0D2C00FE0A40 /* Rivers-en.png */,
 				0A5FADC81F6F1D8300FE0A40 /* gray-background.png */,
 				0A5FADA71F6D2A3D00FE0A40 /* DebugMenu */,
+				0A5FADED1F710DFC00FE0A40 /* Settings */,
 				0A5FAD1B1F69205600FE0A40 /* art.scnassets */,
 				0A5FAD231F69205600FE0A40 /* Assets.xcassets */,
 			);
@@ -429,6 +473,7 @@
 		0A5FADD11F6FB7F200FE0A40 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				0A5FAE0B1F71122B00FE0A40 /* selection_slide.wav */,
 				0A5FADD21F6FBAD400FE0A40 /* home_panel.wav */,
 				0A5FADD31F6FBAD400FE0A40 /* menu_selection.wav */,
 			);
@@ -458,6 +503,63 @@
 				0A5FADDE1F6FD4AA00FE0A40 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0A5FADE21F710B9700FE0A40 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FADE31F710BD400FE0A40 /* SettingsViewController.h */,
+				0A5FADE41F710BD400FE0A40 /* SettingsViewController.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		0A5FADEC1F710CC000FE0A40 /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FADE61F710CB800FE0A40 /* SliderNode.h */,
+				0A5FADE71F710CB800FE0A40 /* SliderNode.m */,
+				0A5FADE81F710CB800FE0A40 /* VolumeSliderNode.h */,
+				0A5FADE91F710CB800FE0A40 /* VolumeSliderNode.m */,
+			);
+			name = Slider;
+			sourceTree = "<group>";
+		};
+		0A5FADED1F710DFC00FE0A40 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FADEE1F710E1B00FE0A40 /* settings-panel.png */,
+				0A5FADEF1F710E1B00FE0A40 /* slider_bar.png */,
+				0A5FADF01F710E1B00FE0A40 /* slider_selection.png */,
+				0A5FADF11F710E1B00FE0A40 /* speaker_high.png */,
+				0A5FADF21F710E1B00FE0A40 /* speaker_low.png */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		0A5FADF81F710F0200FE0A40 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FADFC1F710F9100FE0A40 /* Theme.h */,
+				0A5FADFD1F710F9100FE0A40 /* Theme.m */,
+				0A5FADFE1F710F9100FE0A40 /* themes_v2.plist */,
+				0A5FADF91F710F6C00FE0A40 /* ThemeManager.h */,
+				0A5FADFA1F710F6C00FE0A40 /* ThemeManager.m */,
+			);
+			name = Themes;
+			sourceTree = "<group>";
+		};
+		0A5FAE011F71105700FE0A40 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FAE021F71108400FE0A40 /* ThemeBoxManagerNode.h */,
+				0A5FAE031F71108400FE0A40 /* ThemeBoxManagerNode.m */,
+				0A5FAE041F71108400FE0A40 /* ThemePanelManagerNode.h */,
+				0A5FAE051F71108400FE0A40 /* ThemePanelManagerNode.m */,
+				0A5FAE061F71108400FE0A40 /* ThemePanelNode.h */,
+				0A5FAE071F71108400FE0A40 /* ThemePanelNode.m */,
+			);
+			name = Themes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -574,6 +676,8 @@
 				0A5FADC31F6D2A5A00FE0A40 /* dm_pause.png in Resources */,
 				0A5FAD1C1F69205600FE0A40 /* art.scnassets in Resources */,
 				0A5FADBB1F6D2A5A00FE0A40 /* dm_bluetooth.png in Resources */,
+				0A5FADF61F710E1B00FE0A40 /* speaker_high.png in Resources */,
+				0A5FADF51F710E1B00FE0A40 /* slider_selection.png in Resources */,
 				0A5FAD9A1F69757300FE0A40 /* Localizable.strings in Resources */,
 				0A5FADB71F6D2A5A00FE0A40 /* dm_arrow.png in Resources */,
 				0A5FADD41F6FBAD400FE0A40 /* home_panel.wav in Resources */,
@@ -584,6 +688,10 @@
 				0A5FAD221F69205600FE0A40 /* Main.storyboard in Resources */,
 				0A5FAD9E1F6C0D2C00FE0A40 /* Rivers-en.png in Resources */,
 				0A5FADC51F6D2A5A00FE0A40 /* dm_reset.png in Resources */,
+				0A5FADF41F710E1B00FE0A40 /* slider_bar.png in Resources */,
+				0A5FAE001F710F9100FE0A40 /* themes_v2.plist in Resources */,
+				0A5FAE0C1F71122B00FE0A40 /* selection_slide.wav in Resources */,
+				0A5FADF31F710E1B00FE0A40 /* settings-panel.png in Resources */,
 				0A5FADC21F6D2A5A00FE0A40 /* dm_next.png in Resources */,
 				0A5FADBC1F6D2A5A00FE0A40 /* dm_context.png in Resources */,
 				0A5FADC91F6F1D8300FE0A40 /* gray-background.png in Resources */,
@@ -594,6 +702,8 @@
 				0A5FADBF1F6D2A5A00FE0A40 /* dm_enter.png in Resources */,
 				0A5FADC01F6D2A5A00FE0A40 /* dm_file.png in Resources */,
 				0A5FADB81F6D2A5A00FE0A40 /* dm_attachment.png in Resources */,
+				0A5FADE11F7084B700FE0A40 /* Settings.bundle in Resources */,
+				0A5FADF71F710E1B00FE0A40 /* speaker_low.png in Resources */,
 				0A5FADB91F6D2A5A00FE0A40 /* dm_back.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,6 +729,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5FAE091F71108400FE0A40 /* ThemePanelManagerNode.m in Sources */,
 				0A5FAD6F1F69650800FE0A40 /* SwitchMenuItemView.m in Sources */,
 				0A5FAD8B1F696F2600FE0A40 /* ButtonNode.m in Sources */,
 				0A5FAD7F1F69665700FE0A40 /* BackgroundNode.m in Sources */,
@@ -634,13 +745,20 @@
 				0A5FAD8C1F696F2600FE0A40 /* ImageButtonNode.m in Sources */,
 				0A5FAD7E1F69665700FE0A40 /* ActorNode.m in Sources */,
 				0A5FAD581F6963CC00FE0A40 /* RiversViewController.m in Sources */,
+				0A5FADFB1F710F6C00FE0A40 /* ThemeManager.m in Sources */,
 				0A5FAD1A1F69205500FE0A40 /* AppDelegate.m in Sources */,
 				0A5FAD621F69648A00FE0A40 /* GridMenuViewController.m in Sources */,
+				0A5FADFF1F710F9100FE0A40 /* Theme.m in Sources */,
+				0A5FAE0A1F71108400FE0A40 /* ThemePanelNode.m in Sources */,
+				0A5FAE081F71108400FE0A40 /* ThemeBoxManagerNode.m in Sources */,
 				0A5FAD611F69648A00FE0A40 /* GridMenuScrollView.m in Sources */,
+				0A5FADEA1F710CB800FE0A40 /* SliderNode.m in Sources */,
+				0A5FADEB1F710CB800FE0A40 /* VolumeSliderNode.m in Sources */,
 				0A5FAD1F1F69205600FE0A40 /* GameSceneViewController.m in Sources */,
 				0A5FAD821F69665700FE0A40 /* LabelNode.m in Sources */,
 				0A5FAD171F69205500FE0A40 /* main.m in Sources */,
 				0A5FADDB1F6FCF8E00FE0A40 /* AStar.m in Sources */,
+				0A5FADE51F710BD400FE0A40 /* SettingsViewController.m in Sources */,
 				0A5FAD6C1F69650800FE0A40 /* ImageMenuItemView.m in Sources */,
 				0A5FAD551F692DB400FE0A40 /* MainMenuViewController.m in Sources */,
 			);
@@ -682,7 +800,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				0A5FAD211F69205600FE0A40 /* Base */,
-				0A5FAD921F69752C00FE0A40 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -691,7 +808,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				0A5FAD261F69205600FE0A40 /* Base */,
-				0A5FAD941F69753E00FE0A40 /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

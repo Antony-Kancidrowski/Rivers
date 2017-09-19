@@ -11,6 +11,7 @@
 
 // Notifications
 #define kRiversNotification             @"Rivers"
+#define kThemeChangedNotification       @"ThemeChanged"
 #define kSelectionPanelsNotification    @"SelectionPanelsNotification"
 
 static const float BUTTON_SIZE = 0.1f; //0.08f;

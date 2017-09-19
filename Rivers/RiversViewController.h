@@ -35,6 +35,9 @@
 - (void)applicationWillResignActive;
 - (void)applicationDidBecomeActive;
 
+- (void)setSound:(CGFloat)volume;
+- (void)setMusic:(CGFloat)volume;
+
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer;
 
 - (void)renderer:(id<SCNSceneRenderer>)aRenderer didRenderScene:(SCNScene*)scene atTime:(NSTimeInterval)time;
