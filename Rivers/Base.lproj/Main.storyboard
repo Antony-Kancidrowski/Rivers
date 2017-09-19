@@ -20,6 +20,10 @@
                             <outletCollection property="gestureRecognizers" destination="QFP-G4-X8T" appends="YES" id="Ffb-ld-hze"/>
                         </connections>
                     </sceneKitView>
+                    <connections>
+                        <segue destination="XmH-6u-9l5" kind="presentation" identifier="SettingsSegue" modalPresentationStyle="overCurrentContext" id="BFl-qq-XWX"/>
+                        <segue destination="BV1-FR-VrT" kind="showDetail" identifier="GameSegue" id="Kub-gA-XUd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QpN-HI-80w" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <pinchGestureRecognizer cancelsTouchesInView="NO" delaysTouchesEnded="NO" id="QFP-G4-X8T">
@@ -30,6 +34,42 @@
                 </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-825" y="37"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="VeC-0L-fF3">
+            <objects>
+                <viewController storyboardIdentifier="SettingsScene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XmH-6u-9l5" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <sceneKitView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="nzh-X9-rpv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Iuv-hH-jek" appends="YES" id="1SY-Ok-sSc"/>
+                            <outletCollection property="gestureRecognizers" destination="QFb-GD-MvR" appends="YES" id="Xth-jX-XnX"/>
+                            <outletCollection property="gestureRecognizers" destination="h5J-hH-NCk" appends="YES" id="jQz-bv-bTt"/>
+                        </connections>
+                    </sceneKitView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Imd-3l-Yz0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer cancelsTouchesInView="NO" delaysTouchesEnded="NO" allowableMovement="10" minimumPressDuration="0.025000000000000001" id="h5J-hH-NCk">
+                    <connections>
+                        <action selector="longPressAction:" destination="XmH-6u-9l5" id="zr2-mb-TWw"/>
+                        <outlet property="delegate" destination="XmH-6u-9l5" id="Nb3-OK-Lts"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="QFb-GD-MvR">
+                    <connections>
+                        <action selector="panAction:" destination="XmH-6u-9l5" id="YiR-5q-xDZ"/>
+                        <outlet property="delegate" destination="XmH-6u-9l5" id="IsG-AQ-g3r"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="Iuv-hH-jek">
+                    <connections>
+                        <action selector="pinchAction:" destination="XmH-6u-9l5" id="7nI-H1-9Lv"/>
+                        <outlet property="delegate" destination="XmH-6u-9l5" id="w3Z-i4-pe7"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-826" y="812"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -43,6 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="65" y="36"/>
         </scene>
     </scenes>
 </document>
