@@ -41,6 +41,7 @@
 #define kInAppPurchasesDownloadedNotification       @"InAppPurchasesDownloaded"
 #define kInAppPurchasePanelsNotification            @"InAppPurchasePanels"
 #define kSelectionPanelsNotification                @"SelectionPanelsNotification"
+#define kMasterKeyChangeNotification                @"MasterKeyChange"
 
 static const float BUTTON_SIZE = 0.1f; //0.08f;
 static const float BUTTON_OFFSET = 0.265f;

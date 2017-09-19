@@ -50,6 +50,15 @@ typedef NS_ENUM(gsUDWORD, NodeDirection) {
 
 //-------------------------------------------------------------
 
+typedef NS_ENUM(NSInteger, GameType)
+{
+    ZenGame,
+    ReverseGame,
+    TimedGame
+};
+
+//-------------------------------------------------------------
+
 #ifdef __BLOCKS__
 typedef void (^dispatch_block_float_t)(CGFloat value);
 #endif
