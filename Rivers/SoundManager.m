@@ -62,6 +62,16 @@
     return [[SoundManager sharedSoundManager] soundActionForKey:@"selection_slide_sound" waitForCompletion:wait];
 }
 
++ (void)preloadAchievement {
+    
+    [[SoundManager sharedSoundManager] preloadSoundFromFilename:@"achievement.wav" withKey:@"achievement"];
+}
+
++ (SCNAction *)achievementSoundActionWithWaitForCompletion:(BOOL)wait {
+    
+    return [[SoundManager sharedSoundManager] soundActionForKey:@"achievement" waitForCompletion:wait];
+}
+
 #pragma mark Music
 
 + (void)preloadMainMenuMusic {

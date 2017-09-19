@@ -16,6 +16,7 @@
 + (void)preloadHomePanel;
 + (void)preloadMenuSelection;
 + (void)preloadSelectionSlide;
++ (void)preloadAchievement;
 
 + (void)preloadMainMenuMusic;
 
@@ -23,6 +24,7 @@
 + (SCNAction *)homePanelSoundActionWithWaitForCompletion:(BOOL)wait;
 + (SCNAction *)menuselectionSoundActionWithWaitForCompletion:(BOOL)wait;
 + (SCNAction *)selectionSlideSoundActionWithWaitForCompletion:(BOOL)wait;
++ (SCNAction *)achievementSoundActionWithWaitForCompletion:(BOOL)wait;
 
 - (void)preloadSoundFromFilename:(NSString *)filename withKey:(id)key;
 

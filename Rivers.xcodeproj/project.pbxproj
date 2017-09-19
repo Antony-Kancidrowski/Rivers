@@ -76,6 +76,15 @@
 		0A5FAE091F71108400FE0A40 /* ThemePanelManagerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAE051F71108400FE0A40 /* ThemePanelManagerNode.m */; };
 		0A5FAE0A1F71108400FE0A40 /* ThemePanelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAE071F71108400FE0A40 /* ThemePanelNode.m */; };
 		0A5FAE0C1F71122B00FE0A40 /* selection_slide.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAE0B1F71122B00FE0A40 /* selection_slide.wav */; };
+		0A5FAE0F1F7120E900FE0A40 /* MainMenuNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAE0E1F7120E900FE0A40 /* MainMenuNode.m */; };
+		0A5FAE131F71219700FE0A40 /* GameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAE121F71219700FE0A40 /* GameCenterManager.m */; };
+		0A5FAE181F7121C800FE0A40 /* AchievementPopupManagerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAE151F7121C800FE0A40 /* AchievementPopupManagerNode.m */; };
+		0A5FAE191F7121C800FE0A40 /* AchievementPopupNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAE171F7121C800FE0A40 /* AchievementPopupNode.m */; };
+		0A5FAE1C1F71230E00FE0A40 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5FAE1B1F71230E00FE0A40 /* GameKit.framework */; };
+		0A5FAE1E1F7124A600FE0A40 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5FAE1D1F7124A600FE0A40 /* StoreKit.framework */; };
+		0A5FAE231F71267300FE0A40 /* InAppPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAE201F71267300FE0A40 /* InAppPurchase.m */; };
+		0A5FAE241F71267300FE0A40 /* InAppPurchasesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAE221F71267300FE0A40 /* InAppPurchasesManager.m */; };
+		0A5FAE281F71286700FE0A40 /* LeaderboardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAE271F71286700FE0A40 /* LeaderboardModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +218,22 @@
 		0A5FAE061F71108400FE0A40 /* ThemePanelNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemePanelNode.h; sourceTree = "<group>"; };
 		0A5FAE071F71108400FE0A40 /* ThemePanelNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemePanelNode.m; sourceTree = "<group>"; };
 		0A5FAE0B1F71122B00FE0A40 /* selection_slide.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = selection_slide.wav; path = Sounds/selection_slide.wav; sourceTree = "<group>"; };
+		0A5FAE0D1F7120E900FE0A40 /* MainMenuNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuNode.h; sourceTree = "<group>"; };
+		0A5FAE0E1F7120E900FE0A40 /* MainMenuNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuNode.m; sourceTree = "<group>"; };
+		0A5FAE111F71219700FE0A40 /* GameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCenterManager.h; sourceTree = "<group>"; };
+		0A5FAE121F71219700FE0A40 /* GameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCenterManager.m; sourceTree = "<group>"; };
+		0A5FAE141F7121C800FE0A40 /* AchievementPopupManagerNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievementPopupManagerNode.h; sourceTree = "<group>"; };
+		0A5FAE151F7121C800FE0A40 /* AchievementPopupManagerNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementPopupManagerNode.m; sourceTree = "<group>"; };
+		0A5FAE161F7121C800FE0A40 /* AchievementPopupNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievementPopupNode.h; sourceTree = "<group>"; };
+		0A5FAE171F7121C800FE0A40 /* AchievementPopupNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievementPopupNode.m; sourceTree = "<group>"; };
+		0A5FAE1B1F71230E00FE0A40 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		0A5FAE1D1F7124A600FE0A40 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		0A5FAE1F1F71267300FE0A40 /* InAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPurchase.h; sourceTree = "<group>"; };
+		0A5FAE201F71267300FE0A40 /* InAppPurchase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppPurchase.m; sourceTree = "<group>"; };
+		0A5FAE211F71267300FE0A40 /* InAppPurchasesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPurchasesManager.h; sourceTree = "<group>"; };
+		0A5FAE221F71267300FE0A40 /* InAppPurchasesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppPurchasesManager.m; sourceTree = "<group>"; };
+		0A5FAE261F71286700FE0A40 /* LeaderboardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderboardModel.h; sourceTree = "<group>"; };
+		0A5FAE271F71286700FE0A40 /* LeaderboardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderboardModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,7 +241,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5FAE1E1F7124A600FE0A40 /* StoreKit.framework in Frameworks */,
 				0A5FADDF1F6FD4AA00FE0A40 /* CoreGraphics.framework in Frameworks */,
+				0A5FAE1C1F71230E00FE0A40 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,10 +295,14 @@
 				0A5FAD501F69258000FE0A40 /* Configuration.h */,
 				0A5FAD4D1F69245C00FE0A40 /* DebugOptions.h */,
 				0A5FAD4E1F69245C00FE0A40 /* DebugOptions.m */,
+				0A5FAE111F71219700FE0A40 /* GameCenterManager.h */,
+				0A5FAE121F71219700FE0A40 /* GameCenterManager.m */,
 				0A5FAD841F69669E00FE0A40 /* GraphicsHelper.h */,
 				0A5FAD851F69677900FE0A40 /* MathHelper.h */,
 				0A5FAD511F69266100FE0A40 /* Types.h */,
 				0A5FADDC1F6FCFA300FE0A40 /* Algorithms */,
+				0A5FAE251F71269D00FE0A40 /* InAppPurchase */,
+				0A5FAE2A1F71287C00FE0A40 /* Leaderboard */,
 				0A5FAD731F6965DC00FE0A40 /* Nodes */,
 				0A5FAD4B1F6920D800FE0A40 /* Resources */,
 				0A5FADCC1F6FB71200FE0A40 /* SoundManager */,
@@ -398,8 +429,10 @@
 				0A5FAD7B1F69665700FE0A40 /* ImageNode.m */,
 				0A5FAD7C1F69665700FE0A40 /* LabelNode.h */,
 				0A5FAD7D1F69665700FE0A40 /* LabelNode.m */,
+				0A5FAE1A1F7121D200FE0A40 /* Achievements */,
 				0A5FAD861F696F0700FE0A40 /* Buttons */,
 				0A5FAD8D1F696F3100FE0A40 /* Panels */,
+				0A5FAE101F7120EF00FE0A40 /* MainMenu */,
 				0A5FADEC1F710CC000FE0A40 /* Slider */,
 				0A5FAE011F71105700FE0A40 /* Themes */,
 			);
@@ -500,6 +533,8 @@
 		0A5FADDD1F6FD4AA00FE0A40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A5FAE1D1F7124A600FE0A40 /* StoreKit.framework */,
+				0A5FAE1B1F71230E00FE0A40 /* GameKit.framework */,
 				0A5FADDE1F6FD4AA00FE0A40 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
@@ -560,6 +595,54 @@
 				0A5FAE071F71108400FE0A40 /* ThemePanelNode.m */,
 			);
 			name = Themes;
+			sourceTree = "<group>";
+		};
+		0A5FAE101F7120EF00FE0A40 /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FAE0D1F7120E900FE0A40 /* MainMenuNode.h */,
+				0A5FAE0E1F7120E900FE0A40 /* MainMenuNode.m */,
+			);
+			name = MainMenu;
+			sourceTree = "<group>";
+		};
+		0A5FAE1A1F7121D200FE0A40 /* Achievements */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FAE141F7121C800FE0A40 /* AchievementPopupManagerNode.h */,
+				0A5FAE151F7121C800FE0A40 /* AchievementPopupManagerNode.m */,
+				0A5FAE161F7121C800FE0A40 /* AchievementPopupNode.h */,
+				0A5FAE171F7121C800FE0A40 /* AchievementPopupNode.m */,
+			);
+			name = Achievements;
+			sourceTree = "<group>";
+		};
+		0A5FAE251F71269D00FE0A40 /* InAppPurchase */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FAE1F1F71267300FE0A40 /* InAppPurchase.h */,
+				0A5FAE201F71267300FE0A40 /* InAppPurchase.m */,
+				0A5FAE211F71267300FE0A40 /* InAppPurchasesManager.h */,
+				0A5FAE221F71267300FE0A40 /* InAppPurchasesManager.m */,
+			);
+			name = InAppPurchase;
+			sourceTree = "<group>";
+		};
+		0A5FAE291F71287100FE0A40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FAE261F71286700FE0A40 /* LeaderboardModel.h */,
+				0A5FAE271F71286700FE0A40 /* LeaderboardModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0A5FAE2A1F71287C00FE0A40 /* Leaderboard */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FAE291F71287100FE0A40 /* Model */,
+			);
+			name = Leaderboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -631,6 +714,14 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = G383QJKTQ7;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					0A5FAD2C1F69205600FE0A40 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -742,9 +833,12 @@
 				0A5FAD811F69665700FE0A40 /* ImageNode.m in Sources */,
 				0A5FAD601F69648A00FE0A40 /* GridMenuItem.m in Sources */,
 				0A5FAD901F696F4300FE0A40 /* PanelNode.m in Sources */,
+				0A5FAE231F71267300FE0A40 /* InAppPurchase.m in Sources */,
 				0A5FAD8C1F696F2600FE0A40 /* ImageButtonNode.m in Sources */,
+				0A5FAE241F71267300FE0A40 /* InAppPurchasesManager.m in Sources */,
 				0A5FAD7E1F69665700FE0A40 /* ActorNode.m in Sources */,
 				0A5FAD581F6963CC00FE0A40 /* RiversViewController.m in Sources */,
+				0A5FAE131F71219700FE0A40 /* GameCenterManager.m in Sources */,
 				0A5FADFB1F710F6C00FE0A40 /* ThemeManager.m in Sources */,
 				0A5FAD1A1F69205500FE0A40 /* AppDelegate.m in Sources */,
 				0A5FAD621F69648A00FE0A40 /* GridMenuViewController.m in Sources */,
@@ -752,6 +846,8 @@
 				0A5FAE0A1F71108400FE0A40 /* ThemePanelNode.m in Sources */,
 				0A5FAE081F71108400FE0A40 /* ThemeBoxManagerNode.m in Sources */,
 				0A5FAD611F69648A00FE0A40 /* GridMenuScrollView.m in Sources */,
+				0A5FAE281F71286700FE0A40 /* LeaderboardModel.m in Sources */,
+				0A5FAE181F7121C800FE0A40 /* AchievementPopupManagerNode.m in Sources */,
 				0A5FADEA1F710CB800FE0A40 /* SliderNode.m in Sources */,
 				0A5FADEB1F710CB800FE0A40 /* VolumeSliderNode.m in Sources */,
 				0A5FAD1F1F69205600FE0A40 /* GameSceneViewController.m in Sources */,
@@ -759,6 +855,8 @@
 				0A5FAD171F69205500FE0A40 /* main.m in Sources */,
 				0A5FADDB1F6FCF8E00FE0A40 /* AStar.m in Sources */,
 				0A5FADE51F710BD400FE0A40 /* SettingsViewController.m in Sources */,
+				0A5FAE191F7121C800FE0A40 /* AchievementPopupNode.m in Sources */,
+				0A5FAE0F1F7120E900FE0A40 /* MainMenuNode.m in Sources */,
 				0A5FAD6C1F69650800FE0A40 /* ImageMenuItemView.m in Sources */,
 				0A5FAD551F692DB400FE0A40 /* MainMenuViewController.m in Sources */,
 			);
