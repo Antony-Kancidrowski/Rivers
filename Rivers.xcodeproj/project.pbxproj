@@ -85,6 +85,7 @@
 		0A5FAE231F71267300FE0A40 /* InAppPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAE201F71267300FE0A40 /* InAppPurchase.m */; };
 		0A5FAE241F71267300FE0A40 /* InAppPurchasesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAE221F71267300FE0A40 /* InAppPurchasesManager.m */; };
 		0A5FAE281F71286700FE0A40 /* LeaderboardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAE271F71286700FE0A40 /* LeaderboardModel.m */; };
+		0A5FAE2C1F714FD600FE0A40 /* achievement.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAE2B1F714FD600FE0A40 /* achievement.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,6 +235,7 @@
 		0A5FAE221F71267300FE0A40 /* InAppPurchasesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppPurchasesManager.m; sourceTree = "<group>"; };
 		0A5FAE261F71286700FE0A40 /* LeaderboardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderboardModel.h; sourceTree = "<group>"; };
 		0A5FAE271F71286700FE0A40 /* LeaderboardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderboardModel.m; sourceTree = "<group>"; };
+		0A5FAE2B1F714FD600FE0A40 /* achievement.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = achievement.wav; path = Sounds/achievement.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -506,9 +508,10 @@
 		0A5FADD11F6FB7F200FE0A40 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				0A5FAE0B1F71122B00FE0A40 /* selection_slide.wav */,
+				0A5FAE2B1F714FD600FE0A40 /* achievement.wav */,
 				0A5FADD21F6FBAD400FE0A40 /* home_panel.wav */,
 				0A5FADD31F6FBAD400FE0A40 /* menu_selection.wav */,
+				0A5FAE0B1F71122B00FE0A40 /* selection_slide.wav */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -793,6 +796,7 @@
 				0A5FADBF1F6D2A5A00FE0A40 /* dm_enter.png in Resources */,
 				0A5FADC01F6D2A5A00FE0A40 /* dm_file.png in Resources */,
 				0A5FADB81F6D2A5A00FE0A40 /* dm_attachment.png in Resources */,
+				0A5FAE2C1F714FD600FE0A40 /* achievement.wav in Resources */,
 				0A5FADE11F7084B700FE0A40 /* Settings.bundle in Resources */,
 				0A5FADF71F710E1B00FE0A40 /* speaker_low.png in Resources */,
 				0A5FADB91F6D2A5A00FE0A40 /* dm_back.png in Resources */,

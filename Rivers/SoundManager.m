@@ -64,12 +64,12 @@
 
 + (void)preloadAchievement {
     
-    [[SoundManager sharedSoundManager] preloadSoundFromFilename:@"achievement.wav" withKey:@"achievement"];
+    [[SoundManager sharedSoundManager] preloadSoundFromFilename:@"achievement.wav" withKey:@"achievement_sound"];
 }
 
 + (SCNAction *)achievementSoundActionWithWaitForCompletion:(BOOL)wait {
     
-    return [[SoundManager sharedSoundManager] soundActionForKey:@"achievement" waitForCompletion:wait];
+    return [[SoundManager sharedSoundManager] soundActionForKey:@"achievement_sound" waitForCompletion:wait];
 }
 
 #pragma mark Music
