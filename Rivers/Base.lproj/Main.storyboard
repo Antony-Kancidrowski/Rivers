@@ -51,7 +51,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QpN-HI-80w" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer cancelsTouchesInView="NO" delaysTouchesEnded="NO" allowableMovement="10" minimumPressDuration="0.5" id="52O-40-kGl">
+                <pongPressGestureRecognizer cancelsTouchesInView="NO" delaysTouchesEnded="NO" allowableMovement="10" minimumPressDuration="0.025000000000000001" id="52O-40-kGl">
                     <connections>
                         <action selector="longPressAction:" destination="gwW-gJ-8Zg" id="Vkj-kV-bdn"/>
                         <outlet property="delegate" destination="dDQ-bR-3ni" id="hyc-Xs-d8o"/>

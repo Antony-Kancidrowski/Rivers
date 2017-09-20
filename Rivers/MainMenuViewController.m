@@ -71,7 +71,12 @@
   
     _overlay = [SCNNode node];
     
-    [_overlay setPosition:SCNVector3Make(0.0f, 0.0f, 0.0f)];
+    SCNCamera *cam = scnView.pointOfView.camera;
+    SCNMatrix4 pt = cam.projectionTransform;
+    
+    CGFloat z = (pt.m11 / 2.4f) * self.aspectRatio;
+    
+    [_overlay setPosition:SCNVector3Make(0.0f, 0.0f, z)];
     [self.scene.rootNode addChildNode:_overlay];
     [_overlay setScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
     
@@ -84,7 +89,7 @@
     
     _storeButton = [ImageButtonNode imageButtonWithName:nil andButtonColor:nil andTagName:@"shop" andTagAlignment:TagHorizontalAlignmentCenter];
     
-    [_storeButton setScale:SCNVector3Make(0.5f, 0.5f, 1.0f)];
+    [_storeButton setScale:SCNVector3Make(0.4f, 0.4f, 1.0f)];
     
     [_storeButton addPressSoundAction:[SoundManager menuselectionSoundActionWithWaitForCompletion:NO]];
     
@@ -270,39 +275,41 @@
                 [selectedButton pressButton];
             }
         }
-        
     } else if (gestureRecognize.state == UIGestureRecognizerStateChanged) {
         
-        if (selectedButton != nil) {
+        if (selectedButton == nil) {
             
-            // Retrieve the SCNView
-            SCNView *scnView = (SCNView *)self.view;
+            return;
+        }
+        
+        // Retrieve the SCNView
+        SCNView *scnView = (SCNView *)self.view;
+        
+        // Check what nodes are tapped
+        CGPoint p = [gestureRecognize locationInView:scnView];
+        
+        NSArray *hitResults = [scnView hitTest:p options:nil];
+        
+        // Check that we clicked on at least one object
+        if([hitResults count] > 0) {
             
-            CGPoint point = [gestureRecognize locationInView:scnView];
+            ButtonNode *current;
             
-            NSArray *hitResults = [scnView hitTest:point options:nil];
-            
-            // Check that we clicked on at least one object
-            if([hitResults count] > 0) {
+            for (int i = 0; i < [hitResults count]; ++i) {
                 
-                ButtonNode *current;
+                SCNHitTestResult *result = [hitResults objectAtIndex:i];
                 
-                for (int i = 0; i < [hitResults count]; ++i) {
+                if ([result.node.parentNode isKindOfClass:[ButtonNode class]]) {
                     
-                    SCNHitTestResult *result = [hitResults objectAtIndex:i];
+                    current = (ButtonNode *)result.node.parentNode;
                     
-                    if ([result.node.parentNode isKindOfClass:[ButtonNode class]]) {
+                    if (current == selectedButton) {
                         
-                        current = (ButtonNode *)result.node.parentNode;
-                        
-                        if (current == selectedButton) {
-                            
-                            return;
-                        }
-                    } else {
-                        
-                        continue;
+                        return;
                     }
+                } else {
+                    
+                    continue;
                 }
             }
             
