@@ -67,8 +67,8 @@
     
     storePanel = [ImageNode imageWithTextureNamed:@"store-panel.png" andSize:CGSizeMake(1.85f, 2.45f)];
     
-    CGFloat scaleX = 2.45f;
-    CGFloat scaleY = 2.45f;// * self.aspectRatio;
+    CGFloat scaleX = 2.00f;
+    CGFloat scaleY = 2.00f;// * self.aspectRatio;
     
     [storePanel setScale:SCNVector3Make(scaleX, scaleY, 1.0f)];
     

@@ -46,7 +46,7 @@
                         </connections>
                     </sceneKitView>
                     <connections>
-                        <segue destination="XmH-6u-9l5" kind="presentation" identifier="SettingsSegue" modalPresentationStyle="overCurrentContext" id="BFl-qq-XWX"/>
+                        <segue destination="XmH-6u-9l5" kind="presentation" identifier="SettingsSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="BFl-qq-XWX"/>
                         <segue destination="BV1-FR-VrT" kind="showDetail" identifier="GameSegue" id="Kub-gA-XUd"/>
                     </connections>
                 </viewController>
@@ -70,7 +70,7 @@
         <scene sceneID="VeC-0L-fF3">
             <objects>
                 <viewController storyboardIdentifier="SettingsScene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XmH-6u-9l5" customClass="SettingsViewController" sceneMemberID="viewController">
-                    <sceneKitView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="nzh-X9-rpv">
+                    <sceneKitView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" id="nzh-X9-rpv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <connections>

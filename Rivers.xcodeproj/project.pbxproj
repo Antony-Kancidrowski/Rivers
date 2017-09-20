@@ -104,6 +104,10 @@
 		0A5FAE5E1F71765B00FE0A40 /* shop.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAE581F71765B00FE0A40 /* shop.png */; };
 		0A5FAE5F1F71765B00FE0A40 /* store-open-closed.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAE591F71765B00FE0A40 /* store-open-closed.png */; };
 		0A5FAE601F71765B00FE0A40 /* store-panel.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAE5A1F71765B00FE0A40 /* store-panel.png */; };
+		0AE2EB2E1F72A277002D3E0B /* black-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE2EB2A1F727A1D002D3E0B /* black-background.png */; };
+		0AE2EB2F1F72A277002D3E0B /* graybutton-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE2EB2C1F729DA5002D3E0B /* graybutton-down.png */; };
+		0AE2EB301F72A277002D3E0B /* graybutton-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE2EB2D1F729DA5002D3E0B /* graybutton-up.png */; };
+		0AE2EB311F72A277002D3E0B /* menu-close-x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE2EB291F72795C002D3E0B /* menu-close-x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -282,6 +286,8 @@
 		0A5FAE5A1F71765B00FE0A40 /* store-panel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "store-panel.png"; path = "Images/Store/store-panel.png"; sourceTree = "<group>"; };
 		0AE2EB291F72795C002D3E0B /* menu-close-x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-close-x.png"; path = "Images/menu-close-x.png"; sourceTree = "<group>"; };
 		0AE2EB2A1F727A1D002D3E0B /* black-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "black-background.png"; path = "Images/black-background.png"; sourceTree = "<group>"; };
+		0AE2EB2C1F729DA5002D3E0B /* graybutton-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "graybutton-down.png"; path = "Images/Buttons/graybutton-down.png"; sourceTree = "<group>"; };
+		0AE2EB2D1F729DA5002D3E0B /* graybutton-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "graybutton-up.png"; path = "Images/Buttons/graybutton-up.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -545,9 +551,9 @@
 			isa = PBXGroup;
 			children = (
 				0A5FAD9D1F6C0D2C00FE0A40 /* Rivers-en.png */,
-				0AE2EB291F72795C002D3E0B /* menu-close-x.png */,
 				0A5FAE2F1F716C9200FE0A40 /* Achievements */,
 				0A5FAE301F716CA200FE0A40 /* Background */,
+				0AE2EB2B1F729D47002D3E0B /* Buttons */,
 				0A5FADA71F6D2A3D00FE0A40 /* DebugMenu */,
 				0A5FAE4C1F716F5800FE0A40 /* Selection */,
 				0A5FADED1F710DFC00FE0A40 /* Settings */,
@@ -786,6 +792,16 @@
 			name = Store;
 			sourceTree = "<group>";
 		};
+		0AE2EB2B1F729D47002D3E0B /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				0AE2EB2C1F729DA5002D3E0B /* graybutton-down.png */,
+				0AE2EB2D1F729DA5002D3E0B /* graybutton-up.png */,
+				0AE2EB291F72795C002D3E0B /* menu-close-x.png */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -903,6 +919,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AE2EB2E1F72A277002D3E0B /* black-background.png in Resources */,
+				0AE2EB2F1F72A277002D3E0B /* graybutton-down.png in Resources */,
+				0AE2EB301F72A277002D3E0B /* graybutton-up.png in Resources */,
+				0AE2EB311F72A277002D3E0B /* menu-close-x.png in Resources */,
 				0A5FADD81F6FBDB700FE0A40 /* main_menu.m4a in Resources */,
 				0A5FADBE1F6D2A5A00FE0A40 /* dm_download.png in Resources */,
 				0A5FADC31F6D2A5A00FE0A40 /* dm_pause.png in Resources */,

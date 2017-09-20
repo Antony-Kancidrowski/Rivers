@@ -95,7 +95,7 @@ static const CGFloat tagScaleY = 0.8f;
                 break;
         }
         
-        NSString *enabledTag = [NSString stringWithFormat:@"%@", tag];
+        NSString *enabledTag = [NSString stringWithFormat:@"%@.png", tag];
         tagEnabledImage = [ImageNode imageWithTextureNamed:enabledTag];
         
         [tagEnabledImage setScale:SCNVector3Make(tagScaleX, tagScaleY, 1.0f)];
@@ -106,7 +106,7 @@ static const CGFloat tagScaleY = 0.8f;
         
         [tagEnabledImage setup:self];
         
-        NSString *disabledTag = [NSString stringWithFormat:@"%@-disabled.", tag];
+        NSString *disabledTag = [NSString stringWithFormat:@"%@-disabled.png", tag];
         tagDisabledImage = [ImageNode imageWithTextureNamed:disabledTag];
         
         [tagDisabledImage setScale:SCNVector3Make(tagScaleX, tagScaleY, 1.0f)];
