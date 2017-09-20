@@ -38,6 +38,9 @@
 
 @synthesize aspectRatio;
 
+@synthesize xmultiplier;
+@synthesize ymultiplier;
+
 @synthesize disableGestures;
 @synthesize allowCameraControl;
 

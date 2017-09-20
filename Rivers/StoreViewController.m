@@ -248,6 +248,57 @@
     [super viewDidDisappear:animated];
 }
 
+#pragma mark - Autorotation and Layout
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration {
+    
+    [self setlayout];
+}
+
+- (void)setlayout {
+    
+    // Retrieve the SCNView
+    SCNView *scnView = (SCNView *)self.view;
+    
+    SCNCamera *cam = scnView.pointOfView.camera;
+    
+    SCNMatrix4 pt = cam.projectionTransform;
+    
+    CGFloat z = (pt.m11 / 2.0f) * self.aspectRatio;
+    
+    UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+    
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
+        
+        self.xmultiplier = self.view.frame.size.width / 320.0f;
+        self.ymultiplier = self.view.frame.size.height / 480.0f;
+    } else if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        
+        self.xmultiplier = self.view.frame.size.width / 768.0f;
+        self.ymultiplier = self.view.frame.size.height / 1024.0f;
+    }
+    
+    if (interfaceOrientation == UIInterfaceOrientationPortrait) {
+        
+        if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
+            NSLog(@"UIInterfaceOrientationPortrait");
+    } else {
+        
+        self.xmultiplier *= self.view.frame.size.width / self.view.frame.size.height;
+        self.ymultiplier *= self.view.frame.size.width / self.view.frame.size.height;
+        
+        if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
+            NSLog(@"UIInterfaceOrientationLandscape");
+    }
+    
+    // TODO: Layout
+    
+    if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
+        NSLog(@"Camera projection transform %f, %f", pt.m33, pt.m43);
+}
+
+#pragma mark - Gestures
+
 - (IBAction)longPressAction:(UILongPressGestureRecognizer *)gestureRecognize {
     
     if (gestureRecognize.state == UIGestureRecognizerStateBegan) {

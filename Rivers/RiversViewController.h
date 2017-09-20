@@ -25,6 +25,9 @@
 
 @property (assign, nonatomic) NSUInteger frameCount;
 
+@property (assign, nonatomic) CGFloat xmultiplier;
+@property (assign, nonatomic) CGFloat ymultiplier;
+
 @property (assign, nonatomic) BOOL disableGestures;
 @property (assign, nonatomic) BOOL allowCameraControl;
 

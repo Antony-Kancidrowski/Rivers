@@ -84,7 +84,7 @@
     
     _storeButton = [ImageButtonNode imageButtonWithName:nil andButtonColor:nil andTagName:@"shop" andTagAlignment:TagHorizontalAlignmentCenter];
     
-    [_storeButton setScale:SCNVector3Make(0.6f, 0.6f, 1.0f)];
+    [_storeButton setScale:SCNVector3Make(0.5f, 0.5f, 1.0f)];
     
     [_storeButton addPressSoundAction:[SoundManager menuselectionSoundActionWithWaitForCompletion:NO]];
     
@@ -184,11 +184,36 @@
     
     CGFloat z = (pt.m11 / 2.0f) * self.aspectRatio;
     
-    [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43, z)];
+    UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
     
-    [_storeButton setPosition:SCNVector3Make(-pt.m33, (pt.m43 * 8.0 / 10.0), z)];
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
+        
+        self.xmultiplier = self.view.frame.size.width / 320.0f;
+        self.ymultiplier = self.view.frame.size.height / 480.0f;
+    } else if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        
+        self.xmultiplier = self.view.frame.size.width / 768.0f;
+        self.ymultiplier = self.view.frame.size.height / 1024.0f;
+    }
+    
+    if (interfaceOrientation == UIInterfaceOrientationPortrait) {
+        
+        if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
+            NSLog(@"UIInterfaceOrientationPortrait");
+    } else {
+        
+        self.xmultiplier *= self.view.frame.size.width / self.view.frame.size.height;
+        self.ymultiplier *= self.view.frame.size.width / self.view.frame.size.height;
+        
+        if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
+            NSLog(@"UIInterfaceOrientationLandscape");
+    }
+    
+    [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43 * self.ymultiplier, z)];
+    
+    [_storeButton setPosition:SCNVector3Make(-pt.m33 * self.xmultiplier, (pt.m43 * 7.5 / 10.0) * self.ymultiplier, z)];
 
-    [_copyrightLabel setPosition:SCNVector3Make(0.0f, pt.m43, z)];
+    [_copyrightLabel setPosition:SCNVector3Make(0.0f, pt.m43 * self.ymultiplier, z)];
     
     if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
         NSLog(@"Camera projection transform %f, %f", pt.m33, pt.m43);
