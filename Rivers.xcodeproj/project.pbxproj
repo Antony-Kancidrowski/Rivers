@@ -280,6 +280,8 @@
 		0A5FAE581F71765B00FE0A40 /* shop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shop.png; path = Images/Store/shop.png; sourceTree = "<group>"; };
 		0A5FAE591F71765B00FE0A40 /* store-open-closed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "store-open-closed.png"; path = "Images/Store/store-open-closed.png"; sourceTree = "<group>"; };
 		0A5FAE5A1F71765B00FE0A40 /* store-panel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "store-panel.png"; path = "Images/Store/store-panel.png"; sourceTree = "<group>"; };
+		0AE2EB291F72795C002D3E0B /* menu-close-x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-close-x.png"; path = "Images/menu-close-x.png"; sourceTree = "<group>"; };
+		0AE2EB2A1F727A1D002D3E0B /* black-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "black-background.png"; path = "Images/black-background.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -543,6 +545,7 @@
 			isa = PBXGroup;
 			children = (
 				0A5FAD9D1F6C0D2C00FE0A40 /* Rivers-en.png */,
+				0AE2EB291F72795C002D3E0B /* menu-close-x.png */,
 				0A5FAE2F1F716C9200FE0A40 /* Achievements */,
 				0A5FAE301F716CA200FE0A40 /* Background */,
 				0A5FADA71F6D2A3D00FE0A40 /* DebugMenu */,
@@ -710,6 +713,7 @@
 			isa = PBXGroup;
 			children = (
 				0A5FADC81F6F1D8300FE0A40 /* gray-background.png */,
+				0AE2EB2A1F727A1D002D3E0B /* black-background.png */,
 			);
 			name = Background;
 			sourceTree = "<group>";
@@ -1274,6 +1278,7 @@
 				0A5FAD431F69205600FE0A40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A5FAD441F69205600FE0A40 /* Build configuration list for PBXNativeTarget "RiversTests" */ = {
 			isa = XCConfigurationList;
@@ -1282,6 +1287,7 @@
 				0A5FAD461F69205600FE0A40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A5FAD471F69205600FE0A40 /* Build configuration list for PBXNativeTarget "RiversUITests" */ = {
 			isa = XCConfigurationList;
@@ -1290,6 +1296,7 @@
 				0A5FAD491F69205600FE0A40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

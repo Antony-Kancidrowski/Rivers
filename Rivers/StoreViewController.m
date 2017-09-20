@@ -62,7 +62,6 @@
     
     [self.background setScale:SCNVector3Make(8.0f, 8.0f, 0.0f)];
     [self.background setPosition:SCNVector3Zero];
-    [self.background setEulerAngles:SCNVector3Make(0.25f, 0.0f, 0.0f)];
     
     [self.background setup:self.scene.rootNode];
     
@@ -72,8 +71,6 @@
     CGFloat scaleY = 2.45f;// * self.aspectRatio;
     
     [storePanel setScale:SCNVector3Make(scaleX, scaleY, 1.0f)];
-    [storePanel setPosition:SCNVector3Make(0.0f, 0.25f, 0.1f)];
-    [storePanel setEulerAngles:SCNVector3Make(0.25f, 0.0f, 0.0f)];
     
     [storePanel setup:self.scene.rootNode];
     
@@ -87,7 +84,7 @@
     
     storePanelManager = [StorePanelManagerNode new];
     [storePanelManager setScale:SCNVector3Make(1.85f / 2.45f, 1.85f / 2.45f, 1.0f)];
-    [storePanelManager setPosition:SCNVector3Make(0.0f, 0.35f, 0.0f)];
+    [storePanelManager setPosition:SCNVector3Make(0.0f, 0.0f, 0.0f)];
     
     [storePanelManager setDelegate:self];
     [storePanelManager setup:storePanel];
@@ -103,7 +100,6 @@
     
     [headerText setScale:SCNVector3Make(0.3f, 0.2f, 1.0f)];
     [headerText setPosition:SCNVector3Make(0.0f, 0.925f, 1.4f)];
-    [headerText setEulerAngles:SCNVector3Zero];
     
     [headerText setup:storePanel];
     
@@ -112,7 +108,6 @@
     
     [openClosedText setScale:SCNVector3Make(0.5f, 0.35f, 1.0f)];
     [openClosedText setPosition:SCNVector3Make(0.0f, -0.15f, 0.5f)];
-    [openClosedText setEulerAngles:SCNVector3Zero];
     [openClosedText setOpacity:0.5f];
     
     [openClosedText setup:openClosed];

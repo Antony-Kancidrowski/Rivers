@@ -11,6 +11,7 @@
 #import "Configuration.h"
 #import "DebugOptions.h"
 
+#import "GameCenterManager.h"
 #import "SoundManager.h"
 
 #import "AppSpecificValues.h"
@@ -104,6 +105,11 @@
 - (void)viewWillAppear:(BOOL)animated {
     
     [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveGameCenterAuthenticatedNotification:)
+                                                 name:@"GameCenterAuthenticated"
+                                               object:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(applicationWillResignActive)
                                                  name:UIApplicationWillResignActiveNotification
                                                object:NULL];
@@ -149,10 +155,20 @@
 
 - (void)applicationWillResignActive {
     
+    [[GameCenterManager sharedGameCenterManager] setIsAuthenticated:NO];
 }
 
 - (void)applicationDidBecomeActive {
     
+}
+
+- (void)receiveGameCenterAuthenticatedNotification:(NSNotification *)notification {
+    
+    if ([[notification name] isEqualToString:@"GameCenterAuthenticated"]) {
+        
+    }
+    
+    // TODO: Respond to authentication change
 }
 
 - (void)receiveShowDebugInformationNotification:(NSNotification *)notification {
@@ -411,6 +427,23 @@
     
     if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
         NSLog(@"Grid Menu %@ dismissed.", gridMenu.title);
+}
+
+#pragma mark Navigation
+
+- (void)store {
+    
+    if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
+        NSLog(@"Navigate to store.");
+    
+    UIViewController *storeController = [self.storyboard instantiateViewControllerWithIdentifier:@"StoreScene"];
+    
+    [storeController setDefinesPresentationContext:YES];
+    
+    [storeController setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+    [storeController setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+    
+    [self presentViewController:storeController animated:YES completion:nil];
 }
 
 #pragma mark SCNSceneRendererDelegate

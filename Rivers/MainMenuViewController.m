@@ -10,6 +10,8 @@
 
 #import "LabelNode.h"
 #import "ImageNode.h"
+
+#import "ImageButtonNode.h"
 #import "ButtonNode.h"
 
 #import "SoundManager.h"
@@ -22,6 +24,9 @@
 }
 
 @property (nonatomic, strong) SCNNode *overlay;
+
+@property (nonatomic, strong) MainMenuNode *mainMenuNode;
+@property (nonatomic, strong) ImageButtonNode *storeButton;
 
 @property (nonatomic, strong) ImageNode *applicationImage;
 @property (nonatomic, strong) LabelNode *copyrightLabel;
@@ -77,6 +82,16 @@
     
     [_applicationImage setup:_overlay];
     
+    _storeButton = [ImageButtonNode imageButtonWithName:nil andButtonColor:nil andTagName:@"shop" andTagAlignment:TagHorizontalAlignmentCenter];
+    
+    [_storeButton setScale:SCNVector3Make(0.6f, 0.6f, 1.0f)];
+    
+    [_storeButton addPressSoundAction:[SoundManager menuselectionSoundActionWithWaitForCompletion:NO]];
+    
+    [_storeButton addTarget:self action:@selector(store) forControlEvent:ButtonNodeControlEventTouchUpInside];
+    [_storeButton setup:_overlay];
+    
+    
     NSShadow *myShadow = [NSShadow new];
     [myShadow setShadowColor:[UIColor blackColor]];
     [myShadow setShadowBlurRadius:5.0];
@@ -113,6 +128,8 @@
     
     [_applicationImage activate];
     
+    [_storeButton activate];
+    
     [_copyrightLabel activate];
 }
 
@@ -140,13 +157,14 @@
     
     [_applicationImage deactivate];
     
+    [_storeButton deactivate];
+    
     [_copyrightLabel deactivate];
     
     [[SoundManager sharedSoundManager] stopMusic];
     
     [super viewDidDisappear:animated];
 }
-
 
 #pragma mark - Autorotation and Layout
 
@@ -167,6 +185,8 @@
     CGFloat z = (pt.m11 / 2.0f) * self.aspectRatio;
     
     [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43, z)];
+    
+    [_storeButton setPosition:SCNVector3Make(-pt.m33, (pt.m43 * 8.0 / 10.0), z)];
 
     [_copyrightLabel setPosition:SCNVector3Make(0.0f, pt.m43, z)];
     
@@ -275,6 +295,110 @@
             [selectedButton releaseButton];
             selectedButton = nil;
         }
+    }
+}
+
+#pragma mark - Navigation
+
+- (void)playGame {
+    
+    if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
+        NSLog(@"Navigate to Game Type.");
+    
+    [self performSegueWithIdentifier:@"GameSegue" sender:self];
+    
+}
+
+- (void)tutorial {
+    
+    if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
+        NSLog(@"Navigate to tutorial.");
+    
+    [self performSegueWithIdentifier:@"TutorialSegue" sender:self];
+    
+}
+
+- (void)settings {
+    
+    if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
+        NSLog(@"Navigate to settings.");
+    
+    [self performSegueWithIdentifier:@"SettingsSegue" sender:self];
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    [super prepareForSegue:segue sender:sender];
+    
+    if ([segue.identifier isEqualToString:@"GameSegue"]) {
+        
+        [[SoundManager sharedSoundManager] stopMusic];
+        
+        //        [mainMenuNode runAction:menuOff];
+        
+        // TODO: Setup details to pass to segue
+        
+    } else if ([segue.identifier isEqualToString:@"TutorialSegue"]) {
+        
+        [[SoundManager sharedSoundManager] stopMusic];
+        
+        //        [mainMenuNode runAction:menuOff];
+        
+        // TODO: Setup details to pass to segue
+        
+    } else if ([segue.identifier isEqualToString:@"SettingsSegue"]) {
+        
+        // TODO: Setup details to pass to segue
+        
+    }
+}
+
+#pragma mark GameCenter View Controllers
+
+- (void)leaderBoard {
+    
+    GKGameCenterViewController *leaderboardController = [GKGameCenterViewController new];
+    
+    if (leaderboardController != NULL)
+    {
+        leaderboardController.gameCenterDelegate = self;
+        
+        leaderboardController.leaderboardIdentifier = kZenLeaderboardID;
+        leaderboardController.leaderboardTimeScope = GKLeaderboardTimeScopeAllTime;
+        
+        [self presentViewController:leaderboardController animated:YES completion:nil];
+    }
+}
+
+- (void)achievements {
+    
+    GKGameCenterViewController *achievements = [GKGameCenterViewController new];
+    
+    if (achievements != NULL)
+    {
+        achievements.gameCenterDelegate = self;
+        
+        [self presentViewController:achievements animated:YES completion:nil];
+    }
+}
+
+- (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController {
+    
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+
+#pragma mark Authentication
+
+- (void)receiveGameCenterAuthenticatedNotification:(NSNotification *)notification {
+    
+    [super receiveGameCenterAuthenticatedNotification:notification];
+    
+    if ([[notification name] isEqualToString:@"GameCenterAuthenticated"]) {
+        
+        [_mainMenuNode authenticateGKPlayer:([GKLocalPlayer localPlayer].authenticated)];
     }
 }
 

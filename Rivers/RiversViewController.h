@@ -32,13 +32,17 @@
 
 - (BOOL)toggleDebugOption:(NSString *)optionId;
 
-- (void)applicationWillResignActive;
-- (void)applicationDidBecomeActive;
-
 - (void)setSound:(CGFloat)volume;
 - (void)setMusic:(CGFloat)volume;
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer;
+
+- (void)applicationWillResignActive;
+- (void)applicationDidBecomeActive;
+
+- (void)store;
+
+- (void)receiveGameCenterAuthenticatedNotification:(NSNotification *)notification;
 
 - (void)renderer:(id<SCNSceneRenderer>)aRenderer didRenderScene:(SCNScene*)scene atTime:(NSTimeInterval)time;
 

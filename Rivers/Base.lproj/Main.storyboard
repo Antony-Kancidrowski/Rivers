@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gwW-gJ-8Zg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gwW-gJ-8Zg">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Store View Controller-->
+        <scene sceneID="aUf-75-eAk">
+            <objects>
+                <viewController storyboardIdentifier="StoreScene" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WuC-lJ-opN" customClass="StoreViewController" sceneMemberID="viewController">
+                    <sceneKitView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" id="6io-BU-GEg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="T4W-9z-2MI" appends="YES" id="98x-jA-I3Z"/>
+                        </connections>
+                    </sceneKitView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eu2-7v-aCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer cancelsTouchesInView="NO" delaysTouchesEnded="NO" allowableMovement="10" minimumPressDuration="0.025000000000000001" id="T4W-9z-2MI">
+                    <connections>
+                        <action selector="longPressAction:" destination="WuC-lJ-opN" id="WOw-YT-O1c"/>
+                        <outlet property="delegate" destination="WuC-lJ-opN" id="0Ro-Ij-bEV"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pinchGestureRecognizer id="Dp7-iV-6Y3"/>
+            </objects>
+            <point key="canvasLocation" x="-826" y="-699"/>
+        </scene>
         <!--Main Menu View Controller-->
         <scene sceneID="RN6-8b-WSF">
             <objects>
@@ -18,6 +42,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="QFP-G4-X8T" appends="YES" id="Ffb-ld-hze"/>
+                            <outletCollection property="gestureRecognizers" destination="52O-40-kGl" appends="YES" id="Ii2-xb-tB6"/>
                         </connections>
                     </sceneKitView>
                     <connections>
@@ -26,6 +51,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QpN-HI-80w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer cancelsTouchesInView="NO" delaysTouchesEnded="NO" allowableMovement="10" minimumPressDuration="0.5" id="52O-40-kGl">
+                    <connections>
+                        <action selector="longPressAction:" destination="gwW-gJ-8Zg" id="Vkj-kV-bdn"/>
+                        <outlet property="delegate" destination="dDQ-bR-3ni" id="hyc-Xs-d8o"/>
+                    </connections>
+                </pongPressGestureRecognizer>
                 <pinchGestureRecognizer cancelsTouchesInView="NO" delaysTouchesEnded="NO" id="QFP-G4-X8T">
                     <connections>
                         <action selector="pinchAction:" destination="gwW-gJ-8Zg" id="MAI-GG-qwZ"/>

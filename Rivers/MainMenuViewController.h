@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "GameCenterManager.h"
+#import "MainMenuNode.h"
+
 #import "RiversViewController.h"
 
-@interface MainMenuViewController : RiversViewController
+@interface MainMenuViewController : RiversViewController <GKGameCenterControllerDelegate, MainMenuDelegate>
 
 @end
