@@ -263,9 +263,7 @@
     SCNCamera *cam = scnView.pointOfView.camera;
     
     SCNMatrix4 pt = cam.projectionTransform;
-    
-    CGFloat z = (pt.m11 / 2.0f) * self.aspectRatio;
-    
+
     UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
     
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {

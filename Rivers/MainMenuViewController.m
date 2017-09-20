@@ -182,8 +182,6 @@
     
     SCNMatrix4 pt = cam.projectionTransform;
     
-    CGFloat z = (pt.m11 / 2.0f) * self.aspectRatio;
-    
     UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
     
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
@@ -209,11 +207,11 @@
             NSLog(@"UIInterfaceOrientationLandscape");
     }
     
-    [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43 * self.ymultiplier, z)];
+    [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43 * self.ymultiplier, 0.0f)];
     
-    [_storeButton setPosition:SCNVector3Make(-pt.m33 * self.xmultiplier, (pt.m43 * 7.5 / 10.0) * self.ymultiplier, z)];
+    [_storeButton setPosition:SCNVector3Make(-pt.m33 * self.xmultiplier, (pt.m43 * 7.5 / 10.0) * self.ymultiplier, 0.0f)];
 
-    [_copyrightLabel setPosition:SCNVector3Make(0.0f, pt.m43 * self.ymultiplier, z)];
+    [_copyrightLabel setPosition:SCNVector3Make(0.0f, pt.m43 * self.ymultiplier, 0.0f)];
     
     if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
         NSLog(@"Camera projection transform %f, %f", pt.m33, pt.m43);
