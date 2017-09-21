@@ -83,7 +83,23 @@
     
     [self.camera activate:self.scene.rootNode];
     
-    [self.camera setYFov:(self.aspectRatio * 16.0)];
+    if (IS_IPAD) {
+        
+        [self.camera setYFov:14.0f];
+        
+    } else if (IS_IPHONE_6) {
+        
+        [self.camera setYFov:15.0f];
+        
+    } else if (IS_IPHONE_5) {
+        
+        [self.camera setYFov:20.0f];
+        
+    } else if (IS_IPHONE)  {
+        
+        [self.camera setYFov:14.0f];
+        
+    }
     
     // create and add an ambient light to the scene
     SCNNode *ambientLightNode = [SCNNode node];
