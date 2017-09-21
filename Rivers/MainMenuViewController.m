@@ -74,7 +74,7 @@
     SCNCamera *cam = scnView.pointOfView.camera;
     SCNMatrix4 pt = cam.projectionTransform;
     
-    CGFloat z = (pt.m11 / 2.4f) * self.aspectRatio;
+    CGFloat z = 0.0; //(pt.m11 / 2.4f) * self.aspectRatio;
     
     [_overlay setPosition:SCNVector3Make(0.0f, 0.0f, z)];
     [self.scene.rootNode addChildNode:_overlay];
