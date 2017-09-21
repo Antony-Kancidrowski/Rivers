@@ -17,6 +17,16 @@
 
 "Rivers" = "Rivers";
 
+"Play Game" = "Play Game";
+"Tutorial" = "Tutorial";
+"Leaderboards" = "Leaderboards";
+"Achievements" = "Achievements";
+"Settings" = "Settings";
+"Store" = "Store";
+
+"Purchase" = "Buy";
+"Restore" = "Restore";
+
 /* Debug Strings */
 
 "MAINMENU" = "MAIN MENU";

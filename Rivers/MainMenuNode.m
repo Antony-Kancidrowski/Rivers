@@ -30,8 +30,6 @@
 
 @implementation MainMenuNode
 
-@synthesize adjustment;
-
 - (void)setup:(SCNNode *)parentNode {
     
     [super setup:parentNode];
@@ -45,10 +43,10 @@
     [blockButton setLabelWithText:NSLocalizedString(@"Play Game", nil) withFontNamed:@"Futura" fontSize:36 fontColor:[UIColor whiteColor]];
     [blockButton setLabelFixedWidth:menuWidth];
     [blockButton setLabelFixedHeight:menuHeight];
-    [blockButton setLabelPosition:SCNVector3Make(0.0f, -0.18f, 0.05f)];
+    [blockButton setLabelPosition:SCNVector3Make(0.0f, -0.1f, 0.05f)];
     
     [blockButton setScale:SCNVector3Make(1.0f * scale, 1.0f * scale, 1.0f)];
-    [blockButton setPosition:SCNVector3Make(0, 0.05 * self.adjustment, 0.0f)];
+    [blockButton setPosition:SCNVector3Make(0, 1.0, 0.0f)];
     
     [blockButton addPressSoundAction:[SoundManager menuselectionSoundActionWithWaitForCompletion:NO]];
     
@@ -59,10 +57,10 @@
     [tutorialButton setLabelWithText:NSLocalizedString(@"Tutorial", nil) withFontNamed:@"Futura" fontSize:36 fontColor:[UIColor whiteColor]];
     [tutorialButton setLabelFixedWidth:menuWidth];
     [tutorialButton setLabelFixedHeight:menuHeight];
-    [tutorialButton setLabelPosition:SCNVector3Make(0.0f, -0.18f, 0.05f)];
+    [tutorialButton setLabelPosition:SCNVector3Make(0.0f, -0.1f, 0.05f)];
     
     [tutorialButton setScale:SCNVector3Make(1.0f * scale, 1.0f * scale, 1.0f)];
-    [tutorialButton setPosition:SCNVector3Make(0, -0.45f * self.adjustment, 0.0f)];
+    [tutorialButton setPosition:SCNVector3Make(0, 0.50f, 0.0f)];
     
     [tutorialButton addPressSoundAction:[SoundManager menuselectionSoundActionWithWaitForCompletion:NO]];
     
@@ -73,10 +71,10 @@
     [trophyButton setLabelWithText:NSLocalizedString(@"Leaderboards", nil) withFontNamed:@"Futura" fontSize:36 fontColor:[UIColor whiteColor]];
     [trophyButton setLabelFixedWidth:menuWidth];
     [trophyButton setLabelFixedHeight:menuHeight];
-    [trophyButton setLabelPosition:SCNVector3Make(0.0f, -0.18f, 0.05f)];
+    [trophyButton setLabelPosition:SCNVector3Make(0.0f, -0.1f, 0.05f)];
     
     [trophyButton setScale:SCNVector3Make(1.0f * scale, 1.0f * scale, 1.0f)];
-    [trophyButton setPosition:SCNVector3Make(0, -0.95f * self.adjustment, 0.0f)];
+    [trophyButton setPosition:SCNVector3Make(0, 0.0f, 0.0f)];
     [trophyButton EnableButton:NO];
     
     [trophyButton addPressSoundAction:[SoundManager menuselectionSoundActionWithWaitForCompletion:NO]];
@@ -88,10 +86,10 @@
     [starButton setLabelWithText:NSLocalizedString(@"Achievements", nil) withFontNamed:@"Futura" fontSize:36 fontColor:[UIColor whiteColor]];
     [starButton setLabelFixedWidth:menuWidth];
     [starButton setLabelFixedHeight:menuHeight];
-    [starButton setLabelPosition:SCNVector3Make(0.0f, -0.18f, 0.05f)];
+    [starButton setLabelPosition:SCNVector3Make(0.0f, -0.1f, 0.05f)];
     
     [starButton setScale:SCNVector3Make(1.0f * scale, 1.0f * scale, 1.0f)];
-    [starButton setPosition:SCNVector3Make(0, -1.45f * self.adjustment, 0.0f)];
+    [starButton setPosition:SCNVector3Make(0, -0.50f, 0.0f)];
     [starButton EnableButton:NO];
     
     [starButton addPressSoundAction:[SoundManager menuselectionSoundActionWithWaitForCompletion:NO]];
@@ -103,10 +101,10 @@
     [settingsButton setLabelWithText:NSLocalizedString(@"Settings", nil) withFontNamed:@"Futura" fontSize:36 fontColor:[UIColor whiteColor]];
     [settingsButton setLabelFixedWidth:menuWidth];
     [settingsButton setLabelFixedHeight:menuHeight];
-    [settingsButton setLabelPosition:SCNVector3Make(0.0f, -0.18f, 0.05f)];
+    [settingsButton setLabelPosition:SCNVector3Make(0.0f, -0.1f, 0.05f)];
     
     [settingsButton setScale:SCNVector3Make(1.0f * scale, 1.0f * scale, 1.0f)];
-    [settingsButton setPosition:SCNVector3Make(0, -1.95f * self.adjustment, 0.0f)];
+    [settingsButton setPosition:SCNVector3Make(0, -1.0f, 0.0f)];
     
     [settingsButton addPressSoundAction:[SoundManager menuselectionSoundActionWithWaitForCompletion:NO]];
     

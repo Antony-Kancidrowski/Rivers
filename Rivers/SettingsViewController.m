@@ -63,19 +63,15 @@
     
     [self.background setScale:SCNVector3Make(8.0f, 8.0f, 0.0f)];
     [self.background setPosition:SCNVector3Zero];
-    [self.background setEulerAngles:SCNVector3Make(0.25f, 0.0f, 0.0f)];
     
     [self.background setup:self.scene.rootNode];
     
     settingsPanel = [ImageNode imageWithTextureNamed:@"settings-panel.png" andSize:CGSizeMake(1.75f, 2.25f)];
     
-    CGFloat scaleX = 2.25f;
-    CGFloat scaleY = 2.25f;
+    CGFloat scaleX = 1.80f;
+    CGFloat scaleY = 1.80f;
     
     [settingsPanel setScale:SCNVector3Make(scaleX, scaleY, 1.0f)];
-    [settingsPanel setPosition:SCNVector3Make(0.0f, 0.25f, 0.1f)];
-    [settingsPanel setEulerAngles:SCNVector3Make(0.25f, 0.0f, 0.0f)];
-    
     [settingsPanel setup:self.scene.rootNode];
     
     themePanelManager = [ThemePanelManagerNode new];
@@ -94,7 +90,6 @@
     
     [headerText setScale:SCNVector3Make(0.3f, 0.20f, 1.0f)];
     [headerText setPosition:SCNVector3Make(0.0f, 1.0f, 1.4f)];
-    [headerText setEulerAngles:SCNVector3Zero];
     
     [headerText setup:settingsPanel];
     
@@ -108,7 +103,6 @@
     
     [soundText setScale:SCNVector3Make(0.15f * headingsscale, 0.07f * headingsscale, 1.0f)];
     [soundText setPosition:SCNVector3Make(-0.45f, 0.55f, 1.4f)];
-    [soundText setEulerAngles:SCNVector3Zero];
     
     [soundText setup:settingsPanel];
     
@@ -126,7 +120,6 @@
     
     [musicText setScale:SCNVector3Make(0.15f * headingsscale, 0.07f * headingsscale, 1.0f)];
     [musicText setPosition:SCNVector3Make(-0.45f, 0.25f, 1.4f)];
-    [musicText setEulerAngles:SCNVector3Zero];
     
     [musicText setup:settingsPanel];
     
@@ -144,7 +137,6 @@
     
     [themeText setScale:SCNVector3Make(0.15f * headingsscale, 0.07f * headingsscale, 1.0f)];
     [themeText setPosition:SCNVector3Make(-0.45f, -0.15f, 1.4f)];
-    [themeText setEulerAngles:SCNVector3Zero];
     
     [themeText setup:settingsPanel];
     

@@ -21,8 +21,6 @@
 
 @property (nonatomic, weak) id<MainMenuDelegate> delegate;
 
-@property (assign, nonatomic) CGFloat adjustment;
-
 - (void)authenticateGKPlayer:(BOOL)authenticated;
 
 - (void)activate;

@@ -87,6 +87,13 @@
     
     [_applicationImage setup:_overlay];
     
+    _mainMenuNode = [MainMenuNode new];
+    [_mainMenuNode setPosition:SCNVector3Make(0.0f, 0.0f, 0.0f)];
+    [_mainMenuNode setScale:SCNVector3Make(1.2f, 1.2f, 1.0f)];
+    [_mainMenuNode setDelegate:self];
+    
+    [_mainMenuNode setup:_overlay];
+    
     _storeButton = [ImageButtonNode imageButtonWithName:nil andButtonColor:nil andTagName:@"shop" andTagAlignment:TagHorizontalAlignmentCenter];
     
     [_storeButton setScale:SCNVector3Make(0.4f, 0.4f, 1.0f)];
@@ -133,6 +140,7 @@
     
     [_applicationImage activate];
     
+    [_mainMenuNode activate];
     [_storeButton activate];
     
     [_copyrightLabel activate];
@@ -162,6 +170,7 @@
     
     [_applicationImage deactivate];
     
+    [_mainMenuNode deactivate];
     [_storeButton deactivate];
     
     [_copyrightLabel deactivate];

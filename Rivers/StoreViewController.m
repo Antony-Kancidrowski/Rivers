@@ -71,7 +71,6 @@
     CGFloat scaleY = 2.00f;// * self.aspectRatio;
     
     [storePanel setScale:SCNVector3Make(scaleX, scaleY, 1.0f)];
-    
     [storePanel setup:self.scene.rootNode];
     
     openClosed = [ImageNode imageWithTextureNamed:@"store-open-closed.png"];
