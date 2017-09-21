@@ -89,7 +89,7 @@
         
     } else if (IS_IPHONE_6) {
         
-        [self.camera setYFov:15.0f];
+        [self.camera setYFov:24.0f];
         
     } else if (IS_IPHONE_5) {
         

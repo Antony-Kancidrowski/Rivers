@@ -65,10 +65,10 @@
     
     [self.background setup:self.scene.rootNode];
     
-    storePanel = [ImageNode imageWithTextureNamed:@"store-panel.png" andSize:CGSizeMake(1.85f, 2.45f)];
+    storePanel = [ImageNode imageWithTextureNamed:@"store-panel.png" andSize:CGSizeMake(1.75f, 2.25f)];
     
-    CGFloat scaleX = 2.00f;
-    CGFloat scaleY = 2.00f;// * self.aspectRatio;
+    CGFloat scaleX = 1.80f;
+    CGFloat scaleY = 1.80f;// * self.aspectRatio;
     
     [storePanel setScale:SCNVector3Make(scaleX, scaleY, 1.0f)];
     [storePanel setup:self.scene.rootNode];
