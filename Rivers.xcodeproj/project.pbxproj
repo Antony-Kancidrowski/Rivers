@@ -607,6 +607,7 @@
 				0A5FAE4C1F716F5800FE0A40 /* Selection */,
 				0A5FADED1F710DFC00FE0A40 /* Settings */,
 				0A5FAE541F71764200FE0A40 /* Store */,
+				0A64CCB11F755C38003FC908 /* Themes */,
 				0A5FAD1B1F69205600FE0A40 /* art.scnassets */,
 				0A5FAD231F69205600FE0A40 /* Assets.xcassets */,
 			);
@@ -839,6 +840,13 @@
 				0A5FAE5A1F71765B00FE0A40 /* store-panel.png */,
 			);
 			name = Store;
+			sourceTree = "<group>";
+		};
+		0A64CCB11F755C38003FC908 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Themes;
 			sourceTree = "<group>";
 		};
 		0AD75BC11F73BCA80096BC61 /* MainMenu */ = {

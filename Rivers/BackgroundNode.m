@@ -143,7 +143,7 @@
         
         CGFloat x = sinf(elapsedtime);
         CGFloat y = cosf(elapsedtime);
-        CGFloat z = -3.25f + (cosf(elapsedtime * 2.0f) * 0.25f);
+        CGFloat z = -1.0f + (cosf(elapsedtime * 2.0f) * 0.25f);
         
         [node setPosition:SCNVector3Make(x, y, z)];
         
