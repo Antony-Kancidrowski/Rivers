@@ -104,6 +104,9 @@
 		0A5FAE5E1F71765B00FE0A40 /* shop.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAE581F71765B00FE0A40 /* shop.png */; };
 		0A5FAE5F1F71765B00FE0A40 /* store-open-closed.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAE591F71765B00FE0A40 /* store-open-closed.png */; };
 		0A5FAE601F71765B00FE0A40 /* store-panel.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAE5A1F71765B00FE0A40 /* store-panel.png */; };
+		0A64CCB41F756FA1003FC908 /* GLSLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A64CCB31F756FA1003FC908 /* GLSLNode.m */; };
+		0A64CCB91F75721E003FC908 /* flagShader.frag in Resources */ = {isa = PBXBuildFile; fileRef = 0A64CCB81F757217003FC908 /* flagShader.frag */; };
+		0A64CCBA1F757222003FC908 /* flagShader.vert in Resources */ = {isa = PBXBuildFile; fileRef = 0A64CCB71F757217003FC908 /* flagShader.vert */; };
 		0AD75BAF1F73BA3D0096BC61 /* bluebutton-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD75BAE1F73BA340096BC61 /* bluebutton-down.png */; };
 		0AD75BB01F73BA480096BC61 /* bluebutton-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD75BA91F73BA340096BC61 /* bluebutton-up.png */; };
 		0AD75BB11F73BA4C0096BC61 /* greenbutton-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD75BA81F73BA340096BC61 /* greenbutton-down.png */; };
@@ -307,6 +310,10 @@
 		0A5FAE581F71765B00FE0A40 /* shop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shop.png; path = Images/Store/shop.png; sourceTree = "<group>"; };
 		0A5FAE591F71765B00FE0A40 /* store-open-closed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "store-open-closed.png"; path = "Images/Store/store-open-closed.png"; sourceTree = "<group>"; };
 		0A5FAE5A1F71765B00FE0A40 /* store-panel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "store-panel.png"; path = "Images/Store/store-panel.png"; sourceTree = "<group>"; };
+		0A64CCB21F756FA1003FC908 /* GLSLNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLSLNode.h; sourceTree = "<group>"; };
+		0A64CCB31F756FA1003FC908 /* GLSLNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLSLNode.m; sourceTree = "<group>"; };
+		0A64CCB71F757217003FC908 /* flagShader.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = flagShader.vert; path = Shaders/flagShader.vert; sourceTree = "<group>"; };
+		0A64CCB81F757217003FC908 /* flagShader.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = flagShader.frag; path = Shaders/flagShader.frag; sourceTree = "<group>"; };
 		0AD75BA51F73BA330096BC61 /* redbutton-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "redbutton-up.png"; path = "Images/Buttons/redbutton-up.png"; sourceTree = "<group>"; };
 		0AD75BA61F73BA340096BC61 /* orangebutton-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "orangebutton-down.png"; path = "Images/Buttons/orangebutton-down.png"; sourceTree = "<group>"; };
 		0AD75BA71F73BA340096BC61 /* redbutton-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "redbutton-down.png"; path = "Images/Buttons/redbutton-down.png"; sourceTree = "<group>"; };
@@ -466,6 +473,7 @@
 			children = (
 				0A5FADD01F6FB7DE00FE0A40 /* Graphics */,
 				0A5FADD61F6FBBD900FE0A40 /* Music */,
+				0A64CCB61F75716C003FC908 /* Shaders */,
 				0A5FADD11F6FB7F200FE0A40 /* Sounds */,
 			);
 			name = Resources;
@@ -535,6 +543,7 @@
 				0A5FAD7D1F69665700FE0A40 /* LabelNode.m */,
 				0A5FAE1A1F7121D200FE0A40 /* Achievements */,
 				0A5FAD861F696F0700FE0A40 /* Buttons */,
+				0A64CCB51F756FAC003FC908 /* HLSL */,
 				0A5FAD8D1F696F3100FE0A40 /* Panels */,
 				0A5FAE101F7120EF00FE0A40 /* MainMenu */,
 				0A5FADEC1F710CC000FE0A40 /* Slider */,
@@ -849,6 +858,24 @@
 			name = Themes;
 			sourceTree = "<group>";
 		};
+		0A64CCB51F756FAC003FC908 /* HLSL */ = {
+			isa = PBXGroup;
+			children = (
+				0A64CCB21F756FA1003FC908 /* GLSLNode.h */,
+				0A64CCB31F756FA1003FC908 /* GLSLNode.m */,
+			);
+			name = HLSL;
+			sourceTree = "<group>";
+		};
+		0A64CCB61F75716C003FC908 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				0A64CCB81F757217003FC908 /* flagShader.frag */,
+				0A64CCB71F757217003FC908 /* flagShader.vert */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
 		0AD75BC11F73BCA80096BC61 /* MainMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -1020,11 +1047,13 @@
 				0AD75BCD1F73BD500096BC61 /* tutorial.png in Resources */,
 				0AE2EB301F72A277002D3E0B /* graybutton-up.png in Resources */,
 				0AE2EB311F72A277002D3E0B /* menu-close-x.png in Resources */,
+				0A64CCB91F75721E003FC908 /* flagShader.frag in Resources */,
 				0A5FADD81F6FBDB700FE0A40 /* main_menu.m4a in Resources */,
 				0AD75BB11F73BA4C0096BC61 /* greenbutton-down.png in Resources */,
 				0A5FADBE1F6D2A5A00FE0A40 /* dm_download.png in Resources */,
 				0AD75BC91F73BCD60096BC61 /* trophy.png in Resources */,
 				0A5FADC31F6D2A5A00FE0A40 /* dm_pause.png in Resources */,
+				0A64CCBA1F757222003FC908 /* flagShader.vert in Resources */,
 				0A5FAE2E1F716C8900FE0A40 /* achievements.png in Resources */,
 				0AD75BB61F73BA5D0096BC61 /* redbutton-up.png in Resources */,
 				0AD75BC51F73BCC60096BC61 /* hand.png in Resources */,
@@ -1153,6 +1182,7 @@
 				0A5FADE51F710BD400FE0A40 /* SettingsViewController.m in Sources */,
 				0A5FAE191F7121C800FE0A40 /* AchievementPopupNode.m in Sources */,
 				0A5FAE0F1F7120E900FE0A40 /* MainMenuNode.m in Sources */,
+				0A64CCB41F756FA1003FC908 /* GLSLNode.m in Sources */,
 				0A5FAD6C1F69650800FE0A40 /* ImageMenuItemView.m in Sources */,
 				0A5FAE3B1F716DE300FE0A40 /* MasterKeysConsumable.m in Sources */,
 				0A5FAD551F692DB400FE0A40 /* MainMenuViewController.m in Sources */,
