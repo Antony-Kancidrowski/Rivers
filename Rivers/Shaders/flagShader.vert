@@ -17,32 +17,6 @@
 // OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 // SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-
-//uniform mat4 modelViewProjection;
-//uniform mat4 normalTransform;
-//uniform mat4 modelView;
-//
-//// input
-//attribute vec4 position;
-//attribute vec4 normal;
-//attribute vec2 textureCoordinate;
-//
-//// output
-//varying vec4 viewSpaceNormal;
-//varying vec4 viewSpacePosition;
-//varying vec2 varyingTextureCoordinate;
-//
-//void main(void)
-//{
-//    viewSpaceNormal   = normalTransform * normal;
-//    viewSpacePosition = modelView       * position;
-//    
-//    varyingTextureCoordinate = textureCoordinate;
-//    
-//    gl_Position = modelViewProjection * position;
-//}
-
-
 uniform mat4 modelViewProjection;
 uniform mat4 normalTransform;
 uniform mat4 modelView;
