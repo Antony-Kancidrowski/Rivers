@@ -14,7 +14,7 @@
 
 @interface GLSLNode : ActorNode
 
-+ (GLSLNode *)glslNodeWithName:(NSString *)shaderName andCameraNode:(CameraNode *)cameraNode
++ (GLSLNode *)glslNodeWithName:(NSString *)shaderName andCameraNode:(CameraNode *)cameraNode;
 
 - (instancetype)init NS_UNAVAILABLE;
 
