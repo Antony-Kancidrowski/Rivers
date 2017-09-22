@@ -10,7 +10,7 @@
 		0A5FAD171F69205500FE0A40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD161F69205500FE0A40 /* main.m */; };
 		0A5FAD1A1F69205500FE0A40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD191F69205500FE0A40 /* AppDelegate.m */; };
 		0A5FAD1C1F69205600FE0A40 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAD1B1F69205600FE0A40 /* art.scnassets */; };
-		0A5FAD1F1F69205600FE0A40 /* GameSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD1E1F69205600FE0A40 /* GameSceneViewController.m */; };
+		0A5FAD1F1F69205600FE0A40 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD1E1F69205600FE0A40 /* GameViewController.m */; };
 		0A5FAD221F69205600FE0A40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAD201F69205600FE0A40 /* Main.storyboard */; };
 		0A5FAD241F69205600FE0A40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAD231F69205600FE0A40 /* Assets.xcassets */; };
 		0A5FAD271F69205600FE0A40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAD251F69205600FE0A40 /* LaunchScreen.storyboard */; };
@@ -126,6 +126,7 @@
 		0AD75BCD1F73BD500096BC61 /* tutorial.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD75BCA1F73BD480096BC61 /* tutorial.png */; };
 		0AD75BD01F73BDF10096BC61 /* cogs-disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD75BCF1F73BDEE0096BC61 /* cogs-disabled.png */; };
 		0AD75BD11F73BDF50096BC61 /* cogs.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD75BCE1F73BDEE0096BC61 /* cogs.png */; };
+		0AD75BD41F74FD230096BC61 /* TutotialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD75BD31F74FD230096BC61 /* TutotialViewController.m */; };
 		0AE2EB2E1F72A277002D3E0B /* black-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE2EB2A1F727A1D002D3E0B /* black-background.png */; };
 		0AE2EB2F1F72A277002D3E0B /* graybutton-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE2EB2C1F729DA5002D3E0B /* graybutton-down.png */; };
 		0AE2EB301F72A277002D3E0B /* graybutton-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE2EB2D1F729DA5002D3E0B /* graybutton-up.png */; };
@@ -155,8 +156,8 @@
 		0A5FAD181F69205500FE0A40 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0A5FAD191F69205500FE0A40 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0A5FAD1B1F69205600FE0A40 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		0A5FAD1D1F69205600FE0A40 /* GameSceneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameSceneViewController.h; sourceTree = "<group>"; };
-		0A5FAD1E1F69205600FE0A40 /* GameSceneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameSceneViewController.m; sourceTree = "<group>"; };
+		0A5FAD1D1F69205600FE0A40 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		0A5FAD1E1F69205600FE0A40 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		0A5FAD211F69205600FE0A40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A5FAD231F69205600FE0A40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A5FAD261F69205600FE0A40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -328,6 +329,8 @@
 		0AD75BCB1F73BD480096BC61 /* tutorial-disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tutorial-disabled.png"; path = "Images/MainMenu/tutorial-disabled.png"; sourceTree = "<group>"; };
 		0AD75BCE1F73BDEE0096BC61 /* cogs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cogs.png; path = Images/MainMenu/cogs.png; sourceTree = "<group>"; };
 		0AD75BCF1F73BDEE0096BC61 /* cogs-disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cogs-disabled.png"; path = "Images/MainMenu/cogs-disabled.png"; sourceTree = "<group>"; };
+		0AD75BD21F74FD230096BC61 /* TutotialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TutotialViewController.h; sourceTree = "<group>"; };
+		0AD75BD31F74FD230096BC61 /* TutotialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TutotialViewController.m; sourceTree = "<group>"; };
 		0AE2EB291F72795C002D3E0B /* menu-close-x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu-close-x.png"; path = "Images/menu-close-x.png"; sourceTree = "<group>"; };
 		0AE2EB2A1F727A1D002D3E0B /* black-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "black-background.png"; path = "Images/black-background.png"; sourceTree = "<group>"; };
 		0AE2EB2C1F729DA5002D3E0B /* graybutton-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "graybutton-down.png"; path = "Images/Buttons/graybutton-down.png"; sourceTree = "<group>"; };
@@ -453,6 +456,7 @@
 				0A5FAD521F692D6E00FE0A40 /* MainMenu */,
 				0A5FADE21F710B9700FE0A40 /* Settings */,
 				0A5FAE3D1F716DEE00FE0A40 /* Store */,
+				0AD75BD51F74FD2F0096BC61 /* Tutorial */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -470,8 +474,8 @@
 		0A5FAD4C1F69210A00FE0A40 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				0A5FAD1D1F69205600FE0A40 /* GameSceneViewController.h */,
-				0A5FAD1E1F69205600FE0A40 /* GameSceneViewController.m */,
+				0A5FAD1D1F69205600FE0A40 /* GameViewController.h */,
+				0A5FAD1E1F69205600FE0A40 /* GameViewController.m */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -856,6 +860,15 @@
 			name = MainMenu;
 			sourceTree = "<group>";
 		};
+		0AD75BD51F74FD2F0096BC61 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				0AD75BD21F74FD230096BC61 /* TutotialViewController.h */,
+				0AD75BD31F74FD230096BC61 /* TutotialViewController.m */,
+			);
+			name = Tutorial;
+			sourceTree = "<group>";
+		};
 		0AE2EB2B1F729D47002D3E0B /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -1096,6 +1109,7 @@
 				0A5FAD7F1F69665700FE0A40 /* BackgroundNode.m in Sources */,
 				0A5FAE441F716EA500FE0A40 /* StorePanelNode.m in Sources */,
 				0A5FAD801F69665700FE0A40 /* CameraNode.m in Sources */,
+				0AD75BD41F74FD230096BC61 /* TutotialViewController.m in Sources */,
 				0A5FAD4F1F69245C00FE0A40 /* DebugOptions.m in Sources */,
 				0A5FAD721F69659E00FE0A40 /* MenuItemView.m in Sources */,
 				0A5FAD6D1F69650800FE0A40 /* SliderMenuItemView.m in Sources */,
@@ -1124,7 +1138,7 @@
 				0A5FAE181F7121C800FE0A40 /* AchievementPopupManagerNode.m in Sources */,
 				0A5FADEA1F710CB800FE0A40 /* SliderNode.m in Sources */,
 				0A5FADEB1F710CB800FE0A40 /* VolumeSliderNode.m in Sources */,
-				0A5FAD1F1F69205600FE0A40 /* GameSceneViewController.m in Sources */,
+				0A5FAD1F1F69205600FE0A40 /* GameViewController.m in Sources */,
 				0A5FAD821F69665700FE0A40 /* LabelNode.m in Sources */,
 				0A5FAD171F69205500FE0A40 /* main.m in Sources */,
 				0A5FADDB1F6FCF8E00FE0A40 /* AStar.m in Sources */,

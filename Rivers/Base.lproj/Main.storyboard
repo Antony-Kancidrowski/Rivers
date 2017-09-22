@@ -33,6 +33,28 @@
             </objects>
             <point key="canvasLocation" x="-826" y="-699"/>
         </scene>
+        <!--Tutotial View Controller-->
+        <scene sceneID="yco-Nc-KxX">
+            <objects>
+                <viewController storyboardIdentifier="TutorialScene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5GW-wG-bMM" customClass="TutotialViewController" sceneMemberID="viewController">
+                    <sceneKitView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Owz-B4-Tcj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="5Po-ql-XLS" appends="YES" id="1UD-Hd-8fA"/>
+                        </connections>
+                    </sceneKitView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qno-fQ-ytf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer cancelsTouchesInView="NO" delaysTouchesEnded="NO" allowableMovement="10" minimumPressDuration="0.025000000000000001" id="5Po-ql-XLS">
+                    <connections>
+                        <action selector="longPressAction:" destination="5GW-wG-bMM" id="hsk-wR-p2P"/>
+                        <outlet property="delegate" destination="5GW-wG-bMM" id="DKk-mn-pz0"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="65" y="-699"/>
+        </scene>
         <!--Main Menu View Controller-->
         <scene sceneID="RN6-8b-WSF">
             <objects>
@@ -48,6 +70,7 @@
                     <connections>
                         <segue destination="XmH-6u-9l5" kind="presentation" identifier="SettingsSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="BFl-qq-XWX"/>
                         <segue destination="BV1-FR-VrT" kind="showDetail" identifier="GameSegue" id="Kub-gA-XUd"/>
+                        <segue destination="5GW-wG-bMM" kind="showDetail" identifier="TutorialSegue" id="hwL-mU-WjB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QpN-HI-80w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -110,9 +133,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="is6-kF-81S" appends="YES" id="8Bq-oR-AMq"/>
+                        </connections>
                     </sceneKitView>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer cancelsTouchesInView="NO" delaysTouchesEnded="NO" allowableMovement="10" minimumPressDuration="0.025000000000000001" id="is6-kF-81S">
+                    <connections>
+                        <action selector="longPressAction:" destination="BV1-FR-VrT" id="FPH-HN-hcp"/>
+                        <outlet property="delegate" destination="BV1-FR-VrT" id="1uj-Hc-U9S"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="65" y="36"/>
         </scene>
