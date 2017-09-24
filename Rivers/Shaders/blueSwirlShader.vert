@@ -1,5 +1,5 @@
 //
-//  tileShader.vert
+//  blueSwirlShader.vert
 //  Rivers
 //
 //  Created by Antony Kancidrowski on 24/09/2017.

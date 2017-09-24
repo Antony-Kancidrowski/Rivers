@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0A06B6051F783BB300B6A44F /* tileShader.vert in Resources */ = {isa = PBXBuildFile; fileRef = 0A06B6031F783BB200B6A44F /* tileShader.vert */; };
 		0A06B6061F783BB300B6A44F /* tileShader.frag in Resources */ = {isa = PBXBuildFile; fileRef = 0A06B6041F783BB300B6A44F /* tileShader.frag */; };
+		0A06B6091F78467D00B6A44F /* blueSwirlShader.vert in Resources */ = {isa = PBXBuildFile; fileRef = 0A06B6071F78467C00B6A44F /* blueSwirlShader.vert */; };
+		0A06B60A1F78467D00B6A44F /* blueSwirlShader.frag in Resources */ = {isa = PBXBuildFile; fileRef = 0A06B6081F78467C00B6A44F /* blueSwirlShader.frag */; };
 		0A5FAD171F69205500FE0A40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD161F69205500FE0A40 /* main.m */; };
 		0A5FAD1A1F69205500FE0A40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD191F69205500FE0A40 /* AppDelegate.m */; };
 		0A5FAD1C1F69205600FE0A40 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAD1B1F69205600FE0A40 /* art.scnassets */; };
@@ -156,6 +158,8 @@
 /* Begin PBXFileReference section */
 		0A06B6031F783BB200B6A44F /* tileShader.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = tileShader.vert; path = Shaders/tileShader.vert; sourceTree = "<group>"; };
 		0A06B6041F783BB300B6A44F /* tileShader.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = tileShader.frag; path = Shaders/tileShader.frag; sourceTree = "<group>"; };
+		0A06B6071F78467C00B6A44F /* blueSwirlShader.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = blueSwirlShader.vert; path = Shaders/blueSwirlShader.vert; sourceTree = "<group>"; };
+		0A06B6081F78467C00B6A44F /* blueSwirlShader.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = blueSwirlShader.frag; path = Shaders/blueSwirlShader.frag; sourceTree = "<group>"; };
 		0A5FAD121F69205500FE0A40 /* Rivers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rivers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5FAD161F69205500FE0A40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0A5FAD181F69205500FE0A40 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -872,6 +876,8 @@
 			children = (
 				0A06B6041F783BB300B6A44F /* tileShader.frag */,
 				0A06B6031F783BB200B6A44F /* tileShader.vert */,
+				0A06B6081F78467C00B6A44F /* blueSwirlShader.frag */,
+				0A06B6071F78467C00B6A44F /* blueSwirlShader.vert */,
 			);
 			name = Shaders;
 			sourceTree = "<group>";
@@ -1052,6 +1058,8 @@
 				0A5FADBE1F6D2A5A00FE0A40 /* dm_download.png in Resources */,
 				0AD75BC91F73BCD60096BC61 /* trophy.png in Resources */,
 				0A5FADC31F6D2A5A00FE0A40 /* dm_pause.png in Resources */,
+				0A06B6091F78467D00B6A44F /* blueSwirlShader.vert in Resources */,
+				0A06B60A1F78467D00B6A44F /* blueSwirlShader.frag in Resources */,
 				0A5FAE2E1F716C8900FE0A40 /* achievements.png in Resources */,
 				0A06B6061F783BB300B6A44F /* tileShader.frag in Resources */,
 				0AD75BB61F73BA5D0096BC61 /* redbutton-up.png in Resources */,

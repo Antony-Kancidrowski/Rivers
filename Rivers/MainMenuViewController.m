@@ -73,7 +73,7 @@
 //
 //    [self.background setup:self.scene.rootNode];
     
-    _glslBackground = [GLSLNode glslNodeWithShaderName:@"tileShader"];
+    _glslBackground = [GLSLNode glslNodeWithShaderName:@"blueSwirlShader"];
     [_glslBackground setPosition:SCNVector3Zero];
     [_glslBackground setup:self.scene.rootNode];
   
