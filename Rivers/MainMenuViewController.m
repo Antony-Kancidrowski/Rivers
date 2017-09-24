@@ -8,6 +8,8 @@
 
 #import "MainMenuViewController.h"
 
+#import "GLSLNode.h"
+
 #import "LabelNode.h"
 #import "ImageNode.h"
 
@@ -30,6 +32,8 @@
 
 @property (nonatomic, strong) ImageNode *applicationImage;
 @property (nonatomic, strong) LabelNode *copyrightLabel;
+
+@property (nonatomic, strong) GLSLNode *glslBackground;
 
 @end
 
@@ -61,13 +65,16 @@
     // configure the view
     scnView.backgroundColor = [UIColor colorWithWhite:0.05 alpha:1.0];
     
-    self.background = [BackgroundNode backgroundWithTextureNamed:@"gray-background.png"];
-    [self.background colorizeWithColor:[UIColor brownColor]];
+//    self.background = [BackgroundNode backgroundWithTextureNamed:@"gray-background.png"];
+//    [self.background colorizeWithColor:[UIColor brownColor]];
+//
+//    [self.background setScale:SCNVector3Make(8.0f, 8.0f, 1.0f)];
+//    [self.background setPosition:SCNVector3Make(0, 0, 0)];
+//
+//    [self.background setup:self.scene.rootNode];
     
-    [self.background setScale:SCNVector3Make(8.0f, 8.0f, 1.0f)];
-    [self.background setPosition:SCNVector3Make(0, 0, 0)];
-    
-    [self.background setup:self.scene.rootNode];
+    _glslBackground = [GLSLNode glslNodeWithShaderName:@"tileShader"];
+    [_glslBackground setup:self.scene.rootNode];
   
     _overlay = [SCNNode node];
     
@@ -130,8 +137,9 @@
     [self setlayout];
     
     // Activate
-    [self.background activate];
-    [self.background fly];
+//    [self.background activate];
+//    [self.background fly];
+    [_glslBackground activate];
     
     [_applicationImage activate];
     
@@ -161,7 +169,8 @@
 - (void)viewDidDisappear:(BOOL)animated {
     
     // Deactivate
-    [self.background deactivate];
+//    [self.background deactivate];
+    [_glslBackground deactivate];
     
     [_applicationImage deactivate];
     

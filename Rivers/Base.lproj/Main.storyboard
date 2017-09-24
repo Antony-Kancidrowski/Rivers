@@ -13,7 +13,7 @@
         <scene sceneID="aUf-75-eAk">
             <objects>
                 <viewController storyboardIdentifier="StoreScene" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WuC-lJ-opN" customClass="StoreViewController" sceneMemberID="viewController">
-                    <sceneKitView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" id="6io-BU-GEg">
+                    <sceneKitView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" preferredRenderingAPI="2" id="6io-BU-GEg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -37,7 +37,7 @@
         <scene sceneID="yco-Nc-KxX">
             <objects>
                 <viewController storyboardIdentifier="TutorialScene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5GW-wG-bMM" customClass="TutotialViewController" sceneMemberID="viewController">
-                    <sceneKitView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Owz-B4-Tcj">
+                    <sceneKitView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preferredRenderingAPI="2" id="Owz-B4-Tcj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <connections>
@@ -59,7 +59,7 @@
         <scene sceneID="RN6-8b-WSF">
             <objects>
                 <viewController storyboardIdentifier="MainMenuScene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gwW-gJ-8Zg" customClass="MainMenuViewController" sceneMemberID="viewController">
-                    <sceneKitView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="dDQ-bR-3ni">
+                    <sceneKitView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preferredRenderingAPI="2" id="dDQ-bR-3ni">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <connections>
@@ -93,7 +93,7 @@
         <scene sceneID="VeC-0L-fF3">
             <objects>
                 <viewController storyboardIdentifier="SettingsScene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XmH-6u-9l5" customClass="SettingsViewController" sceneMemberID="viewController">
-                    <sceneKitView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" id="nzh-X9-rpv">
+                    <sceneKitView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" preferredRenderingAPI="2" id="nzh-X9-rpv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <connections>
@@ -129,7 +129,7 @@
         <scene sceneID="tXr-a1-R10">
             <objects>
                 <viewController storyboardIdentifier="GameScene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BV1-FR-VrT" customClass="GameViewController" sceneMemberID="viewController">
-                    <sceneKitView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx">
+                    <sceneKitView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preferredRenderingAPI="2" id="3se-qz-xqx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
