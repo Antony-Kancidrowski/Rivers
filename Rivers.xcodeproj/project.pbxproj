@@ -11,6 +11,7 @@
 		0A06B6061F783BB300B6A44F /* tileShader.frag in Resources */ = {isa = PBXBuildFile; fileRef = 0A06B6041F783BB300B6A44F /* tileShader.frag */; };
 		0A06B6091F78467D00B6A44F /* blueSwirlShader.vert in Resources */ = {isa = PBXBuildFile; fileRef = 0A06B6071F78467C00B6A44F /* blueSwirlShader.vert */; };
 		0A06B60A1F78467D00B6A44F /* blueSwirlShader.frag in Resources */ = {isa = PBXBuildFile; fileRef = 0A06B6081F78467C00B6A44F /* blueSwirlShader.frag */; };
+		0A2160081F78F590008A8D2E /* GameGridManagerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2160071F78F590008A8D2E /* GameGridManagerNode.m */; };
 		0A5FAD171F69205500FE0A40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD161F69205500FE0A40 /* main.m */; };
 		0A5FAD1A1F69205500FE0A40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD191F69205500FE0A40 /* AppDelegate.m */; };
 		0A5FAD1C1F69205600FE0A40 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAD1B1F69205600FE0A40 /* art.scnassets */; };
@@ -160,6 +161,8 @@
 		0A06B6041F783BB300B6A44F /* tileShader.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = tileShader.frag; path = Shaders/tileShader.frag; sourceTree = "<group>"; };
 		0A06B6071F78467C00B6A44F /* blueSwirlShader.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = blueSwirlShader.vert; path = Shaders/blueSwirlShader.vert; sourceTree = "<group>"; };
 		0A06B6081F78467C00B6A44F /* blueSwirlShader.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = blueSwirlShader.frag; path = Shaders/blueSwirlShader.frag; sourceTree = "<group>"; };
+		0A2160061F78F590008A8D2E /* GameGridManagerNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameGridManagerNode.h; sourceTree = "<group>"; };
+		0A2160071F78F590008A8D2E /* GameGridManagerNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameGridManagerNode.m; sourceTree = "<group>"; };
 		0A5FAD121F69205500FE0A40 /* Rivers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rivers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5FAD161F69205500FE0A40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0A5FAD181F69205500FE0A40 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -376,6 +379,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A2160051F78F557008A8D2E /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				0A2160061F78F590008A8D2E /* GameGridManagerNode.h */,
+				0A2160071F78F590008A8D2E /* GameGridManagerNode.m */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
 		0A5FAD091F69205500FE0A40 = {
 			isa = PBXGroup;
 			children = (
@@ -547,6 +559,7 @@
 				0A5FAD7D1F69665700FE0A40 /* LabelNode.m */,
 				0A5FAE1A1F7121D200FE0A40 /* Achievements */,
 				0A5FAD861F696F0700FE0A40 /* Buttons */,
+				0A2160051F78F557008A8D2E /* Game */,
 				0A64CCB51F756FAC003FC908 /* HLSL */,
 				0A5FAD8D1F696F3100FE0A40 /* Panels */,
 				0A5FAE101F7120EF00FE0A40 /* MainMenu */,
@@ -1181,6 +1194,7 @@
 				0A5FAD611F69648A00FE0A40 /* GridMenuScrollView.m in Sources */,
 				0A5FAE281F71286700FE0A40 /* LeaderboardModel.m in Sources */,
 				0A5FAE181F7121C800FE0A40 /* AchievementPopupManagerNode.m in Sources */,
+				0A2160081F78F590008A8D2E /* GameGridManagerNode.m in Sources */,
 				0A5FADEA1F710CB800FE0A40 /* SliderNode.m in Sources */,
 				0A5FADEB1F710CB800FE0A40 /* VolumeSliderNode.m in Sources */,
 				0A5FAD1F1F69205600FE0A40 /* GameViewController.m in Sources */,

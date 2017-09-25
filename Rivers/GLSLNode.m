@@ -16,6 +16,8 @@
 @interface GLSLNode () <SCNProgramDelegate>
 {
     NSTimeInterval shaderTime;
+    
+    CGFloat intensity;
     CGSize resolution;
 }
 
@@ -128,6 +130,15 @@
          glUniform1f(location, resolution.height);
      }];
     
+    [plane.firstMaterial handleBindingOfSymbol:@"intensity"
+                                    usingBlock:^(unsigned int programID,
+                                                 unsigned int location,
+                                                 SCNNode *renderedNode,
+                                                 SCNRenderer *renderer)
+     {
+         glUniform1f(location, intensity);
+     }];
+    
     // Bind a bool to switch between using a texture (see below) and a solid color (see above)
     [plane.firstMaterial handleBindingOfSymbol:@"time"
                                         usingBlock:^(unsigned int programID,
@@ -135,8 +146,7 @@
                                                      SCNNode *renderedNode,
                                                      SCNRenderer *renderer)
      {
-         CAAnimation *animation = [self animationForKey:@"glsl"];
-         shaderTime += ((1.0 / 30.0) * animation.speed);
+         shaderTime += (1.0 / kPreferredFrameRate);
          
          glUniform1f(location, shaderTime);
      }];
@@ -145,28 +155,15 @@
     plane.firstMaterial.program = program;
 }
 
-#pragma mark - ActorActivation
-
-- (void)activate {
+- (void)animate {
     
-    [super activate];
+    SCNAction *custom = [SCNAction customActionWithDuration:2 * M_PI actionBlock:^(SCNNode* node, CGFloat elapsedtime) {
+        
+        intensity = 0.6f + (0.2f * cosf(elapsedtime) * sinf(elapsedtime * 4.0f));
+    }];
     
-    // Need to animate to show the fluttering...we'll use opacity with no change to accomplish this
-    CABasicAnimation *opacity = [CABasicAnimation animationWithKeyPath:@"opacity"];
-    opacity.fromValue = NULL;
-    opacity.toValue = NULL;
-    opacity.duration = 1;
-    opacity.repeatCount = INFINITY;
-    opacity.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     
-    [self addAnimation:opacity forKey:@"glsl"];
-}
-
-- (void)deactivate {
-    
-    [self removeAnimationForKey:@"glsl"];
-    
-    [super deactivate];
+    [self runAction:[SCNAction repeatActionForever:custom]];
 }
 
 @end

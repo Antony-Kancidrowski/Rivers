@@ -10,8 +10,11 @@
 precision highp float;
 #endif
 
+varying float vintensity;
+
 varying float vresX;
 varying float vresY;
+
 varying float vtime;
 
 #define MAX_ITER 3
@@ -45,7 +48,7 @@ void main(void)
     
     vec3 color = vec3(0.02, 0.15, 0.33);
     
-    color.rgb *= (1.0 / (1.0 - (c + 0.05)));
+    color.rgb *= (1.0 / (1.0 - (c + 0.05))) * vintensity;
 
     // The color of the fragment is the sum of the ambient color, diffuse color and specular color
     gl_FragColor = vec4( color,

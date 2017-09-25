@@ -14,17 +14,26 @@ uniform mat4 modelViewProjection;
 
 // input
 attribute vec4 position;
+
+uniform float intensity;
+
 uniform float resX;
 uniform float resY;
+
 uniform float time;
 
 // output
+varying float vintensity;
+
 varying float vresX;
 varying float vresY;
+
 varying float vtime;
 
 void main(void)
 {
+    vintensity = intensity;
+    
     vresX = resX;
     vresY = resY;
     vtime = time;

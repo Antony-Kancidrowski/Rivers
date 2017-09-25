@@ -141,6 +141,7 @@
 //    [self.background activate];
 //    [self.background fly];
     [_glslBackground activate];
+    [_glslBackground animate];
     
     [_applicationImage activate];
     

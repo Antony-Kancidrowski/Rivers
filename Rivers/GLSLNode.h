@@ -18,4 +18,6 @@
 
 - (instancetype)init NS_UNAVAILABLE;
 
+- (void)animate;
+
 @end
