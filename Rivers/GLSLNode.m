@@ -16,6 +16,7 @@
 @interface GLSLNode () <SCNProgramDelegate>
 {
     NSTimeInterval shaderTime;
+    CGSize resolution;
 }
 
 @property (strong, nonatomic) GLKTextureInfo *texture;
@@ -26,14 +27,14 @@
 
 @implementation GLSLNode
 
-+ (GLSLNode *)glslNodeWithShaderName:(NSString *)shaderName {
++ (GLSLNode *)glslNodeWithShaderName:(NSString *)shaderName andResolution:(CGSize)size {
     
-    GLSLNode *newGLSLNode = [[GLSLNode alloc] initWithShaderName:shaderName];
+    GLSLNode *newGLSLNode = [[GLSLNode alloc] initWithShaderName:shaderName andResolution:size];
     
     return newGLSLNode;
 }
 
-- (instancetype)initWithShaderName:(NSString *)shaderName {
+- (instancetype)initWithShaderName:(NSString *)shaderName andResolution:(CGSize)size {
     
     self = [super init];
     
@@ -43,6 +44,7 @@
         
         self.shaderName = shaderName;
         
+        resolution = size;
         shaderTime = 355.0f / 113.0f;
     }
     
@@ -59,8 +61,8 @@
 - (void)createMesh {
     
     SCNPlane *plane = [SCNPlane planeWithWidth:5.0f height:8.0f];
-    plane.widthSegmentCount = 1;
-    plane.heightSegmentCount = 1;
+    plane.widthSegmentCount = 10;
+    plane.heightSegmentCount = 10;
     
     [self setGeometry:plane];
     
@@ -108,6 +110,24 @@
                forSymbol:@"normalTransform"
                  options:nil];
     
+    [plane.firstMaterial handleBindingOfSymbol:@"resX"
+                                       usingBlock:^(unsigned int programID,
+                                                    unsigned int location,
+                                                    SCNNode *renderedNode,
+                                                    SCNRenderer *renderer)
+     {
+         glUniform1f(location, resolution.width);
+     }];
+    
+    [plane.firstMaterial handleBindingOfSymbol:@"resY"
+                                       usingBlock:^(unsigned int programID,
+                                                    unsigned int location,
+                                                    SCNNode *renderedNode,
+                                                    SCNRenderer *renderer)
+     {
+         glUniform1f(location, resolution.height);
+     }];
+    
     // Bind a bool to switch between using a texture (see below) and a solid color (see above)
     [plane.firstMaterial handleBindingOfSymbol:@"time"
                                         usingBlock:^(unsigned int programID,
@@ -116,10 +136,12 @@
                                                      SCNRenderer *renderer)
      {
          CAAnimation *animation = [self animationForKey:@"glsl"];
-         glUniform1f(location, shaderTime+=(0.01 * animation.speed));
+         shaderTime += ((1.0 / 30.0) * animation.speed);
+         
+         glUniform1f(location, shaderTime);
      }];
     
-    // Make the flag use the custom shaders
+    // Make the plane use the custom shaders
     plane.firstMaterial.program = program;
 }
 

@@ -73,7 +73,7 @@
 //
 //    [self.background setup:self.scene.rootNode];
     
-    _glslBackground = [GLSLNode glslNodeWithShaderName:@"blueSwirlShader"];
+    _glslBackground = [GLSLNode glslNodeWithShaderName:@"blueSwirlShader" andResolution:self.view.frame.size];
     [_glslBackground setPosition:SCNVector3Zero];
     [_glslBackground setup:self.scene.rootNode];
   
@@ -228,7 +228,7 @@
     
     [_applicationImage setPosition:SCNVector3Make(0.0f, -pt.m43 * self.ymultiplier, 0.0f)];
     
-    [_storeButton setPosition:SCNVector3Make(-pt.m33 * self.xmultiplier, (pt.m43 * 7.5 / 10.0) * self.ymultiplier, 0.0f)];
+    [_storeButton setPosition:SCNVector3Make(-pt.m33 * self.xmultiplier * 1.35f, pt.m43 * self.ymultiplier, 0.0f)];
 
     [_copyrightLabel setPosition:SCNVector3Make(0.0f, pt.m43 * self.ymultiplier, 0.0f)];
     

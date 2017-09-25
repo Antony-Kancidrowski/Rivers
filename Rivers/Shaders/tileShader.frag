@@ -14,6 +14,8 @@ precision highp float;
 varying vec4 viewSpaceNormal;
 varying vec4 viewSpacePosition;
 
+varying float vresX;
+varying float vresY;
 varying float vtime;
 
 #define PITCH 3.
@@ -26,7 +28,7 @@ float line(vec2 p,vec2 l){return pow(1.-length(p-l),POWER);}
 float map(vec2 p){float c=line(p,vec2(p.x,floor(p.y*PITCH+.5)/PITCH))+line(p,vec2(floor(p.x*PITCH+.5)/PITCH,p.y))-1e-10;return clamp(c,0.,1.);}
 
 void main(void){
-    vec2 resolution = vec2(400.0, 300.0);
+    vec2 resolution = vec2(vresX, vresY);
     
     vec2 p=(gl_FragCoord.xy*2.-resolution.xy)/min(resolution.x,resolution.y);
     vec3 l=vec3(p.x+1.,p.y-2.,2.5);    //light pos

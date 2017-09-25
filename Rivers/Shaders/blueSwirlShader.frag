@@ -10,34 +10,34 @@
 precision highp float;
 #endif
 
-// Interpolated normal and positions
-varying vec4 viewSpaceNormal;
-varying vec4 viewSpacePosition;
-
+varying float vresX;
+varying float vresY;
 varying float vtime;
 
 #define MAX_ITER 3
 
 void main(void)
 {
-    vec2 resolution = vec2(400.0, 300.0);
+    vec2 resolution = vec2(vresX, vresY);
     
     vec2 v_texCoord = gl_FragCoord.xy / resolution;
     
     vec2 p =  v_texCoord * 4.0 - vec2(20.0);
     vec2 i = p;
     float c = 2.0;
-    float inten = .05;
+    float inten = 20.0;
     
-    for (int n = 0; n < MAX_ITER; n++)
+    int n = 1;
+    
+    for (int n = 1; n < MAX_ITER; n++)
     {
-        float t = vtime * (0.5 - (0.050 / float(n+1)));
+        float t = vtime * (0.5 - (0.050 / float(n)));
         
         i = p + vec2(cos(t - i.x) + sin(t + i.y),
                      sin(t - i.y) + cos(t + i.x));
         
-        c += 1.0/length(vec2(p.x / (sin(i.x+t)/inten),
-                             p.y / (cos(i.y+t)/inten)));
+        c += 1.0/length(vec2(p.x / (sin(i.x+t)*inten),
+                             p.y / (cos(i.y+t)*inten)));
     }
     
     c /= float(MAX_ITER);

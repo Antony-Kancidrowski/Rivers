@@ -11,24 +11,22 @@ precision highp float;
 #endif
 
 uniform mat4 modelViewProjection;
-uniform mat4 normalTransform;
-uniform mat4 modelView;
 
 // input
 attribute vec4 position;
-attribute vec4 normal;
+uniform float resX;
+uniform float resY;
 uniform float time;
 
 // output
-varying vec4 viewSpaceNormal;
-varying vec4 viewSpacePosition;
+varying float vresX;
+varying float vresY;
 varying float vtime;
 
 void main(void)
 {
-    viewSpaceNormal   = normalTransform * normal;
-    viewSpacePosition = modelView       * position;
-    
+    vresX = resX;
+    vresY = resY;
     vtime = time;
     
     gl_Position = modelViewProjection * position;
