@@ -10,17 +10,15 @@
 
 #import "ActorNode.h"
 
-@interface BackgroundNode : ActorNode
+@protocol BackgroundProtocol <NSObject>
+@optional
+- (void)colorizeWithColor:(id)color;
+- (void)animate;
+@end
 
-+ (BackgroundNode *)backgroundWithTextureNamed:(NSString *)textureName;
-
-- (instancetype)init NS_UNAVAILABLE;
+@interface BackgroundNode : ActorNode <BackgroundProtocol>
 
 - (void)activate;
 - (void)deactivate;
-
-- (void)colorizeWithColor:(id)color;
-
-- (void)fly;
 
 @end

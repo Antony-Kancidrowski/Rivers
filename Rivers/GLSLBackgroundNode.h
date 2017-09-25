@@ -1,5 +1,5 @@
 //
-//  GLSLNode.h
+//  GLSLBackgroundNode.h
 //  Rivers
 //
 //  Created by Antony Kancidrowski on 22/09/2017.
@@ -8,13 +8,13 @@
 
 #import <GLKit/GLKit.h>
 
-#import "ActorNode.h"
+#import "BackgroundNode.h"
 
 @class CameraNode;
 
-@interface GLSLNode : ActorNode
+@interface GLSLBackgroundNode : BackgroundNode
 
-+ (GLSLNode *)glslNodeWithShaderName:(NSString *)shaderName andResolution:(CGSize)size;
++ (GLSLBackgroundNode *)backgroundNodeWithShaderName:(NSString *)shaderName andResolution:(CGSize)size;
 
 - (instancetype)init NS_UNAVAILABLE;
 

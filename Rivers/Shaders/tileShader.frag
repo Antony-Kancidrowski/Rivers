@@ -14,8 +14,12 @@ precision highp float;
 varying vec4 viewSpaceNormal;
 varying vec4 viewSpacePosition;
 
+varying float vopacity;
+varying float vintensity;
+
 varying float vresX;
 varying float vresY;
+
 varying float vtime;
 
 #define PITCH 3.
@@ -51,7 +55,7 @@ void main(void){
         col+=v;
     }
     
-    gl_FragColor = vec4(col,1);
+    gl_FragColor = vec4(color, vopacity);
 }
 
 

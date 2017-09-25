@@ -102,8 +102,8 @@
 
 - (void)initialiseOptions {
     
-    NSArray *keys = [NSArray arrayWithObjects:@"ShowDebugInformation", @"ShowBackgroundLayer", @"Zoom", @"EnableLog", nil];
-    NSArray *objects = [NSArray arrayWithObjects:@"0", @"1", @"1.0", @"1", nil];
+    NSArray *keys = [NSArray arrayWithObjects:@"ShowDebugInformation", @"ShowBackgroundLayer", @"ShowTiles", @"Zoom", @"EnableLog", nil];
+    NSArray *objects = [NSArray arrayWithObjects:@"0", @"1", @"1", @"1.0", @"1", nil];
     
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects
                                                            forKeys:keys];

@@ -45,17 +45,6 @@ static NSUInteger maxGameIndex = 10;
 - (void)initialiseStoredZenGames;
 
 
-@property (strong, readonly, nonatomic) NSString *reverseGamesFilename;
-
-// Save reverse games to disk. 
-- (void)writeStoredReverseGames;
-
-// Load reverse games from disk.
-- (void)readStoredReverseGames;
-
-- (void)initialiseStoredReverseGames;
-
-
 @property (strong, readonly, nonatomic) NSString *timedGamesFilename;
 
 // Save timed games to disk. 
@@ -72,7 +61,6 @@ static NSUInteger maxGameIndex = 10;
 @implementation GamesManager
 
 @synthesize storedZenGames, zenGamesFilename;
-@synthesize storedReverseGames, reverseGamesFilename;
 @synthesize storedTimedGames, timedGamesFilename;
 
 @synthesize gamesWonThisSession;
@@ -116,14 +104,12 @@ static NSUInteger maxGameIndex = 10;
 - (void)load
 {
     [self readStoredZenGames];
-    [self readStoredReverseGames];
     [self readStoredTimedGames];
 }
 
 - (void)save
 {
     [self writeStoredZenGames];
-    [self writeStoredReverseGames];
     [self writeStoredTimedGames];
 }
 
@@ -132,7 +118,6 @@ static NSUInteger maxGameIndex = 10;
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     
     zenGamesFilename = [[NSString alloc] initWithFormat:@"%@/%@.storedZenGames_v2.plist", path, [GKLocalPlayer localPlayer].playerID];
-    reverseGamesFilename = [[NSString alloc] initWithFormat:@"%@/%@.storedReverseGames_v2.plist", path, [GKLocalPlayer localPlayer].playerID];
     timedGamesFilename = [[NSString alloc] initWithFormat:@"%@/%@.storedTimedGames_v2.plist", path, [GKLocalPlayer localPlayer].playerID];
     
     writeLock = [NSLock new];
@@ -160,7 +145,6 @@ static NSUInteger maxGameIndex = 10;
 - (void)initialiseStoredGames
 {
     [self initialiseStoredZenGames];
-    [self initialiseStoredReverseGames];
     [self initialiseStoredTimedGames];
 }
 
@@ -232,79 +216,6 @@ static NSUInteger maxGameIndex = 10;
     else
     {
         [self initialiseStoredZenGames];
-    }
-}
-
-#pragma mark Reverse
-
-- (void)writeStoredReverseGames
-{
-    [writeLock lock];
-    {
-        NSData *archivedStore = [NSKeyedArchiver archivedDataWithRootObject:storedReverseGames];
-        NSError *error;
-        
-        [archivedStore writeToFile:reverseGamesFilename options:NSDataWritingFileProtectionNone error:&error];
-        
-        if (error)
-        {
-            //  Error saving file, handle accordingly 
-            NSLog(@"Error saving Reverse Games progress.");
-        }
-    }
-    [writeLock unlock];
-}
-
-- (void)initialiseStoredReverseGames
-{
-    storedReverseGames = [NSMutableArray new];
-    
-    // Setup the Reverse Games Defaults
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"gameselection_v2" ofType:@"plist"];
-    NSArray *contentList = [NSArray arrayWithContentsOfFile:path];
-    
-    Game *game = nil;
-    
-    for (int i = 0; i < maxGameIndex; i++)
-    {
-        NSDictionary *item = [contentList objectAtIndex:i];
-        
-        game = [Game new];
-        
-        game.name = [item valueForKey:NameKey];
-        
-        game.gameSelected = i;
-        
-        game.moves = 0;
-        
-        NSNumber *time = [item valueForKey:TimeKey];
-        game.time = time.integerValue;
-        
-        game.completed = FALSE;
-        game.helpUsed = FALSE;
-        
-        NSNumber *locked = [item valueForKey:LockedKey];
-        game.locked = locked.boolValue;
-        
-        game.showTimer = FALSE;
-        
-        game.gameType = ReverseGame;
-        
-        [storedReverseGames addObject:game];
-    }
-}
-
-- (void)readStoredReverseGames
-{
-    NSArray *unarchivedObj = [NSKeyedUnarchiver unarchiveObjectWithFile:reverseGamesFilename];
-    
-    if (unarchivedObj)
-    {
-        storedReverseGames = [[NSMutableArray alloc] initWithArray:unarchivedObj];
-    }
-    else
-    {
-        [self initialiseStoredReverseGames];
     }
 }
 
@@ -394,10 +305,6 @@ static NSUInteger maxGameIndex = 10;
         if (game.gameType == ZenGame) {
             
             nextGame = [[[GamesManager sharedGamesManager] storedZenGames] objectAtIndex:nextGameSelection];
-            
-        } else if (game.gameType == ReverseGame) {
-            
-            nextGame = [[[GamesManager sharedGamesManager] storedReverseGames] objectAtIndex:nextGameSelection];
             
         } else if (game.gameType == TimedGame) {
         

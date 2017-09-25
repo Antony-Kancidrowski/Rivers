@@ -12,6 +12,9 @@
 		0A06B6091F78467D00B6A44F /* blueSwirlShader.vert in Resources */ = {isa = PBXBuildFile; fileRef = 0A06B6071F78467C00B6A44F /* blueSwirlShader.vert */; };
 		0A06B60A1F78467D00B6A44F /* blueSwirlShader.frag in Resources */ = {isa = PBXBuildFile; fileRef = 0A06B6081F78467C00B6A44F /* blueSwirlShader.frag */; };
 		0A2160081F78F590008A8D2E /* GameGridManagerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2160071F78F590008A8D2E /* GameGridManagerNode.m */; };
+		0A21600C1F790555008A8D2E /* TileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A21600B1F790555008A8D2E /* TileNode.m */; };
+		0A21600F1F790992008A8D2E /* FlyingTilesManagerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A21600D1F790992008A8D2E /* FlyingTilesManagerNode.m */; };
+		0A2160131F79114A008A8D2E /* TexturedBackgroundNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2160121F79114A008A8D2E /* TexturedBackgroundNode.m */; };
 		0A5FAD171F69205500FE0A40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD161F69205500FE0A40 /* main.m */; };
 		0A5FAD1A1F69205500FE0A40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAD191F69205500FE0A40 /* AppDelegate.m */; };
 		0A5FAD1C1F69205600FE0A40 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAD1B1F69205600FE0A40 /* art.scnassets */; };
@@ -109,7 +112,7 @@
 		0A5FAE5E1F71765B00FE0A40 /* shop.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAE581F71765B00FE0A40 /* shop.png */; };
 		0A5FAE5F1F71765B00FE0A40 /* store-open-closed.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAE591F71765B00FE0A40 /* store-open-closed.png */; };
 		0A5FAE601F71765B00FE0A40 /* store-panel.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAE5A1F71765B00FE0A40 /* store-panel.png */; };
-		0A64CCB41F756FA1003FC908 /* GLSLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A64CCB31F756FA1003FC908 /* GLSLNode.m */; };
+		0A64CCB41F756FA1003FC908 /* GLSLBackgroundNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A64CCB31F756FA1003FC908 /* GLSLBackgroundNode.m */; };
 		0AD75BAF1F73BA3D0096BC61 /* bluebutton-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD75BAE1F73BA340096BC61 /* bluebutton-down.png */; };
 		0AD75BB01F73BA480096BC61 /* bluebutton-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD75BA91F73BA340096BC61 /* bluebutton-up.png */; };
 		0AD75BB11F73BA4C0096BC61 /* greenbutton-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD75BA81F73BA340096BC61 /* greenbutton-down.png */; };
@@ -163,6 +166,12 @@
 		0A06B6081F78467C00B6A44F /* blueSwirlShader.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = blueSwirlShader.frag; path = Shaders/blueSwirlShader.frag; sourceTree = "<group>"; };
 		0A2160061F78F590008A8D2E /* GameGridManagerNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameGridManagerNode.h; sourceTree = "<group>"; };
 		0A2160071F78F590008A8D2E /* GameGridManagerNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameGridManagerNode.m; sourceTree = "<group>"; };
+		0A21600A1F790555008A8D2E /* TileNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TileNode.h; sourceTree = "<group>"; };
+		0A21600B1F790555008A8D2E /* TileNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TileNode.m; sourceTree = "<group>"; };
+		0A21600D1F790992008A8D2E /* FlyingTilesManagerNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlyingTilesManagerNode.m; sourceTree = "<group>"; };
+		0A21600E1F790992008A8D2E /* FlyingTilesManagerNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlyingTilesManagerNode.h; sourceTree = "<group>"; };
+		0A2160111F791149008A8D2E /* TexturedBackgroundNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TexturedBackgroundNode.h; sourceTree = "<group>"; };
+		0A2160121F79114A008A8D2E /* TexturedBackgroundNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TexturedBackgroundNode.m; sourceTree = "<group>"; };
 		0A5FAD121F69205500FE0A40 /* Rivers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rivers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5FAD161F69205500FE0A40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0A5FAD181F69205500FE0A40 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -319,8 +328,8 @@
 		0A5FAE581F71765B00FE0A40 /* shop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shop.png; path = Images/Store/shop.png; sourceTree = "<group>"; };
 		0A5FAE591F71765B00FE0A40 /* store-open-closed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "store-open-closed.png"; path = "Images/Store/store-open-closed.png"; sourceTree = "<group>"; };
 		0A5FAE5A1F71765B00FE0A40 /* store-panel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "store-panel.png"; path = "Images/Store/store-panel.png"; sourceTree = "<group>"; };
-		0A64CCB21F756FA1003FC908 /* GLSLNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLSLNode.h; sourceTree = "<group>"; };
-		0A64CCB31F756FA1003FC908 /* GLSLNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLSLNode.m; sourceTree = "<group>"; };
+		0A64CCB21F756FA1003FC908 /* GLSLBackgroundNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLSLBackgroundNode.h; sourceTree = "<group>"; };
+		0A64CCB31F756FA1003FC908 /* GLSLBackgroundNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLSLBackgroundNode.m; sourceTree = "<group>"; };
 		0AD75BA51F73BA330096BC61 /* redbutton-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "redbutton-up.png"; path = "Images/Buttons/redbutton-up.png"; sourceTree = "<group>"; };
 		0AD75BA61F73BA340096BC61 /* orangebutton-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "orangebutton-down.png"; path = "Images/Buttons/orangebutton-down.png"; sourceTree = "<group>"; };
 		0AD75BA71F73BA340096BC61 /* redbutton-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "redbutton-down.png"; path = "Images/Buttons/redbutton-down.png"; sourceTree = "<group>"; };
@@ -386,6 +395,37 @@
 				0A2160071F78F590008A8D2E /* GameGridManagerNode.m */,
 			);
 			name = Game;
+			sourceTree = "<group>";
+		};
+		0A2160091F79051C008A8D2E /* Tile */ = {
+			isa = PBXGroup;
+			children = (
+				0A21600A1F790555008A8D2E /* TileNode.h */,
+				0A21600B1F790555008A8D2E /* TileNode.m */,
+				0A21600E1F790992008A8D2E /* FlyingTilesManagerNode.h */,
+				0A21600D1F790992008A8D2E /* FlyingTilesManagerNode.m */,
+			);
+			name = Tile;
+			sourceTree = "<group>";
+		};
+		0A2160101F791097008A8D2E /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FAD761F69665700FE0A40 /* BackgroundNode.h */,
+				0A5FAD771F69665700FE0A40 /* BackgroundNode.m */,
+				0A64CCB51F756FAC003FC908 /* GLSL */,
+				0A2160141F7912AF008A8D2E /* Textured */,
+			);
+			name = Background;
+			sourceTree = "<group>";
+		};
+		0A2160141F7912AF008A8D2E /* Textured */ = {
+			isa = PBXGroup;
+			children = (
+				0A2160111F791149008A8D2E /* TexturedBackgroundNode.h */,
+				0A2160121F79114A008A8D2E /* TexturedBackgroundNode.m */,
+			);
+			name = Textured;
 			sourceTree = "<group>";
 		};
 		0A5FAD091F69205500FE0A40 = {
@@ -549,8 +589,6 @@
 			children = (
 				0A5FAD741F69665700FE0A40 /* ActorNode.h */,
 				0A5FAD751F69665700FE0A40 /* ActorNode.m */,
-				0A5FAD761F69665700FE0A40 /* BackgroundNode.h */,
-				0A5FAD771F69665700FE0A40 /* BackgroundNode.m */,
 				0A5FAD781F69665700FE0A40 /* CameraNode.h */,
 				0A5FAD791F69665700FE0A40 /* CameraNode.m */,
 				0A5FAD7A1F69665700FE0A40 /* ImageNode.h */,
@@ -558,13 +596,14 @@
 				0A5FAD7C1F69665700FE0A40 /* LabelNode.h */,
 				0A5FAD7D1F69665700FE0A40 /* LabelNode.m */,
 				0A5FAE1A1F7121D200FE0A40 /* Achievements */,
+				0A2160101F791097008A8D2E /* Background */,
 				0A5FAD861F696F0700FE0A40 /* Buttons */,
 				0A2160051F78F557008A8D2E /* Game */,
-				0A64CCB51F756FAC003FC908 /* HLSL */,
 				0A5FAD8D1F696F3100FE0A40 /* Panels */,
 				0A5FAE101F7120EF00FE0A40 /* MainMenu */,
 				0A5FADEC1F710CC000FE0A40 /* Slider */,
 				0A5FAE451F716EAC00FE0A40 /* Store */,
+				0A2160091F79051C008A8D2E /* Tile */,
 				0A5FAE011F71105700FE0A40 /* Themes */,
 			);
 			name = Nodes;
@@ -875,13 +914,13 @@
 			name = Themes;
 			sourceTree = "<group>";
 		};
-		0A64CCB51F756FAC003FC908 /* HLSL */ = {
+		0A64CCB51F756FAC003FC908 /* GLSL */ = {
 			isa = PBXGroup;
 			children = (
-				0A64CCB21F756FA1003FC908 /* GLSLNode.h */,
-				0A64CCB31F756FA1003FC908 /* GLSLNode.m */,
+				0A64CCB21F756FA1003FC908 /* GLSLBackgroundNode.h */,
+				0A64CCB31F756FA1003FC908 /* GLSLBackgroundNode.m */,
 			);
-			name = HLSL;
+			name = GLSL;
 			sourceTree = "<group>";
 		};
 		0A64CCB61F75716C003FC908 /* Shaders */ = {
@@ -1172,6 +1211,7 @@
 				0A5FAD721F69659E00FE0A40 /* MenuItemView.m in Sources */,
 				0A5FAD6D1F69650800FE0A40 /* SliderMenuItemView.m in Sources */,
 				0A5FADCF1F6FB7AE00FE0A40 /* SoundManager.m in Sources */,
+				0A2160131F79114A008A8D2E /* TexturedBackgroundNode.m in Sources */,
 				0A5FAD6E1F69650800FE0A40 /* StepperMenuItemView.m in Sources */,
 				0A5FAD811F69665700FE0A40 /* ImageNode.m in Sources */,
 				0A5FAD601F69648A00FE0A40 /* GridMenuItem.m in Sources */,
@@ -1189,6 +1229,7 @@
 				0A5FAD621F69648A00FE0A40 /* GridMenuViewController.m in Sources */,
 				0A5FADFF1F710F9100FE0A40 /* Theme.m in Sources */,
 				0A5FAE0A1F71108400FE0A40 /* ThemePanelNode.m in Sources */,
+				0A21600F1F790992008A8D2E /* FlyingTilesManagerNode.m in Sources */,
 				0A5FAE081F71108400FE0A40 /* ThemeBoxManagerNode.m in Sources */,
 				0A5FAE511F71706200FE0A40 /* Game.m in Sources */,
 				0A5FAD611F69648A00FE0A40 /* GridMenuScrollView.m in Sources */,
@@ -1204,11 +1245,12 @@
 				0A5FADE51F710BD400FE0A40 /* SettingsViewController.m in Sources */,
 				0A5FAE191F7121C800FE0A40 /* AchievementPopupNode.m in Sources */,
 				0A5FAE0F1F7120E900FE0A40 /* MainMenuNode.m in Sources */,
-				0A64CCB41F756FA1003FC908 /* GLSLNode.m in Sources */,
+				0A64CCB41F756FA1003FC908 /* GLSLBackgroundNode.m in Sources */,
 				0A5FAD6C1F69650800FE0A40 /* ImageMenuItemView.m in Sources */,
 				0A5FAE3B1F716DE300FE0A40 /* MasterKeysConsumable.m in Sources */,
 				0A5FAD551F692DB400FE0A40 /* MainMenuViewController.m in Sources */,
 				0A5FAE3C1F716DE300FE0A40 /* StoreViewController.m in Sources */,
+				0A21600C1F790555008A8D2E /* TileNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

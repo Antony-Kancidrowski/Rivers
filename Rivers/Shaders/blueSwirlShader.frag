@@ -10,6 +10,7 @@
 precision highp float;
 #endif
 
+varying float vopacity;
 varying float vintensity;
 
 varying float vresX;
@@ -50,7 +51,5 @@ void main(void)
     
     color.rgb *= (1.0 / (1.0 - (c + 0.05))) * vintensity;
 
-    // The color of the fragment is the sum of the ambient color, diffuse color and specular color
-    gl_FragColor = vec4( color,
-                        1.0); // color is opaque
+    gl_FragColor = vec4(color, vopacity);
 }

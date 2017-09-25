@@ -1,19 +1,19 @@
 //
-//  GLSLNode.m
+//  GLSLBackgroundNode.m
 //  Rivers
 //
 //  Created by Antony Kancidrowski on 22/09/2017.
 //  Copyright © 2017 Cidrosoft. All rights reserved.
 //
 
-#import "GLSLNode.h"
+#import "GLSLBackgroundNode.h"
 
 #import "Configuration.h"
 #import "DebugOptions.h"
 
 #import "CameraNode.h"
 
-@interface GLSLNode () <SCNProgramDelegate>
+@interface GLSLBackgroundNode () <SCNProgramDelegate>
 {
     NSTimeInterval shaderTime;
     
@@ -27,13 +27,13 @@
 @end
 
 
-@implementation GLSLNode
+@implementation GLSLBackgroundNode
 
-+ (GLSLNode *)glslNodeWithShaderName:(NSString *)shaderName andResolution:(CGSize)size {
++ (GLSLBackgroundNode *)backgroundNodeWithShaderName:(NSString *)shaderName andResolution:(CGSize)size {
     
-    GLSLNode *newGLSLNode = [[GLSLNode alloc] initWithShaderName:shaderName andResolution:size];
+    GLSLBackgroundNode *newBackground = [[GLSLBackgroundNode alloc] initWithShaderName:shaderName andResolution:size];
     
-    return newGLSLNode;
+    return newBackground;
 }
 
 - (instancetype)initWithShaderName:(NSString *)shaderName andResolution:(CGSize)size {
@@ -137,6 +137,15 @@
                                                  SCNRenderer *renderer)
      {
          glUniform1f(location, intensity);
+     }];
+    
+    [plane.firstMaterial handleBindingOfSymbol:@"opacity"
+                                    usingBlock:^(unsigned int programID,
+                                                 unsigned int location,
+                                                 SCNNode *renderedNode,
+                                                 SCNRenderer *renderer)
+     {
+         glUniform1f(location, self.opacity);
      }];
     
     // Bind a bool to switch between using a texture (see below) and a solid color (see above)

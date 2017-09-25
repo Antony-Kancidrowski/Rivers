@@ -8,6 +8,8 @@
 
 #import "TutotialViewController.h"
 
+#import "TexturedBackgroundNode.h"
+
 #import "LabelNode.h"
 #import "ImageNode.h"
 
@@ -57,7 +59,7 @@
     // configure the view
     scnView.backgroundColor = [UIColor colorWithWhite:0.05 alpha:1.0];
     
-    self.background = [BackgroundNode backgroundWithTextureNamed:@"gray-background.png"];
+    self.background = [TexturedBackgroundNode backgroundWithTextureNamed:@"gray-background.png"];
     [self.background colorizeWithColor:[UIColor brownColor]];
     
     [self.background setScale:SCNVector3Make(8.0f, 8.0f, 1.0f)];
@@ -93,7 +95,7 @@
     
     // Activate
     [self.background activate];
-    [self.background fly];
+    [self.background animate];
     
     // TODO:
 }

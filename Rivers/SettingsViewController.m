@@ -8,13 +8,13 @@
 
 #import "SettingsViewController.h"
 
+#import "TexturedBackgroundNode.h"
+
 #import "AppSpecificValues.h"
 #import "Configuration.h"
 #import "DebugOptions.h"
 
 #import "SoundManager.h"
-
-#import "BackgroundNode.h"
 
 #import "ThemePanelManagerNode.h"
 
@@ -59,7 +59,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.background = [BackgroundNode backgroundWithTextureNamed:@"black-background.png"];
+    self.background = [TexturedBackgroundNode backgroundWithTextureNamed:@"black-background.png"];
     
     [self.background setScale:SCNVector3Make(8.0f, 8.0f, 0.0f)];
     [self.background setPosition:SCNVector3Zero];

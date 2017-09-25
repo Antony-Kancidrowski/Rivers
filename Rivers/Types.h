@@ -40,6 +40,15 @@ typedef NS_ENUM(gsUDWORD, AStarMapType) {
 
 //-------------------------------------------------------------
 
+typedef NS_ENUM(gsUDWORD, NodeType) {
+    
+    BLOCK_NODE,         // 0
+    ENDPOINT_NODE,      // 1
+    PROCESS_NODE        // 2
+};
+
+//-------------------------------------------------------------
+
 typedef NS_ENUM(gsUDWORD, NodeDirection) {
     
     MOVES_LEFT = 1,           // 1
@@ -50,10 +59,17 @@ typedef NS_ENUM(gsUDWORD, NodeDirection) {
 
 //-------------------------------------------------------------
 
+typedef NS_ENUM(NSInteger, GameDifficulty)
+{
+    Easy,
+    Hard
+};
+
+//-------------------------------------------------------------
+
 typedef NS_ENUM(NSInteger, GameType)
 {
     ZenGame,
-    ReverseGame,
     TimedGame
 };
 
@@ -73,7 +89,5 @@ typedef void (^dispatch_block_float_t)(CGFloat value);
 #define IS_RETINA ([[UIScreen mainScreen] scale] == 2.0)
 
 #define DEG_TO_RAD(__DEG__) (__DEG__ * M_PI / 180)
-
-#define kFrameInterval 1
 
 #endif /* Rivers_Types_h */
