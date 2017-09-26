@@ -32,8 +32,9 @@
 @implementation TileNode
 
 @synthesize tagName;
+@synthesize respondToThemeNotification;
 
-- (instancetype)initWithTagName:(NSString *)name andSize:(SCNVector3)size andScale:(SCNVector3)scale {
+- (instancetype)initWithTheme:(Theme *)theme andTagName:(NSString *)name andSize:(SCNVector3)size andScale:(SCNVector3)scale {
     
     self = [super init];
     
@@ -226,11 +227,8 @@
         SCNGeometry *geometry = [SCNGeometry geometryWithSources:@[verticesSource, normalsSource, textureSource]
                                                         elements:@[indicesElement]];
         
-        
-        ThemeManager *themeManager = [ThemeManager sharedThemeManager];
-        Theme *theme = [themeManager getCurrentTheme];
-        
         self.tagName = name;
+        self.respondToThemeNotification = YES;
         
         NSString *key = @"tileKey";
         
@@ -286,7 +284,7 @@
 }
 
 - (void)deactivate {
-    
+
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
     [super deactivate];
@@ -294,7 +292,7 @@
 
 - (void)receiveThemeChangeNotification:(NSNotification *)notification {
     
-    if ([[notification name] isEqualToString:kThemeChangedNotification]) {
+    if ((self.respondToThemeNotification) && ([[notification name] isEqualToString:kThemeChangedNotification])) {
         
         ThemeManager *themeManager = [ThemeManager sharedThemeManager];
         Theme *theme = [themeManager getCurrentTheme];

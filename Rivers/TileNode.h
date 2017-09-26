@@ -11,13 +11,17 @@
 #import "ActorNode.h"
 #import "Types.h"
 
+@class Theme;
+
 @interface TileNode : ActorNode
 
 @property (nonatomic, strong) NSString *tagName;
 
+@property (nonatomic, assign) BOOL respondToThemeNotification;
+
 - (instancetype)init NS_UNAVAILABLE;
 
-- (instancetype)initWithTagName:(NSString *)name andSize:(SCNVector3)size andScale:(SCNVector3)scale;
+- (instancetype)initWithTheme:(Theme *)theme andTagName:(NSString *)name andSize:(SCNVector3)size andScale:(SCNVector3)scale;
 
 - (void)activate;
 - (void)deactivate;

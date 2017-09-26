@@ -8,6 +8,9 @@
 
 #import "FlyingTilesManagerNode.h"
 
+#import "ThemeManager.h"
+#import "Theme.h"
+
 #import "DebugOptions.h"
 #import "TileNode.h"
 
@@ -15,6 +18,8 @@
 {
     NSMutableArray *flyingTiles;
 }
+
+@property (nonatomic, strong) Theme *theme;
 
 @end
 
@@ -27,6 +32,9 @@
     if (self != nil)
     {
         flyingTiles = [[NSMutableArray alloc] initWithCapacity:3];
+        
+        ThemeManager *themeManager = [ThemeManager sharedThemeManager];
+        self.theme = [themeManager getCurrentTheme];
     }
     
     return self;
@@ -53,9 +61,10 @@
     float unit_x = 0.5f;
     float unit_y = 0.5f;
     
-    TileNode *blockNode = [[TileNode alloc] initWithTagName:@"red"
-                                                           andSize:SCNVector3Make(unit_x * 2, unit_y * 2, 0.25)
-                                                          andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
+    TileNode *blockNode = [[TileNode alloc] initWithTheme:self.theme
+                                               andTagName:@"red"
+                                                  andSize:SCNVector3Make(unit_x * 2, unit_y * 2, 0.25)
+                                                 andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
     [blockNode setPosition:position];
     [blockNode setup:self];
     
@@ -83,9 +92,10 @@
     float unit_x = 0.5f;
     float unit_y = 0.5f;
     
-    TileNode *tileNode = [[TileNode alloc] initWithTagName:@"blue"
-                                                           andSize:SCNVector3Make(unit_x, unit_y * 2, 0.25)
-                                                          andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
+    TileNode *tileNode = [[TileNode alloc] initWithTheme:self.theme
+                                              andTagName:@"blue"
+                                                 andSize:SCNVector3Make(unit_x, unit_y * 2, 0.25)
+                                                andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
     [tileNode setPosition:position];
     [tileNode setup:self];
     
@@ -113,9 +123,10 @@
     float unit_x = 0.5f;
     float unit_y = 0.5f;
     
-    TileNode *tileNode = [[TileNode alloc] initWithTagName:@"white"
-                                                           andSize:SCNVector3Make(unit_x, unit_y, 0.25)
-                                                          andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
+    TileNode *tileNode = [[TileNode alloc] initWithTheme:self.theme
+                                              andTagName:@"white"
+                                                 andSize:SCNVector3Make(unit_x, unit_y, 0.25)
+                                                andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
     [tileNode setPosition:position];
     [tileNode setup:self];
     

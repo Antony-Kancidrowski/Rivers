@@ -59,7 +59,6 @@
     _themeTileManager = [ThemeTileManagerNode tileWithTheme:_theTheme];
     [_themeTileManager setPosition:SCNVector3Make(0.0f, 0.15f, 1.75f)];
     [_themeTileManager setScale:SCNVector3Make(1.5f * scale, 1.5f * scale, 1.5f * scale)];
-//    [_themeTileManager setEulerAngles:SCNVector3Make(M_PI_2 - 0.75f, 0.0f, 0.0f)];
     [_themeTileManager setup:self];
     
     const CGFloat width = 320.0f;
