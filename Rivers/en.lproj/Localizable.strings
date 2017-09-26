@@ -27,6 +27,16 @@
 "Purchase" = "Buy";
 "Restore" = "Restore";
 
+"Wood" = "Wood";
+"Wood2" = "Wood II";
+"Clouds" = "Clouds";
+"Marble" = "Marble";
+"Marble2" = "Marble II";
+"Plastic" = "Plastic";
+"Gold" = "Gold";
+"Copper" = "Copper";
+"Steel" = "Steel";
+
 /* Debug Strings */
 
 "MAINMENU" = "MAIN MENU";

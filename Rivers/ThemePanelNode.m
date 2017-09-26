@@ -13,18 +13,20 @@
 #import "Configuration.h"
 #import "AppSpecificValues.h"
 
-#import "ThemeBoxManagerNode.h"
+#import "ThemeTileManagerNode.h"
 
 #import "LabelNode.h"
 
 @interface ThemePanelNode ()
 {
-    ThemeBoxManagerNode *themeBoxManager;
-    
-    Theme* theTheme;
-    
-    LabelNode *title;
 }
+
+@property (nonatomic, strong) ThemeTileManagerNode *themeTileManager;
+
+@property (nonatomic, strong) Theme* theTheme;
+
+@property (nonatomic, strong) LabelNode *title;
+
 @end
 
 @implementation ThemePanelNode
@@ -42,7 +44,7 @@
     
     if (self != nil)
     {
-        theTheme = theme;
+        self.theTheme = theme;
     }
     
     return self;
@@ -54,11 +56,11 @@
     
     const CGFloat scale = 0.1f;
 
-    themeBoxManager = [ThemeBoxManagerNode boxWithTheme:theTheme];
-    [themeBoxManager setPosition:SCNVector3Make(0.0f, 0.15f, 1.75f)];
-    [themeBoxManager setScale:SCNVector3Make(1.5f * scale, 1.5f * scale, 1.5f * scale)];
-    [themeBoxManager setEulerAngles:SCNVector3Make(M_PI_2 - 0.75f, 0.0f, 0.0f)];
-    [themeBoxManager setup:self];
+    _themeTileManager = [ThemeTileManagerNode tileWithTheme:_theTheme];
+    [_themeTileManager setPosition:SCNVector3Make(0.0f, 0.15f, 1.75f)];
+    [_themeTileManager setScale:SCNVector3Make(1.5f * scale, 1.5f * scale, 1.5f * scale)];
+    [_themeTileManager setEulerAngles:SCNVector3Make(M_PI_2 - 0.75f, 0.0f, 0.0f)];
+    [_themeTileManager setup:self];
     
     const CGFloat width = 320.0f;
     const CGFloat height = 80.0f;
@@ -68,35 +70,35 @@
     [myShadow setShadowBlurRadius:5.0];
     [myShadow setShadowOffset:CGSizeMake(2, 2)];
     
-    NSString *name = [theTheme.theme valueForKey:@"nameKey"];
+    NSString *name = [_theTheme.theme valueForKey:@"nameKey"];
     
-    title = [LabelNode setLabelWithText:NSLocalizedString(name, nil) withFontNamed:@"Futura" fontSize:36 fontColor:[UIColor whiteColor]];
-    [title setShadow:myShadow];
+    _title = [LabelNode setLabelWithText:NSLocalizedString(name, nil) withFontNamed:@"Futura" fontSize:36 fontColor:[UIColor whiteColor]];
+    [_title setShadow:myShadow];
     
-    [title setFixedWidth:width];
-    [title setFixedHeight:height];
+    [_title setFixedWidth:width];
+    [_title setFixedHeight:height];
     
-    [title setScale:SCNVector3Make(8.0f * scale, 1.86f * scale, 1.0f)];
-    [title setPosition:SCNVector3Make(0.0f, -0.55f, 0.02f)];
-    [title setEulerAngles:SCNVector3Zero];
+    [_title setScale:SCNVector3Make(8.0f * scale, 1.86f * scale, 1.0f)];
+    [_title setPosition:SCNVector3Make(0.0f, -0.55f, 0.02f)];
+    [_title setEulerAngles:SCNVector3Zero];
     
-    [title setup:self];
+    [_title setup:self];
 }
 
 - (void)activate {
     
     [super activate];
     
-    [themeBoxManager activate];
+    [_themeTileManager activate];
     
-    [title activate];
+    [_title activate];
 }
 
 - (void)deactivate {
     
-    [themeBoxManager deactivate];
+    [_themeTileManager deactivate];
     
-    [title deactivate];
+    [_title deactivate];
     
     [super deactivate];
 }

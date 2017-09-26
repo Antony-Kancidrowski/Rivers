@@ -98,7 +98,7 @@
 		0A5FADFB1F710F6C00FE0A40 /* ThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FADFA1F710F6C00FE0A40 /* ThemeManager.m */; };
 		0A5FADFF1F710F9100FE0A40 /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FADFD1F710F9100FE0A40 /* Theme.m */; };
 		0A5FAE001F710F9100FE0A40 /* themes_v2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FADFE1F710F9100FE0A40 /* themes_v2.plist */; };
-		0A5FAE081F71108400FE0A40 /* ThemeBoxManagerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAE031F71108400FE0A40 /* ThemeBoxManagerNode.m */; };
+		0A5FAE081F71108400FE0A40 /* ThemeTileManagerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAE031F71108400FE0A40 /* ThemeTileManagerNode.m */; };
 		0A5FAE091F71108400FE0A40 /* ThemePanelManagerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAE051F71108400FE0A40 /* ThemePanelManagerNode.m */; };
 		0A5FAE0A1F71108400FE0A40 /* ThemePanelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FAE071F71108400FE0A40 /* ThemePanelNode.m */; };
 		0A5FAE0C1F71122B00FE0A40 /* selection_slide.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAE0B1F71122B00FE0A40 /* selection_slide.wav */; };
@@ -304,8 +304,8 @@
 		0A5FADFC1F710F9100FE0A40 /* Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
 		0A5FADFD1F710F9100FE0A40 /* Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theme.m; sourceTree = "<group>"; };
 		0A5FADFE1F710F9100FE0A40 /* themes_v2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = themes_v2.plist; sourceTree = "<group>"; };
-		0A5FAE021F71108400FE0A40 /* ThemeBoxManagerNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeBoxManagerNode.h; sourceTree = "<group>"; };
-		0A5FAE031F71108400FE0A40 /* ThemeBoxManagerNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeBoxManagerNode.m; sourceTree = "<group>"; };
+		0A5FAE021F71108400FE0A40 /* ThemeTileManagerNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeTileManagerNode.h; sourceTree = "<group>"; };
+		0A5FAE031F71108400FE0A40 /* ThemeTileManagerNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeTileManagerNode.m; sourceTree = "<group>"; };
 		0A5FAE041F71108400FE0A40 /* ThemePanelManagerNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemePanelManagerNode.h; sourceTree = "<group>"; };
 		0A5FAE051F71108400FE0A40 /* ThemePanelManagerNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemePanelManagerNode.m; sourceTree = "<group>"; };
 		0A5FAE061F71108400FE0A40 /* ThemePanelNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemePanelNode.h; sourceTree = "<group>"; };
@@ -836,8 +836,8 @@
 		0A5FAE011F71105700FE0A40 /* Themes */ = {
 			isa = PBXGroup;
 			children = (
-				0A5FAE021F71108400FE0A40 /* ThemeBoxManagerNode.h */,
-				0A5FAE031F71108400FE0A40 /* ThemeBoxManagerNode.m */,
+				0A5FAE021F71108400FE0A40 /* ThemeTileManagerNode.h */,
+				0A5FAE031F71108400FE0A40 /* ThemeTileManagerNode.m */,
 				0A5FAE041F71108400FE0A40 /* ThemePanelManagerNode.h */,
 				0A5FAE051F71108400FE0A40 /* ThemePanelManagerNode.m */,
 				0A5FAE061F71108400FE0A40 /* ThemePanelNode.h */,
@@ -1374,7 +1374,7 @@
 				0A5FADFF1F710F9100FE0A40 /* Theme.m in Sources */,
 				0A5FAE0A1F71108400FE0A40 /* ThemePanelNode.m in Sources */,
 				0A21600F1F790992008A8D2E /* FlyingTilesManagerNode.m in Sources */,
-				0A5FAE081F71108400FE0A40 /* ThemeBoxManagerNode.m in Sources */,
+				0A5FAE081F71108400FE0A40 /* ThemeTileManagerNode.m in Sources */,
 				0A5FAE511F71706200FE0A40 /* Game.m in Sources */,
 				0A5FAD611F69648A00FE0A40 /* GridMenuScrollView.m in Sources */,
 				0A5FAE281F71286700FE0A40 /* LeaderboardModel.m in Sources */,

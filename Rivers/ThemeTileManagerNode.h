@@ -1,5 +1,5 @@
 //
-//  ThemeBoxManagerNode.h
+//  ThemeTileManagerNode.h
 //  Rivers
 //
 //  Created by Antony Kancidrowski on 19/09/2017.
@@ -9,9 +9,9 @@
 #import "ActorNode.h"
 #import "Theme.h"
 
-@interface ThemeBoxManagerNode : ActorNode
+@interface ThemeTileManagerNode : ActorNode
 
-+ (ThemeBoxManagerNode *)boxWithTheme:(Theme *)theme;
++ (ThemeTileManagerNode *)tileWithTheme:(Theme *)theme;
 
 - (instancetype)init NS_UNAVAILABLE;
 
