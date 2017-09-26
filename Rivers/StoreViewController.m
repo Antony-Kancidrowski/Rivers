@@ -479,20 +479,6 @@
                     if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
                         NSLog(@"Unlock Zen purchase - Completed succesfully.");
                     
-                } else if ([transaction.payment.productIdentifier isEqualToString:kIAPUnlockReverse]) {
-                    
-                    // TODO: Show purchase success
-                    
-                    for (Game* game in [gamesManager storedReverseGames]) {
-                        
-                        [game setLocked:FALSE];
-                    }
-                    
-                    [gamesManager save];
-                    
-                    if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
-                        NSLog(@"Unlock Reverse purchase - Completed succesfully.");
-                    
                 } else if ([transaction.payment.productIdentifier isEqualToString:kIAPUnlockTimed]) {
                     
                     // TODO: Show purchase success
@@ -535,20 +521,6 @@
                     
                     if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
                         NSLog(@"Unlock Zen restore - Completed succesfully.");
-                    
-                } else if ([transaction.payment.productIdentifier isEqualToString:kIAPUnlockReverse]) {
-                    
-                    // TODO: Show restore success
-                    
-                    for (Game* game in [gamesManager storedReverseGames]) {
-                        
-                        [game setLocked:FALSE];
-                    }
-                    
-                    [gamesManager save];
-                    
-                    if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
-                        NSLog(@"Unlock Reverse restore - Completed succesfully.");
                     
                 } else if ([transaction.payment.productIdentifier isEqualToString:kIAPUnlockTimed]) {
                     

@@ -13,11 +13,11 @@
 
 @interface TileNode : ActorNode
 
-@property (nonatomic, strong) NSString *tileName;
+@property (nonatomic, strong) NSString *tagName;
 
 - (instancetype)init NS_UNAVAILABLE;
 
-- (instancetype)initWithTextureNamed:(NSString *)name andSize:(SCNVector3)size andScale:(SCNVector3)scale;
+- (instancetype)initWithTagName:(NSString *)name andSize:(SCNVector3)size andScale:(SCNVector3)scale;
 
 - (void)activate;
 - (void)deactivate;

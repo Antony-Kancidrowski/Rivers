@@ -12,7 +12,6 @@
 // Leaderboard Category IDs
 #define kZenLeaderboardID                           @"com.cidrosoft.rivers.Zen"
 #define kTimedLeaderboardID                         @"com.cidrosoft.rivers.Timed"
-#define kReverseLeaderboardID                       @"com.cidrosoft.rivers.Reverse"
 
 
 // Achievement IDs
@@ -31,7 +30,6 @@
 
 // In App Purchase IDs
 #define kIAPUnlockZen                               @"com.cidrosoft.rivers.unlockzen"
-#define kIAPUnlockReverse                           @"com.cidrosoft.rivers.unlockreverse"
 #define kIAPUnlockTimed                             @"com.cidrosoft.rivers.unlocktimed"
 #define kIAPUnlockKeys                              @"com.cidrosoft.rivers.unlockkeys"
 

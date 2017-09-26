@@ -16,7 +16,7 @@
 
 #import "DebugOptions.h"
 
-static NSUInteger maxThemes = 7;
+static NSUInteger maxThemes = 9;
 
 @interface ThemeManager()
 {

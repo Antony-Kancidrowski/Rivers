@@ -73,7 +73,7 @@
 
 -(void)fetchAvailableProducts {
     
-    NSSet *productIdentifiers = [NSSet setWithObjects:kIAPUnlockZen, kIAPUnlockReverse, kIAPUnlockTimed, kIAPUnlockKeys, nil];
+    NSSet *productIdentifiers = [NSSet setWithObjects:kIAPUnlockZen, kIAPUnlockTimed, kIAPUnlockKeys, nil];
     
     productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:productIdentifiers];
     productsRequest.delegate = self;
@@ -130,11 +130,6 @@
             if ([[product productIdentifier] isEqualToString:kIAPUnlockZen]) {
                 
                 imageName = @"unlock-zen-iap.png";
-            }
-            
-            if ([[product productIdentifier] isEqualToString:kIAPUnlockReverse]) {
-                
-                imageName = @"unlock-reverse-iap.png";
             }
             
             if ([[product productIdentifier] isEqualToString:kIAPUnlockTimed]) {

@@ -31,9 +31,9 @@
 
 @implementation TileNode
 
-@synthesize tileName;
+@synthesize tagName;
 
-- (instancetype)initWithTextureNamed:(NSString *)name andSize:(SCNVector3)size andScale:(SCNVector3)scale {
+- (instancetype)initWithTagName:(NSString *)name andSize:(SCNVector3)size andScale:(SCNVector3)scale {
     
     self = [super init];
     
@@ -230,9 +230,9 @@
         ThemeManager *themeManager = [ThemeManager sharedThemeManager];
         Theme *theme = [themeManager getCurrentTheme];
         
-        self.tileName = name;
+        self.tagName = name;
         
-        NSString *key = [NSString stringWithFormat:@"%@Key", self.tileName];
+        NSString *key = @"tileKey";
         
         NSString *textureName = [NSString stringWithFormat:@"%@.png", [theme.theme valueForKey:key]];
         NSString *normalName = [NSString stringWithFormat:@"%@-normal.png", [theme.theme valueForKey:key]];
@@ -299,7 +299,7 @@
         ThemeManager *themeManager = [ThemeManager sharedThemeManager];
         Theme *theme = [themeManager getCurrentTheme];
         
-        NSString *key = [NSString stringWithFormat:@"%@Key", self.tileName];
+        NSString *key = @"tileKey";
         
         NSString *textureName = [NSString stringWithFormat:@"%@.png", [theme.theme valueForKey:key]];
         NSString *normalName = [NSString stringWithFormat:@"%@-normal.png", [theme.theme valueForKey:key]];

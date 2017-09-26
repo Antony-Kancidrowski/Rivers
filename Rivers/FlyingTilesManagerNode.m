@@ -53,7 +53,7 @@
     float unit_x = 0.5f;
     float unit_y = 0.5f;
     
-    TileNode *blockNode = [[TileNode alloc] initWithTextureNamed:@"red"
+    TileNode *blockNode = [[TileNode alloc] initWithTagName:@"red"
                                                            andSize:SCNVector3Make(unit_x * 2, unit_y * 2, 0.25)
                                                           andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
     [blockNode setPosition:position];
@@ -83,7 +83,7 @@
     float unit_x = 0.5f;
     float unit_y = 0.5f;
     
-    TileNode *tileNode = [[TileNode alloc] initWithTextureNamed:@"blue"
+    TileNode *tileNode = [[TileNode alloc] initWithTagName:@"blue"
                                                            andSize:SCNVector3Make(unit_x, unit_y * 2, 0.25)
                                                           andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
     [tileNode setPosition:position];
@@ -113,7 +113,7 @@
     float unit_x = 0.5f;
     float unit_y = 0.5f;
     
-    TileNode *tileNode = [[TileNode alloc] initWithTextureNamed:@"white"
+    TileNode *tileNode = [[TileNode alloc] initWithTagName:@"white"
                                                            andSize:SCNVector3Make(unit_x, unit_y, 0.25)
                                                           andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
     [tileNode setPosition:position];
@@ -162,13 +162,13 @@
         
         [tileNode activate];
         
-        if ([[tileNode tileName] containsString:@"red"]) {
+        if ([[tileNode tagName] containsString:@"red"]) {
             
             [self flyRedFly:tileNode];
-        } else if ([[tileNode tileName] containsString:@"blue"]) {
+        } else if ([[tileNode tagName] containsString:@"blue"]) {
             
             [self flyBlueFly:tileNode];
-        } else if ([[tileNode tileName] containsString:@"white"]) {
+        } else if ([[tileNode tagName] containsString:@"white"]) {
             
             [self flyWhiteFly:tileNode];
         }

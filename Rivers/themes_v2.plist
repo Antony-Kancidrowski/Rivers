@@ -7,84 +7,72 @@
 		<string>Wood</string>
 		<key>boxKey</key>
 		<string>box-wood</string>
-		<key>redKey</key>
-		<string>red-wood</string>
-		<key>blueKey</key>
-		<string>blue-wood</string>
-		<key>whiteKey</key>
-		<string>white-wood</string>
+		<key>tileKey</key>
+		<string>tile-wood</string>
 	</dict>
+    <dict>
+        <key>nameKey</key>
+        <string>Wood2</string>
+        <key>boxKey</key>
+        <string>box-wood2</string>
+        <key>tileKey</key>
+        <string>tile-wood2</string>
+    </dict>
 	<dict>
 		<key>nameKey</key>
-		<string>Basic</string>
+		<string>Clouds</string>
 		<key>boxKey</key>
-		<string>box-basic</string>
-		<key>redKey</key>
-		<string>red-basic</string>
-		<key>blueKey</key>
-		<string>blue-basic</string>
-		<key>whiteKey</key>
-		<string>white-basic</string>
+		<string>box-clouds</string>
+		<key>tileKey</key>
+		<string>tile-clouds</string>
 	</dict>
 	<dict>
 		<key>nameKey</key>
 		<string>Marble</string>
 		<key>boxKey</key>
 		<string>box-marble</string>
-		<key>redKey</key>
-		<string>red-marble</string>
-		<key>blueKey</key>
-		<string>blue-marble</string>
-		<key>whiteKey</key>
-		<string>white-marble</string>
+		<key>tileKey</key>
+		<string>tile-marble</string>
 	</dict>
+    <dict>
+        <key>nameKey</key>
+        <string>Marble2</string>
+        <key>boxKey</key>
+        <string>box-marble2</string>
+        <key>tileKey</key>
+        <string>tile-marble2</string>
+    </dict>
 	<dict>
 		<key>nameKey</key>
 		<string>Plastic</string>
 		<key>boxKey</key>
 		<string>box-plastic</string>
-		<key>redKey</key>
-		<string>red-plastic</string>
-		<key>blueKey</key>
-		<string>blue-plastic</string>
-		<key>whiteKey</key>
-		<string>white-plastic</string>
+		<key>tileKey</key>
+		<string>tile-plastic</string>
 	</dict>
 	<dict>
 		<key>nameKey</key>
-		<string>Marble2</string>
+		<string>Gold</string>
 		<key>boxKey</key>
-		<string>box-marble2</string>
-		<key>redKey</key>
-		<string>red-marble2</string>
-		<key>blueKey</key>
-		<string>blue-marble2</string>
-		<key>whiteKey</key>
-		<string>white-marble2</string>
+		<string>box-gold</string>
+		<key>tileKey</key>
+		<string>tile-gold</string>
 	</dict>
-	<dict>
-		<key>nameKey</key>
-		<string>Steel</string>
-		<key>boxKey</key>
-		<string>box-steel</string>
-		<key>redKey</key>
-		<string>red-steel</string>
-		<key>blueKey</key>
-		<string>blue-steel</string>
-		<key>whiteKey</key>
-		<string>white-steel</string>
-	</dict>
-	<dict>
-		<key>nameKey</key>
-		<string>Wood2</string>
-		<key>boxKey</key>
-		<string>box-wood2</string>
-		<key>redKey</key>
-		<string>red-wood2</string>
-		<key>blueKey</key>
-		<string>blue-wood2</string>
-		<key>whiteKey</key>
-		<string>white-wood2</string>
-	</dict>
+    <dict>
+        <key>nameKey</key>
+        <string>Steel</string>
+        <key>boxKey</key>
+        <string>box-steel</string>
+        <key>tileKey</key>
+        <string>tile-steel</string>
+    </dict>
+    <dict>
+        <key>nameKey</key>
+        <string>Copper</string>
+        <key>boxKey</key>
+        <string>box-copper</string>
+        <key>tileKey</key>
+        <string>tile-copper</string>
+    </dict>
 </array>
 </plist>
