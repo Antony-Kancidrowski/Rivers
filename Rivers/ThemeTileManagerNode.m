@@ -20,9 +20,8 @@
 
 @property (nonatomic, strong) Theme *theTheme;
 
-@property (nonatomic, strong) TileNode *red;
-@property (nonatomic, strong) TileNode *white;
-@property (nonatomic, strong) TileNode *blue;
+@property (nonatomic, strong) TileNode *one;
+@property (nonatomic, strong) TileNode *two;
 
 @end
 
@@ -51,45 +50,35 @@
     
     [super setup:parentNode];
     
-    _red = [[TileNode alloc] initWithTagName:@"red" andSize:SCNVector3Make(1.0, 1.0, 0.25) andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
-    [_red setPosition:SCNVector3Make(0.25f, 0.8f, -0.85f)];
+    _one = [[TileNode alloc] initWithTagName:@"one" andSize:SCNVector3Make(0.5, 1.0, 0.125) andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
+    [_one setPosition:SCNVector3Make(0.375f, 0.5f, 0.0f)];
     
-    [_red setName:@"red"];
-    [_red setEulerAngles:SCNVector3Make(-M_PI_2, 0.25f, 0.3f)];
+    [_one setName:@"one"];
+    [_one setEulerAngles:SCNVector3Make(-1.0f, 0.0f, -0.25f)];
     
-    [_red setup:self];
+    [_one setup:self];
     
-    _white = [[TileNode alloc] initWithTagName:@"white" andSize:SCNVector3Make(0.5, 0.5, 0.25) andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
-    [_white setPosition:SCNVector3Make(1.25f, 0.0f, 1.25f)];
+    _two = [[TileNode alloc] initWithTagName:@"two" andSize:SCNVector3Make(0.5, 1.0, 0.125) andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
+    [_two setPosition:SCNVector3Make(0.0f, 0.0f, -1.0f)];
     
-    [_white setName:@"white"];
-    [_white setEulerAngles:SCNVector3Make(-M_PI_2, M_PI_4, 0)];
+    [_two setName:@"two"];
+    [_two setEulerAngles:SCNVector3Make(-1.0f, 0.0f, -0.1f)];
     
-    [_white setup:self];
-    
-    _blue = [[TileNode alloc] initWithTagName:@"blue" andSize:SCNVector3Make(0.5, 1.0, 0.25) andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
-    [_blue setPosition:SCNVector3Make(-1.25f, 0.0f, 0.75f)];
-    
-    [_blue setName:@"blue"];
-    [_blue setEulerAngles:SCNVector3Make(-M_PI_2, -0.1f, 0)];
-    
-    [_blue setup:self];
+    [_two setup:self];
 }
 
 - (void)activate {
     
     [super activate];
 
-    [_red activate];
-    [_white activate];
-    [_blue activate];
+    [_one activate];
+    [_two activate];
 }
 
 - (void)deactivate {
     
-    [_red deactivate];
-    [_white deactivate];
-    [_blue deactivate];
+    [_one deactivate];
+    [_two deactivate];
   
     [super deactivate];
 }
