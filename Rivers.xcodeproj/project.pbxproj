@@ -158,6 +158,7 @@
 		0AE2EB2F1F72A277002D3E0B /* graybutton-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE2EB2C1F729DA5002D3E0B /* graybutton-down.png */; };
 		0AE2EB301F72A277002D3E0B /* graybutton-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE2EB2D1F729DA5002D3E0B /* graybutton-up.png */; };
 		0AE2EB311F72A277002D3E0B /* menu-close-x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE2EB291F72795C002D3E0B /* menu-close-x.png */; };
+		0AF9205D1F7BA3C5009CF049 /* tile-rivers.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9205C1F7BA3C2009CF049 /* tile-rivers.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -394,6 +395,7 @@
 		0AE2EB2A1F727A1D002D3E0B /* black-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "black-background.png"; path = "Images/black-background.png"; sourceTree = "<group>"; };
 		0AE2EB2C1F729DA5002D3E0B /* graybutton-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "graybutton-down.png"; path = "Images/Buttons/graybutton-down.png"; sourceTree = "<group>"; };
 		0AE2EB2D1F729DA5002D3E0B /* graybutton-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "graybutton-up.png"; path = "Images/Buttons/graybutton-up.png"; sourceTree = "<group>"; };
+		0AF9205C1F7BA3C2009CF049 /* tile-rivers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tile-rivers.png"; path = "Images/Themes/tile-rivers.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -982,6 +984,7 @@
 		0A64CCB11F755C38003FC908 /* Themes */ = {
 			isa = PBXGroup;
 			children = (
+				0AF9205C1F7BA3C2009CF049 /* tile-rivers.png */,
 				0AAD1A0F1F7A4AF0002C84D2 /* Copper */,
 				0AAD1A0C1F7A4ACD002C84D2 /* Clouds */,
 				0AAD1A121F7A4B0A002C84D2 /* Gold */,
@@ -1251,6 +1254,7 @@
 				0AD75BC51F73BCC60096BC61 /* hand.png in Resources */,
 				0A5FAD1C1F69205600FE0A40 /* art.scnassets in Resources */,
 				0A5FADBB1F6D2A5A00FE0A40 /* dm_bluetooth.png in Resources */,
+				0AF9205D1F7BA3C5009CF049 /* tile-rivers.png in Resources */,
 				0A5FADF61F710E1B00FE0A40 /* speaker_high.png in Resources */,
 				0A5FADF51F710E1B00FE0A40 /* slider_selection.png in Resources */,
 				0A5FAE5B1F71765B00FE0A40 /* restore-disabled.png in Resources */,

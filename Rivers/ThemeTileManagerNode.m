@@ -50,20 +50,17 @@
     
     [super setup:parentNode];
     
-    _one = [[TileNode alloc] initWithTheme:self.theTheme andTagName:@"one" andSize:SCNVector3Make(0.5, 1.0, 0.125) andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
+    _one = [[TileNode alloc] initWithTheme:self.theTheme andTagName:@"rivers" andSize:SCNVector3Make(0.5, 1.0, 0.125) andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
     [_one setPosition:SCNVector3Make(0.375f, 0.5f, 0.0f)];
-    
-    [_one setName:@"one"];
+
     [_one setRespondToThemeNotification:NO];
     [_one setEulerAngles:SCNVector3Make(-1.0f, 0.0f, -0.25f)];
     
     [_one setIntensity:0.5f];
     [_one setup:self];
     
-    _two = [[TileNode alloc] initWithTheme:self.theTheme andTagName:@"two" andSize:SCNVector3Make(0.5, 1.0, 0.125) andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
+    _two = [[TileNode alloc] initWithTheme:self.theTheme andTagName:@"blank" andSize:SCNVector3Make(0.5, 1.0, 0.125) andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
     [_two setPosition:SCNVector3Make(0.0f, 0.0f, -1.0f)];
-    
-    [_two setName:@"two"];
     
     [_two setRespondToThemeNotification:NO];
     [_two setEulerAngles:SCNVector3Make(-1.0f, 0.0f, -0.1f)];

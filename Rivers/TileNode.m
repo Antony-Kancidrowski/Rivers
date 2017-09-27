@@ -241,8 +241,14 @@
         material.diffuse.wrapT = SCNWrapModeRepeat;
         material.diffuse.intensity = 0.35f;
         material.diffuse.contentsTransform = SCNMatrix4MakeScale( 1.0f, 1.0f, 1.0f);
-        material.doubleSided = YES;
+        material.doubleSided = NO;
         
+        NSString *tagName = [NSString stringWithFormat:@"tile-%@.png", name];
+        
+        material.multiply.contents = [UIImage imageNamed:tagName];
+        material.multiply.wrapS = SCNWrapModeRepeat;
+        material.multiply.wrapT = SCNWrapModeRepeat;
+    
         material.specular.contents = [UIImage imageNamed:textureName];
         material.specular.wrapS = SCNWrapModeRepeat;
         material.specular.wrapT = SCNWrapModeRepeat;
@@ -260,8 +266,6 @@
         geometry.materials = @[material];
         
         [self setGeometry:geometry];
-        
-        [self setEulerAngles:SCNVector3Make(-M_PI_2, 0, 0)];
         
         [self setTileSize:size];
     }
