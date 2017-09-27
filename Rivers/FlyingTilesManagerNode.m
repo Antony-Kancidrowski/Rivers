@@ -63,7 +63,7 @@
     
     TileNode *blockNode = [[TileNode alloc] initWithTheme:self.theme
                                                andTagName:@"red"
-                                                  andSize:SCNVector3Make(unit_x * 2, unit_y * 2, 0.25)
+                                                  andSize:SCNVector3Make(unit_x * 2, unit_y * 2, 0.125)
                                                  andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
     [blockNode setPosition:position];
     [blockNode setup:self];
@@ -93,8 +93,8 @@
     float unit_y = 0.5f;
     
     TileNode *tileNode = [[TileNode alloc] initWithTheme:self.theme
-                                              andTagName:@"blue"
-                                                 andSize:SCNVector3Make(unit_x, unit_y * 2, 0.25)
+                                              andTagName:@"rivers"
+                                                 andSize:SCNVector3Make(unit_x, unit_y * 2, 0.125)
                                                 andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
     [tileNode setPosition:position];
     [tileNode setup:self];
@@ -125,7 +125,7 @@
     
     TileNode *tileNode = [[TileNode alloc] initWithTheme:self.theme
                                               andTagName:@"white"
-                                                 andSize:SCNVector3Make(unit_x, unit_y, 0.25)
+                                                 andSize:SCNVector3Make(unit_x, unit_y, 0.125)
                                                 andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
     [tileNode setPosition:position];
     [tileNode setup:self];
@@ -176,7 +176,7 @@
         if ([[tileNode tagName] containsString:@"red"]) {
             
             [self flyRedFly:tileNode];
-        } else if ([[tileNode tagName] containsString:@"blue"]) {
+        } else if ([[tileNode tagName] containsString:@"rivers"]) {
             
             [self flyBlueFly:tileNode];
         } else if ([[tileNode tagName] containsString:@"white"]) {

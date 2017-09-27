@@ -349,6 +349,8 @@
     if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
         NSLog(@"Navigate to Game Type.");
     
+    // TODO: Ramp down music and fade to black, then perform segue
+    
     [self performSegueWithIdentifier:@"GameSegue" sender:self];
     
 }
@@ -357,6 +359,8 @@
     
     if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
         NSLog(@"Navigate to tutorial.");
+    
+    // TODO: Ramp down music and fade to black, then perform segue
     
     [self performSegueWithIdentifier:@"TutorialSegue" sender:self];
     
