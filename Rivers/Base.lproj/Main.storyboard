@@ -19,6 +19,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="T4W-9z-2MI" appends="YES" id="98x-jA-I3Z"/>
+                            <outletCollection property="gestureRecognizers" destination="Dp7-iV-6Y3" appends="YES" id="aty-sp-xm2"/>
                         </connections>
                     </sceneKitView>
                 </viewController>
@@ -29,7 +30,12 @@
                         <outlet property="delegate" destination="WuC-lJ-opN" id="0Ro-Ij-bEV"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pinchGestureRecognizer id="Dp7-iV-6Y3"/>
+                <pinchGestureRecognizer id="Dp7-iV-6Y3">
+                    <connections>
+                        <action selector="pinchAction:" destination="WuC-lJ-opN" id="fFn-9K-6Fw"/>
+                        <outlet property="delegate" destination="WuC-lJ-opN" id="Vzx-xv-x0l"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-826" y="-699"/>
         </scene>
@@ -42,6 +48,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="5Po-ql-XLS" appends="YES" id="1UD-Hd-8fA"/>
+                            <outletCollection property="gestureRecognizers" destination="7S7-fU-aFg" appends="YES" id="pBs-8e-qLy"/>
                         </connections>
                     </sceneKitView>
                 </viewController>
@@ -52,6 +59,12 @@
                         <outlet property="delegate" destination="5GW-wG-bMM" id="DKk-mn-pz0"/>
                     </connections>
                 </pongPressGestureRecognizer>
+                <pinchGestureRecognizer id="7S7-fU-aFg">
+                    <connections>
+                        <action selector="pinchAction:" destination="5GW-wG-bMM" id="B12-v4-FoU"/>
+                        <outlet property="delegate" destination="5GW-wG-bMM" id="57A-ZG-ocV"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="65" y="-699"/>
         </scene>
@@ -135,6 +148,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="is6-kF-81S" appends="YES" id="8Bq-oR-AMq"/>
+                            <outletCollection property="gestureRecognizers" destination="jnz-Vf-OlA" appends="YES" id="CeV-Nf-DDo"/>
                         </connections>
                     </sceneKitView>
                 </viewController>
@@ -145,6 +159,12 @@
                         <outlet property="delegate" destination="BV1-FR-VrT" id="1uj-Hc-U9S"/>
                     </connections>
                 </pongPressGestureRecognizer>
+                <pinchGestureRecognizer cancelsTouchesInView="NO" delaysTouchesEnded="NO" id="jnz-Vf-OlA">
+                    <connections>
+                        <action selector="pinchAction:" destination="BV1-FR-VrT" id="pCS-75-gtB"/>
+                        <outlet property="delegate" destination="BV1-FR-VrT" id="Aze-Yd-ypr"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="65" y="36"/>
         </scene>

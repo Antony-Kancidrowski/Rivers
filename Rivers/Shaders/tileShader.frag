@@ -59,7 +59,7 @@ void main(void){
         color+=v;
     }
     
-    gl_FragColor = vec4(color, vopacity);
+    gl_FragColor = vec4(color * vintensity, vopacity);
 }
 
 

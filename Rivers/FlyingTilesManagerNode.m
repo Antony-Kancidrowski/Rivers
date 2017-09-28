@@ -63,7 +63,7 @@
     
     TileNode *blockNode = [[TileNode alloc] initWithTheme:self.theme
                                                andTagName:@"red"
-                                                  andSize:SCNVector3Make(unit_x * 2, unit_y * 2, 0.125)
+                                                  andSize:SCNVector3Make(unit_x * 2, unit_y * 2, 0.25)
                                                  andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
     [blockNode setPosition:position];
     [blockNode setup:self];
@@ -94,7 +94,7 @@
     
     TileNode *tileNode = [[TileNode alloc] initWithTheme:self.theme
                                               andTagName:@"rivers"
-                                                 andSize:SCNVector3Make(unit_x, unit_y * 2, 0.125)
+                                                 andSize:SCNVector3Make(unit_x, unit_y * 2, 0.25)
                                                 andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
     [tileNode setPosition:position];
     [tileNode setup:self];
@@ -125,7 +125,7 @@
     
     TileNode *tileNode = [[TileNode alloc] initWithTheme:self.theme
                                               andTagName:@"white"
-                                                 andSize:SCNVector3Make(unit_x, unit_y, 0.125)
+                                                 andSize:SCNVector3Make(unit_x, unit_y, 0.25)
                                                 andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
     [tileNode setPosition:position];
     [tileNode setup:self];

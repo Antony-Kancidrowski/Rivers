@@ -136,7 +136,7 @@
                                                  SCNNode *renderedNode,
                                                  SCNRenderer *renderer)
      {
-         glUniform1f(location, intensity);
+         glUniform1f(location, intensity * self.opacity);
      }];
     
     [plane.firstMaterial handleBindingOfSymbol:@"opacity"

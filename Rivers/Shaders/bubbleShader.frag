@@ -50,5 +50,5 @@ void main(void)
         color += col.xyz *(1.- smoothstep( rad*(0.65+0.20*sin(pox*vtime)), rad, dis )) * (1.0 - cos(pox*vtime));
     }
     
-    gl_FragColor = vec4(color, vopacity);
+    gl_FragColor = vec4(color * vintensity, vopacity);
 }

@@ -211,18 +211,26 @@
         
         NSNumber *show = [DebugOptions optionForKey:@"ShowBackgroundLayer"];
         
-        [SCNTransaction begin];
-        [SCNTransaction setAnimationDuration:1.0];
-        
         if (show.boolValue == false) {
-            
-            [background setOpacity:0.0f];
+
+            [background runAction:[SCNAction fadeOutWithDuration:1.0]];
         } else {
-            
-            [background setOpacity:1.0f];
+
+            [background runAction:[SCNAction fadeInWithDuration:1.0]];
         }
         
-        [SCNTransaction commit];
+//        [SCNTransaction begin];
+//        [SCNTransaction setAnimationDuration:1.0];
+//
+//        if (show.boolValue == false) {
+//
+//            [background setOpacity:0.0f];
+//        } else {
+//
+//            [background setOpacity:1.0f];
+//        }
+//
+//        [SCNTransaction commit];
         
         if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
             NSLog(@"Successfully received Show Background Changed!");
