@@ -7,8 +7,7 @@
 //
 
 #import "TutotialViewController.h"
-
-#import "TexturedBackgroundNode.h"
+#import "GLSLBackgroundNode.h"
 
 #import "LabelNode.h"
 #import "ImageNode.h"
@@ -59,12 +58,9 @@
     // configure the view
     scnView.backgroundColor = [UIColor colorWithWhite:0.05 alpha:1.0];
     
-    self.background = [TexturedBackgroundNode backgroundWithTextureNamed:@"gray-background.png"];
-    [self.background colorizeWithColor:[UIColor brownColor]];
-    
-    [self.background setScale:SCNVector3Make(8.0f, 8.0f, 1.0f)];
-    [self.background setPosition:SCNVector3Make(0, 0, 0)];
-    
+    self.background = [GLSLBackgroundNode backgroundNodeWithShaderName:@"bubbleShader" andResolution:self.view.frame.size];
+    [self.background setPosition:SCNVector3Make(0.0f, 0.0f, -5.0f)];
+    [self.background setScale:SCNVector3Make(2.0f, 2.0f, 1.0f)];
     [self.background setup:self.scene.rootNode];
     
     _overlay = [SCNNode node];

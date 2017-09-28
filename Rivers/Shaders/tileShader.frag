@@ -34,25 +34,29 @@ float map(vec2 p){float c=line(p,vec2(p.x,floor(p.y*PITCH+.5)/PITCH))+line(p,vec
 void main(void){
     vec2 resolution = vec2(vresX, vresY);
     
+    float t = vtime * .6;
+    
     vec2 p=(gl_FragCoord.xy*2.-resolution.xy)/min(resolution.x,resolution.y);
-    vec3 l=vec3(p.x+1.,p.y-2.,2.5);    //light pos
+    vec3 l=vec3(p.x-1.+sin(t*2.15),p.y-2.-cos(t*2.75),2.5);    //light pos
     vec3 ln=normalize(l);
-    float t=vtime*.3;
-    float si=sin(t),co=cos(t*1.15);
-    mat2 m=mat2(co,-si,si,co);
-    p*=m;
-    p.x+=vtime*.7;
     
-    vec3 col=vec3(.5,.4,.1);
+    float si = sin(t), co = cos(t*1.15);
+    mat2 m = mat2(co, -si, si, co);
+    p *= m;
+    p.x += vtime * .7;
     
-    float v=map(p);
+    vec3 color = vec3(.5, .4, .1);
+    
+    float v = map(p);
+    
     if(v>.3){
-        col=vec3(.1,.1,.1);
+        color = vec3(.1,.1,.1);
     }else{
-        float dx=map(p+vec2(0.01,0.)),dy=map(p+vec2(0.,0.01));
-        vec3 n=rotZ(normalize(vec3(v-dx,v-dy,.2)),-t);
-        v=pow(clamp(dot(ln,n),0.,1.),8.);
-        col+=v;
+        float dx = map(p+vec2(0.01,0.)), dy = map(p+vec2(0.,0.01));
+        vec3 n = rotZ(normalize(vec3(v-dx, v-dy,.2)), -t);
+        v = pow(clamp(dot(ln,n),0.,1.),8.);
+        
+        color+=v;
     }
     
     gl_FragColor = vec4(color, vopacity);

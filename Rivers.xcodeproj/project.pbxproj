@@ -131,6 +131,8 @@
 		0A5FAE5F1F71765B00FE0A40 /* store-open-closed.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAE591F71765B00FE0A40 /* store-open-closed.png */; };
 		0A5FAE601F71765B00FE0A40 /* store-panel.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FAE5A1F71765B00FE0A40 /* store-panel.png */; };
 		0A64CCB41F756FA1003FC908 /* GLSLBackgroundNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A64CCB31F756FA1003FC908 /* GLSLBackgroundNode.m */; };
+		0A75233D1F7D058C00C782F6 /* bubbleShader.frag in Resources */ = {isa = PBXBuildFile; fileRef = 0A75233B1F7D058B00C782F6 /* bubbleShader.frag */; };
+		0A75233E1F7D058C00C782F6 /* bubbleShader.vert in Resources */ = {isa = PBXBuildFile; fileRef = 0A75233C1F7D058B00C782F6 /* bubbleShader.vert */; };
 		0AD75BAF1F73BA3D0096BC61 /* bluebutton-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD75BAE1F73BA340096BC61 /* bluebutton-down.png */; };
 		0AD75BB01F73BA480096BC61 /* bluebutton-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD75BA91F73BA340096BC61 /* bluebutton-up.png */; };
 		0AD75BB11F73BA4C0096BC61 /* greenbutton-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD75BA81F73BA340096BC61 /* greenbutton-down.png */; };
@@ -357,6 +359,8 @@
 		0A5FAE5A1F71765B00FE0A40 /* store-panel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "store-panel.png"; path = "Images/Store/store-panel.png"; sourceTree = "<group>"; };
 		0A64CCB21F756FA1003FC908 /* GLSLBackgroundNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLSLBackgroundNode.h; sourceTree = "<group>"; };
 		0A64CCB31F756FA1003FC908 /* GLSLBackgroundNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLSLBackgroundNode.m; sourceTree = "<group>"; };
+		0A75233B1F7D058B00C782F6 /* bubbleShader.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = bubbleShader.frag; path = Shaders/bubbleShader.frag; sourceTree = "<group>"; };
+		0A75233C1F7D058B00C782F6 /* bubbleShader.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = bubbleShader.vert; path = Shaders/bubbleShader.vert; sourceTree = "<group>"; };
 		0AAD1A0A1F7A4ABF002C84D2 /* tile-clouds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tile-clouds.png"; path = "Images/Themes/Clouds/tile-clouds.png"; sourceTree = "<group>"; };
 		0AAD1A0B1F7A4AC0002C84D2 /* tile-clouds-normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tile-clouds-normal.png"; path = "Images/Themes/Clouds/tile-clouds-normal.png"; sourceTree = "<group>"; };
 		0AAD1A0D1F7A4AE7002C84D2 /* tile-copper-normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tile-copper-normal.png"; path = "Images/Themes/Copper/tile-copper-normal.png"; sourceTree = "<group>"; };
@@ -1014,6 +1018,8 @@
 				0A06B6031F783BB200B6A44F /* tileShader.vert */,
 				0A06B6081F78467C00B6A44F /* blueSwirlShader.frag */,
 				0A06B6071F78467C00B6A44F /* blueSwirlShader.vert */,
+				0A75233B1F7D058B00C782F6 /* bubbleShader.frag */,
+				0A75233C1F7D058B00C782F6 /* bubbleShader.vert */,
 			);
 			name = Shaders;
 			sourceTree = "<group>";
@@ -1295,6 +1301,7 @@
 				0A1C054B1F7A535300C4969A /* tile-copper.png in Resources */,
 				0AD75BB01F73BA480096BC61 /* bluebutton-up.png in Resources */,
 				0A5FAE0C1F71122B00FE0A40 /* selection_slide.wav in Resources */,
+				0A75233E1F7D058C00C782F6 /* bubbleShader.vert in Resources */,
 				0A5FADF31F710E1B00FE0A40 /* settings-panel.png in Resources */,
 				0AD75BD11F73BDF50096BC61 /* cogs.png in Resources */,
 				0A1C054A1F7A534F00C4969A /* tile-copper-normal.png in Resources */,
@@ -1305,6 +1312,7 @@
 				0AD75BC81F73BCD20096BC61 /* trophy-disabled.png in Resources */,
 				0A5FAE491F716F5000FE0A40 /* selection-panel.png in Resources */,
 				0A5FADD51F6FBAD400FE0A40 /* menu_selection.wav in Resources */,
+				0A75233D1F7D058C00C782F6 /* bubbleShader.frag in Resources */,
 				0A5FADBD1F6D2A5A00FE0A40 /* dm_cube.png in Resources */,
 				0A1C054D1F7A535A00C4969A /* tile-clouds.png in Resources */,
 				0A5FADC11F6D2A5A00FE0A40 /* dm_github.png in Resources */,
