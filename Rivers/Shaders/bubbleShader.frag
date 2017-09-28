@@ -23,17 +23,14 @@ const float fRadius = 0.1;
 void main(void)
 {
     vec2 resolution = vec2(vresX, vresY);
-
-//    vec2 uv = gl_FragCoord.xy / resolution;
-//    uv.x *=  resolution.x / resolution.y;
-    
+ 
     vec2 uv = (gl_FragCoord.xy - resolution.xy) / max(resolution.x, resolution.y);
     uv.x += 0.5;
     
     vec3 color = vec3(0.0);
     
     // bubbles
-    for( int i=0; i<64; i++ )
+    for( int i = 0; i < 32; i++ )
     {
         float floati = float(i);
         
