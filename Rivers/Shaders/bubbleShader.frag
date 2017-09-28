@@ -44,11 +44,11 @@ void main(void)
         vec2  pos = vec2( pox+sin(vtime/10.+pha+siz), -1.0-rad + (2.0+2.0*rad)
                          *mod(pha+0.1*(vtime/2.)*(0.2+0.8*siz),1.0)) * vec2(1.0, 1.0);
         float dis = length( uv - pos );
-        vec3  col = mix( vec3(0.7, 0.2, 0.8), vec3(0.2,0.8,0.6), 0.5+0.5*sin(floati*sin(vtime*pox*0.03)+1.9));
+        vec3  col = mix( vec3(0.2, 0.2, 0.4), vec3(0.2, 0.8, 0.6), 0.5 + 0.5*sin(floati*sin(vtime*pox*0.03)+1.9));
         
         // render
         color += col.xyz *(1.- smoothstep( rad*(0.65+0.20*sin(pox*vtime)), rad, dis )) * (1.0 - cos(pox*vtime));
     }
     
-    gl_FragColor = vec4(color, 1.0);
+    gl_FragColor = vec4(color, vopacity);
 }
