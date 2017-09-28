@@ -16,6 +16,7 @@
 
 #import "ImageButtonNode.h"
 #import "ButtonNode.h"
+#import "TileNode.h"
 
 #import "SoundManager.h"
 
@@ -24,6 +25,7 @@
 @interface GameViewController ()
 {
     ButtonNode *selectedButton;
+    TileNode *selectedTile;
 }
 
 @property (nonatomic, strong) GameGridManagerNode *gridManager;
@@ -47,7 +49,7 @@
     
     self.paused = NO;
     
-    selectedButton = nil;
+    selectedTile = nil;
     
     ////////////////////////////////////////////////////////////////////////////////////////////
     
@@ -72,7 +74,7 @@
     [_overlay setPosition:SCNVector3Zero];
     [self.scene.rootNode addChildNode:_overlay];
     [_overlay setScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
-    [_overlay setEulerAngles:SCNVector3Make(-0.25f, 0.0f, 0.0f)];
+    [_overlay setEulerAngles:SCNVector3Make(-0.125f, 0.0f, 0.0f)];
     
     _gridManager = [GameGridManagerNode gridManagerWithType:ZenGame];
     [_gridManager setPosition:SCNVector3Zero];
@@ -213,7 +215,7 @@
         // Check that we clicked on at least one object
         if([hitResults count] > 0) {
             
-            selectedButton = nil;
+            selectedTile = nil;
             
             for (int i = 0; i < [hitResults count]; ++i) {
                 
@@ -222,11 +224,42 @@
                 if ([result.node.parentNode isKindOfClass:[ButtonNode class]]) {
                     
                     selectedButton = (ButtonNode *)result.node.parentNode;
+                    
+                } else if ([result.node isKindOfClass:[TileNode class]]) {
+                    
+                    selectedTile = (TileNode *)result.node;
+                    
+                } else if ([result.node isKindOfClass:[BackgroundNode class]]) {
+                        
+                    [self dismissGame];
+                    break;
+                    
                 } else {
                     
                     continue;
                 }
             }
+            
+            // Get its material
+            SCNMaterial *material = selectedTile.geometry.firstMaterial;
+            
+            // Highlight it
+            [SCNTransaction begin];
+            [SCNTransaction setAnimationDuration:0.5];
+            
+            // On completion - unhighlight
+            [SCNTransaction setCompletionBlock:^{
+                [SCNTransaction begin];
+                [SCNTransaction setAnimationDuration:0.5];
+                
+                material.emission.contents = [UIColor blackColor];
+                
+                [SCNTransaction commit];
+            }];
+            
+            material.emission.contents = [UIColor redColor];
+            
+            [SCNTransaction commit];
             
             if (selectedButton != nil) {
                 
@@ -273,7 +306,7 @@
             
             [selectedButton cancelButton];
             
-            selectedButton = nil;
+            selectedTile = nil;
         }
         
     } else if (gestureRecognize.state == UIGestureRecognizerStateEnded) {
@@ -283,8 +316,6 @@
             [selectedButton releaseButton];
             selectedButton = nil;
         }
-        
-        [self dismissGame];
     }
 }
 
@@ -300,7 +331,7 @@
         
         self.background = nil;
         
-        selectedButton = nil;
+        selectedTile = nil;
     }];
 }
 
