@@ -48,15 +48,15 @@
 
 - (void)setTile:(SCNVector3)position {
     
-    float unit_x = 0.5f;
-    float unit_y = 0.5f;
+    float unit_x = 0.625f;
+    float unit_y = 0.625f;
     
     ThemeManager *manager = [ThemeManager sharedThemeManager];
     Theme *theme = [manager getCurrentTheme];
     
     TileNode *tileNode = [[TileNode alloc] initWithTheme:theme
                                               andTagName:@"rivers"
-                                                 andSize:SCNVector3Make(unit_x, unit_y * 2, 0.125)
+                                                 andSize:SCNVector3Make(unit_x, unit_y, 0.125)
                                                 andScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
     [tileNode setPosition:position];
     [tileNode setup:self];
@@ -68,17 +68,14 @@
     
     [super setup:parentNode];
     
-    [self setTile:SCNVector3Make(-1.05f, -2.05f, 0.0f)];
-    [self setTile:SCNVector3Make(0.0f, -2.05f, 0.0f)];
-    [self setTile:SCNVector3Make(1.05f, -2.05f, 0.0f)];
+    const float gap = 0.0;
     
-    [self setTile:SCNVector3Make(-1.05f, 0.0f, 0.0f)];
-    [self setTile:SCNVector3Make(0.0f, 0.0f, 0.0f)];
-    [self setTile:SCNVector3Make(1.05f, 0.0f, 0.0f)];
-    
-    [self setTile:SCNVector3Make(-1.05f, 2.05f, 0.0f)];
-    [self setTile:SCNVector3Make(0.0f, 2.05f, 0.0f)];
-    [self setTile:SCNVector3Make(1.05f, 2.05f, 0.0f)];
+    for (int x = -6; x < 6; ++x) {
+        for (int y = -3; y <= 3; ++y) {
+            
+            [self setTile:SCNVector3Make(0.525 + (x * (1.25f + gap)), (y * (1.25 + gap)), 0.0f)];
+        }
+    }
 }
 
 - (void)receiveShowTilesNotification:(NSNotification *)notification {
