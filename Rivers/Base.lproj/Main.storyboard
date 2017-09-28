@@ -93,7 +93,7 @@
                         <outlet property="delegate" destination="dDQ-bR-3ni" id="hyc-Xs-d8o"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pinchGestureRecognizer cancelsTouchesInView="NO" delaysTouchesEnded="NO" id="QFP-G4-X8T">
+                <pinchGestureRecognizer id="QFP-G4-X8T">
                     <connections>
                         <action selector="pinchAction:" destination="gwW-gJ-8Zg" id="MAI-GG-qwZ"/>
                         <outlet property="delegate" destination="gwW-gJ-8Zg" id="ZaB-gd-sfX"/>
@@ -159,7 +159,7 @@
                         <outlet property="delegate" destination="BV1-FR-VrT" id="1uj-Hc-U9S"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pinchGestureRecognizer cancelsTouchesInView="NO" delaysTouchesEnded="NO" id="jnz-Vf-OlA">
+                <pinchGestureRecognizer id="jnz-Vf-OlA">
                     <connections>
                         <action selector="pinchAction:" destination="BV1-FR-VrT" id="pCS-75-gtB"/>
                         <outlet property="delegate" destination="BV1-FR-VrT" id="Aze-Yd-ypr"/>

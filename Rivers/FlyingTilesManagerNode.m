@@ -152,7 +152,13 @@
         
         for (TileNode *tileNode in flyingTiles) {
             
-            [tileNode setHidden:!show.boolValue];
+            if (show.boolValue == false) {
+                
+                [tileNode runAction:[SCNAction fadeOutWithDuration:1.0]];
+            } else {
+                
+                [tileNode runAction:[SCNAction fadeInWithDuration:1.0]];
+            }
         }
         
         if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])

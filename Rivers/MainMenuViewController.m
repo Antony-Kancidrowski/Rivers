@@ -256,6 +256,11 @@
 
 - (IBAction)longPressAction:(UILongPressGestureRecognizer *)gestureRecognize {
     
+    if ((self.debugMenuShown) || (self.disableGestures)) {
+        
+        return;
+    }
+    
     if (gestureRecognize.state == UIGestureRecognizerStateBegan) {
         
         // Retrieve the SCNView
