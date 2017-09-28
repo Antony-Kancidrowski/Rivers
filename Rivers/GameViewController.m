@@ -9,6 +9,8 @@
 #import "GameViewController.h"
 #import "GLSLBackgroundNode.h"
 
+#import "GameGridManagerNode.h"
+
 #import "LabelNode.h"
 #import "ImageNode.h"
 
@@ -23,6 +25,8 @@
 {
     ButtonNode *selectedButton;
 }
+
+@property (nonatomic, strong) GameGridManagerNode *gridManager;
 
 @property (nonatomic, strong) SCNNode *overlay;
 
@@ -68,8 +72,12 @@
     [_overlay setPosition:SCNVector3Zero];
     [self.scene.rootNode addChildNode:_overlay];
     [_overlay setScale:SCNVector3Make(1.0f, 1.0f, 1.0f)];
+    [_overlay setEulerAngles:SCNVector3Make(-0.25f, 0.0f, 0.0f)];
     
-    
+    _gridManager = [GameGridManagerNode gridManagerWithType:ZenGame];
+    [_gridManager setPosition:SCNVector3Zero];
+    [_gridManager setScale:SCNVector3Make(0.5f, 0.5f, 0.5f)];
+    [_gridManager setup:_overlay];
     
     self.camera.mainCameraNode.constraints = @[[SCNLookAtConstraint lookAtConstraintWithTarget:_overlay]];
 }
@@ -93,7 +101,7 @@
     [self.background activate];
     [self.background animate];
     
-    // TODO:
+    [_gridManager activate];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -118,7 +126,7 @@
     // Deactivate
     [self.background deactivate];
     
-    // TODO:
+    [_gridManager deactivate];
     
     [[SoundManager sharedSoundManager] stopMusic];
     
