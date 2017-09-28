@@ -43,7 +43,7 @@
 @synthesize disableGestures;
 @synthesize allowCameraControl;
 
-@synthesize debugMenuShown;
+@synthesize gridMenuShown;
 @synthesize paused;
 
 - (void)viewDidLoad
@@ -116,7 +116,7 @@
     debugMenuEnabled = FALSE;
 #endif
     
-    self.debugMenuShown = NO;
+    self.gridMenuShown = NO;
     
     self.disableGestures = NO;
 }
@@ -233,7 +233,7 @@
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
     
-    if ((self.debugMenuShown) || (self.disableGestures)) {
+    if ((self.gridMenuShown) || (self.disableGestures)) {
         
         return NO;
     }
@@ -338,7 +338,7 @@
     SCNView *scnView = (SCNView *)self.view;
     [scnView setAllowsCameraControl:NO];
     
-    self.debugMenuShown = YES;
+    self.gridMenuShown = YES;
 }
 
 - (void)gridMenu:(GridMenuViewController *)gridMenu willDismissWithSelectedItem:(GridMenuItem *)item atIndex:(NSInteger)itemIndex {
@@ -353,7 +353,7 @@
             SCNView *scnView = (SCNView *)self.view;
             [scnView setAllowsCameraControl:self.allowCameraControl];
             
-            self.debugMenuShown = NO;
+            self.gridMenuShown = NO;
         }
         
         return;
@@ -429,7 +429,7 @@
         SCNView *scnView = (SCNView *)self.view;
         [scnView setAllowsCameraControl:self.allowCameraControl];
         
-        self.debugMenuShown = NO;
+        self.gridMenuShown = NO;
     }
 }
 
@@ -438,7 +438,7 @@
     SCNView *scnView = (SCNView *)self.view;
     [scnView setAllowsCameraControl:self.allowCameraControl];
     
-    self.debugMenuShown = NO;
+    self.gridMenuShown = NO;
     
     if ([[DebugOptions optionForKey:@"EnableLog"] boolValue])
         NSLog(@"Grid Menu %@ dismissed.", gridMenu.title);

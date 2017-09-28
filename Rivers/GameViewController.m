@@ -202,7 +202,7 @@
 
 - (IBAction)longPressAction:(UILongPressGestureRecognizer *)gestureRecognize {
     
-    if ((self.debugMenuShown) || (self.disableGestures)) {
+    if ((self.gridMenuShown) || (self.disableGestures)) {
         
         return;
     }
