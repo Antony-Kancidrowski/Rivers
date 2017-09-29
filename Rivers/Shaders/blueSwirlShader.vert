@@ -18,8 +18,7 @@ attribute vec4 position;
 uniform float opacity;
 uniform float intensity;
 
-uniform float resX;
-uniform float resY;
+uniform vec2 resolution;
 
 uniform float time;
 
@@ -27,8 +26,7 @@ uniform float time;
 varying float vopacity;
 varying float vintensity;
 
-varying float vresX;
-varying float vresY;
+varying vec2 vresolution;
 
 varying float vtime;
 
@@ -37,8 +35,7 @@ void main(void)
     vopacity = opacity;
     vintensity = intensity;
     
-    vresX = resX;
-    vresY = resY;
+    vresolution = resolution;
     vtime = time;
     
     gl_Position = modelViewProjection * position;

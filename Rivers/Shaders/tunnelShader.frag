@@ -17,8 +17,7 @@ varying vec4 viewSpacePosition;
 varying float vopacity;
 varying float vintensity;
 
-varying float vresX;
-varying float vresY;
+varying vec2 vresolution;
 
 varying float vtime;
 
@@ -47,9 +46,7 @@ vec3 tunnel( vec2 p, float scrollPos, float rotateSpeed )
 
 void main(void)
 {
-    vec2 resolution = vec2(vresX, vresY);
-
-    vec2 uv = gl_FragCoord.xy / resolution.xy;
+    vec2 uv = gl_FragCoord.xy / vresolution.xy;
 
     vec2 p = uv - vec2(1.0 - 0.25*cos(vtime), 1.0 - 0.25*sin(2.0*vtime));
 

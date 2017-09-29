@@ -112,22 +112,13 @@
                forSymbol:@"normalTransform"
                  options:nil];
     
-    [plane.firstMaterial handleBindingOfSymbol:@"resX"
+    [plane.firstMaterial handleBindingOfSymbol:@"resolution"
                                        usingBlock:^(unsigned int programID,
                                                     unsigned int location,
                                                     SCNNode *renderedNode,
                                                     SCNRenderer *renderer)
      {
-         glUniform1f(location, resolution.width);
-     }];
-    
-    [plane.firstMaterial handleBindingOfSymbol:@"resY"
-                                       usingBlock:^(unsigned int programID,
-                                                    unsigned int location,
-                                                    SCNNode *renderedNode,
-                                                    SCNRenderer *renderer)
-     {
-         glUniform1f(location, resolution.height);
+         glUniform2f(location, resolution.width, resolution.height);
      }];
     
     [plane.firstMaterial handleBindingOfSymbol:@"intensity"

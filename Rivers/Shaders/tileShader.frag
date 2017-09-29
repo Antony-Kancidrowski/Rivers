@@ -17,8 +17,7 @@ varying vec4 viewSpacePosition;
 varying float vopacity;
 varying float vintensity;
 
-varying float vresX;
-varying float vresY;
+varying vec2 vresolution;
 
 varying float vtime;
 
@@ -32,11 +31,10 @@ float line(vec2 p,vec2 l){return pow(1.-length(p-l),POWER);}
 float map(vec2 p){float c=line(p,vec2(p.x,floor(p.y*PITCH+.5)/PITCH))+line(p,vec2(floor(p.x*PITCH+.5)/PITCH,p.y))-1e-10;return clamp(c,0.,1.);}
 
 void main(void){
-    vec2 resolution = vec2(vresX, vresY);
-    
+
     float t = vtime * .6;
     
-    vec2 p=(gl_FragCoord.xy*2.-resolution.xy)/min(resolution.x,resolution.y);
+    vec2 p=(gl_FragCoord.xy*2.-vresolution.xy)/min(vresolution.x, vresolution.y);
     vec3 l=vec3(p.x-1.+sin(t*2.15),p.y-2.-cos(t*2.75),2.5);    //light pos
     vec3 ln=normalize(l);
     

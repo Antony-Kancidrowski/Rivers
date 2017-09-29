@@ -17,8 +17,7 @@ varying vec4 viewSpacePosition;
 varying float vopacity;
 varying float vintensity;
 
-varying float vresX;
-varying float vresY;
+varying vec2 vresolution;
 
 varying float vtime;
 
@@ -46,10 +45,8 @@ float fworley(vec2 p) {
 
 void main(void)
 {
-    vec2 resolution = vec2(vresX, vresY);
-
-    vec2 uv = gl_FragCoord.xy / resolution.xy;
-    float t = fworley(uv * resolution.xy / 1500.0);
+    vec2 uv = gl_FragCoord.xy / vresolution.xy;
+    float t = fworley(uv * vresolution.xy / 1500.0);
     t *= exp(-length2(abs(0.7 * uv - 1.0)));
     gl_FragColor = vec4(t * vec3(0.1, 1.1*t, 1.2*t + pow(t, 0.5-t)), 1.0);
 }

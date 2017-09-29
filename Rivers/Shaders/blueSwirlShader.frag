@@ -13,8 +13,7 @@ precision mediump float;
 varying float vopacity;
 varying float vintensity;
 
-varying float vresX;
-varying float vresY;
+varying vec2 vresolution;
 
 varying float vtime;
 
@@ -22,9 +21,7 @@ const int MAX_ITER = 3;
 
 void main(void)
 {
-    vec2 resolution = vec2(vresX, vresY);
-    
-    vec2 v_texCoord = gl_FragCoord.xy / resolution;
+    vec2 v_texCoord = gl_FragCoord.xy / vresolution;
     
     vec2 p =  v_texCoord * 4.0 - vec2(20.0);
     vec2 i = p;

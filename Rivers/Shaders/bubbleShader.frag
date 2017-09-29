@@ -13,8 +13,7 @@ precision highp float;
 varying float vopacity;
 varying float vintensity;
 
-varying float vresX;
-varying float vresY;
+varying vec2 vresolution;
 
 varying float vtime;
 
@@ -22,9 +21,7 @@ const float fRadius = 0.1;
 
 void main(void)
 {
-    vec2 resolution = vec2(vresX, vresY);
- 
-    vec2 uv = (gl_FragCoord.xy - resolution.xy) / max(resolution.x, resolution.y);
+    vec2 uv = (gl_FragCoord.xy - vresolution.xy) / max(vresolution.x, vresolution.y);
     uv.x += 0.5;
     
     vec3 color = vec3(0.0);
