@@ -1,8 +1,8 @@
 //
-//  bubbleShader.vert
+//  voronoiShader.vert
 //  Rivers
 //
-//  Created by Antony Kancidrowski on 28/09/2017.
+//  Created by Antony Kancidrowski on 29/09/2017.
 //  Copyright © 2017 Cidrosoft. All rights reserved.
 //
 

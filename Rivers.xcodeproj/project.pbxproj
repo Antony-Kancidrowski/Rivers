@@ -165,6 +165,10 @@
 		0AF920611F7E524E009CF049 /* blueCellsShader.frag in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9205F1F7E524E009CF049 /* blueCellsShader.frag */; };
 		0AF920641F7E5582009CF049 /* tunnelShader.frag in Resources */ = {isa = PBXBuildFile; fileRef = 0AF920621F7E5582009CF049 /* tunnelShader.frag */; };
 		0AF920651F7E5582009CF049 /* tunnelShader.vert in Resources */ = {isa = PBXBuildFile; fileRef = 0AF920631F7E5582009CF049 /* tunnelShader.vert */; };
+		0AF9206C1F7E7E8F009CF049 /* voronoiShader.frag in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9206A1F7E7E8E009CF049 /* voronoiShader.frag */; };
+		0AF9206D1F7E7E8F009CF049 /* voronoiShader.vert in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9206B1F7E7E8F009CF049 /* voronoiShader.vert */; };
+		0AF920701F7E87FC009CF049 /* cloudsShader.frag in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9206E1F7E87FB009CF049 /* cloudsShader.frag */; };
+		0AF920711F7E87FC009CF049 /* cloudsShader.vert in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9206F1F7E87FC009CF049 /* cloudsShader.vert */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -408,6 +412,10 @@
 		0AF9205F1F7E524E009CF049 /* blueCellsShader.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = blueCellsShader.frag; path = Shaders/blueCellsShader.frag; sourceTree = "<group>"; };
 		0AF920621F7E5582009CF049 /* tunnelShader.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = tunnelShader.frag; path = Shaders/tunnelShader.frag; sourceTree = "<group>"; };
 		0AF920631F7E5582009CF049 /* tunnelShader.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = tunnelShader.vert; path = Shaders/tunnelShader.vert; sourceTree = "<group>"; };
+		0AF9206A1F7E7E8E009CF049 /* voronoiShader.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = voronoiShader.frag; path = Shaders/voronoiShader.frag; sourceTree = "<group>"; };
+		0AF9206B1F7E7E8F009CF049 /* voronoiShader.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = voronoiShader.vert; path = Shaders/voronoiShader.vert; sourceTree = "<group>"; };
+		0AF9206E1F7E87FB009CF049 /* cloudsShader.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = cloudsShader.frag; path = Shaders/cloudsShader.frag; sourceTree = "<group>"; };
+		0AF9206F1F7E87FC009CF049 /* cloudsShader.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = cloudsShader.vert; path = Shaders/cloudsShader.vert; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1028,10 +1036,14 @@
 				0A06B6071F78467C00B6A44F /* blueSwirlShader.vert */,
 				0A75233B1F7D058B00C782F6 /* bubbleShader.frag */,
 				0A75233C1F7D058B00C782F6 /* bubbleShader.vert */,
+				0AF9206E1F7E87FB009CF049 /* cloudsShader.frag */,
+				0AF9206F1F7E87FC009CF049 /* cloudsShader.vert */,
 				0A06B6041F783BB300B6A44F /* tileShader.frag */,
 				0A06B6031F783BB200B6A44F /* tileShader.vert */,
 				0AF920621F7E5582009CF049 /* tunnelShader.frag */,
 				0AF920631F7E5582009CF049 /* tunnelShader.vert */,
+				0AF9206A1F7E7E8E009CF049 /* voronoiShader.frag */,
+				0AF9206B1F7E7E8F009CF049 /* voronoiShader.vert */,
 			);
 			name = Shaders;
 			sourceTree = "<group>";
@@ -1249,6 +1261,7 @@
 				0AE2EB2E1F72A277002D3E0B /* black-background.png in Resources */,
 				0AF920611F7E524E009CF049 /* blueCellsShader.frag in Resources */,
 				0AD75BB31F73BA540096BC61 /* orangebutton-down.png in Resources */,
+				0AF9206C1F7E7E8F009CF049 /* voronoiShader.frag in Resources */,
 				0AE2EB2F1F72A277002D3E0B /* graybutton-down.png in Resources */,
 				0AD75BCD1F73BD500096BC61 /* tutorial.png in Resources */,
 				0AE2EB301F72A277002D3E0B /* graybutton-up.png in Resources */,
@@ -1270,6 +1283,7 @@
 				0A5FAE2E1F716C8900FE0A40 /* achievements.png in Resources */,
 				0A06B6061F783BB300B6A44F /* tileShader.frag in Resources */,
 				0AD75BB61F73BA5D0096BC61 /* redbutton-up.png in Resources */,
+				0AF920701F7E87FC009CF049 /* cloudsShader.frag in Resources */,
 				0AD75BC51F73BCC60096BC61 /* hand.png in Resources */,
 				0AF920651F7E5582009CF049 /* tunnelShader.vert in Resources */,
 				0A5FAD1C1F69205600FE0A40 /* art.scnassets in Resources */,
@@ -1303,6 +1317,7 @@
 				0AD75BB41F73BA570096BC61 /* orangebutton-up.png in Resources */,
 				0AD75BC21F73BCBC0096BC61 /* block-disabled.png in Resources */,
 				0A1C054C1F7A535700C4969A /* tile-clouds-normal.png in Resources */,
+				0AF9206D1F7E7E8F009CF049 /* voronoiShader.vert in Resources */,
 				0AF920641F7E5582009CF049 /* tunnelShader.frag in Resources */,
 				0A1C055C1F7A539E00C4969A /* tile-wood2.png in Resources */,
 				0AD75BC61F73BCCB0096BC61 /* star-disabled.png in Resources */,
@@ -1340,6 +1355,7 @@
 				0A5FAE2C1F714FD600FE0A40 /* achievement.wav in Resources */,
 				0A5FADE11F7084B700FE0A40 /* Settings.bundle in Resources */,
 				0AD75BC71F73BCCF0096BC61 /* star.png in Resources */,
+				0AF920711F7E87FC009CF049 /* cloudsShader.vert in Resources */,
 				0A5FADF71F710E1B00FE0A40 /* speaker_low.png in Resources */,
 				0AD75BCC1F73BD4C0096BC61 /* tutorial-disabled.png in Resources */,
 				0A5FADB91F6D2A5A00FE0A40 /* dm_back.png in Resources */,

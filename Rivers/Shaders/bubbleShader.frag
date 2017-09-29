@@ -34,7 +34,7 @@ void main(void)
         // bubble seeds
         float pha = tan(floati*6.+1.0)*0.5 + 0.5;
         float siz = pow( cos(floati*2.4+5.0)*0.5 + 0.5, 4.0 );
-        float pox = cos(floati*3.55+4.1) * resolution.x / resolution.y;
+        float pox = cos(floati*3.55+4.1) * vresolution.x / vresolution.y;
         
         // buble size, position and color
         float rad = fRadius + sin(floati)*0.12+0.08;
