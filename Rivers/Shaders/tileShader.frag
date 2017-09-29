@@ -7,7 +7,7 @@
 //
 
 #ifdef GL_ES
-precision highp float;
+precision mediump float;
 #endif
 
 // Interpolated normal and positions

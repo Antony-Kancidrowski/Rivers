@@ -161,6 +161,10 @@
 		0AE2EB301F72A277002D3E0B /* graybutton-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE2EB2D1F729DA5002D3E0B /* graybutton-up.png */; };
 		0AE2EB311F72A277002D3E0B /* menu-close-x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE2EB291F72795C002D3E0B /* menu-close-x.png */; };
 		0AF9205D1F7BA3C5009CF049 /* tile-rivers.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9205C1F7BA3C2009CF049 /* tile-rivers.png */; };
+		0AF920601F7E524E009CF049 /* blueCellsShader.vert in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9205E1F7E524E009CF049 /* blueCellsShader.vert */; };
+		0AF920611F7E524E009CF049 /* blueCellsShader.frag in Resources */ = {isa = PBXBuildFile; fileRef = 0AF9205F1F7E524E009CF049 /* blueCellsShader.frag */; };
+		0AF920641F7E5582009CF049 /* tunnelShader.frag in Resources */ = {isa = PBXBuildFile; fileRef = 0AF920621F7E5582009CF049 /* tunnelShader.frag */; };
+		0AF920651F7E5582009CF049 /* tunnelShader.vert in Resources */ = {isa = PBXBuildFile; fileRef = 0AF920631F7E5582009CF049 /* tunnelShader.vert */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -400,6 +404,10 @@
 		0AE2EB2C1F729DA5002D3E0B /* graybutton-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "graybutton-down.png"; path = "Images/Buttons/graybutton-down.png"; sourceTree = "<group>"; };
 		0AE2EB2D1F729DA5002D3E0B /* graybutton-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "graybutton-up.png"; path = "Images/Buttons/graybutton-up.png"; sourceTree = "<group>"; };
 		0AF9205C1F7BA3C2009CF049 /* tile-rivers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tile-rivers.png"; path = "Images/Themes/tile-rivers.png"; sourceTree = "<group>"; };
+		0AF9205E1F7E524E009CF049 /* blueCellsShader.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = blueCellsShader.vert; path = Shaders/blueCellsShader.vert; sourceTree = "<group>"; };
+		0AF9205F1F7E524E009CF049 /* blueCellsShader.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = blueCellsShader.frag; path = Shaders/blueCellsShader.frag; sourceTree = "<group>"; };
+		0AF920621F7E5582009CF049 /* tunnelShader.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = tunnelShader.frag; path = Shaders/tunnelShader.frag; sourceTree = "<group>"; };
+		0AF920631F7E5582009CF049 /* tunnelShader.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = tunnelShader.vert; path = Shaders/tunnelShader.vert; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1014,12 +1022,16 @@
 		0A64CCB61F75716C003FC908 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				0A06B6041F783BB300B6A44F /* tileShader.frag */,
-				0A06B6031F783BB200B6A44F /* tileShader.vert */,
+				0AF9205F1F7E524E009CF049 /* blueCellsShader.frag */,
+				0AF9205E1F7E524E009CF049 /* blueCellsShader.vert */,
 				0A06B6081F78467C00B6A44F /* blueSwirlShader.frag */,
 				0A06B6071F78467C00B6A44F /* blueSwirlShader.vert */,
 				0A75233B1F7D058B00C782F6 /* bubbleShader.frag */,
 				0A75233C1F7D058B00C782F6 /* bubbleShader.vert */,
+				0A06B6041F783BB300B6A44F /* tileShader.frag */,
+				0A06B6031F783BB200B6A44F /* tileShader.vert */,
+				0AF920621F7E5582009CF049 /* tunnelShader.frag */,
+				0AF920631F7E5582009CF049 /* tunnelShader.vert */,
 			);
 			name = Shaders;
 			sourceTree = "<group>";
@@ -1235,6 +1247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AE2EB2E1F72A277002D3E0B /* black-background.png in Resources */,
+				0AF920611F7E524E009CF049 /* blueCellsShader.frag in Resources */,
 				0AD75BB31F73BA540096BC61 /* orangebutton-down.png in Resources */,
 				0AE2EB2F1F72A277002D3E0B /* graybutton-down.png in Resources */,
 				0AD75BCD1F73BD500096BC61 /* tutorial.png in Resources */,
@@ -1258,6 +1271,7 @@
 				0A06B6061F783BB300B6A44F /* tileShader.frag in Resources */,
 				0AD75BB61F73BA5D0096BC61 /* redbutton-up.png in Resources */,
 				0AD75BC51F73BCC60096BC61 /* hand.png in Resources */,
+				0AF920651F7E5582009CF049 /* tunnelShader.vert in Resources */,
 				0A5FAD1C1F69205600FE0A40 /* art.scnassets in Resources */,
 				0A5FADBB1F6D2A5A00FE0A40 /* dm_bluetooth.png in Resources */,
 				0AF9205D1F7BA3C5009CF049 /* tile-rivers.png in Resources */,
@@ -1277,6 +1291,7 @@
 				0A5FADC41F6D2A5A00FE0A40 /* dm_previous.png in Resources */,
 				0A5FAE5E1F71765B00FE0A40 /* shop.png in Resources */,
 				0A5FADBA1F6D2A5A00FE0A40 /* dm_block.png in Resources */,
+				0AF920601F7E524E009CF049 /* blueCellsShader.vert in Resources */,
 				0AD75BB21F73BA500096BC61 /* greenbutton-up.png in Resources */,
 				0AD75BB51F73BA5A0096BC61 /* redbutton-down.png in Resources */,
 				0A1C05501F7A536700C4969A /* tile-marble-normal.png in Resources */,
@@ -1288,6 +1303,7 @@
 				0AD75BB41F73BA570096BC61 /* orangebutton-up.png in Resources */,
 				0AD75BC21F73BCBC0096BC61 /* block-disabled.png in Resources */,
 				0A1C054C1F7A535700C4969A /* tile-clouds-normal.png in Resources */,
+				0AF920641F7E5582009CF049 /* tunnelShader.frag in Resources */,
 				0A1C055C1F7A539E00C4969A /* tile-wood2.png in Resources */,
 				0AD75BC61F73BCCB0096BC61 /* star-disabled.png in Resources */,
 				0AD75BC31F73BCC00096BC61 /* block.png in Resources */,
