@@ -9,6 +9,8 @@
 #ifndef Rivers_AppSpecificValues_h
 #define Rivers_AppSpecificValues_h
 
+#import <UIKit/UIKit.h>
+
 // Leaderboard Category IDs
 #define kZenLeaderboardID                           @"com.cidrosoft.rivers.Zen"
 #define kTimedLeaderboardID                         @"com.cidrosoft.rivers.Timed"
@@ -41,7 +43,9 @@
 #define kSelectionPanelsNotification                @"SelectionPanelsNotification"
 #define kMasterKeyChangeNotification                @"MasterKeyChange"
 
-static const float BUTTON_SIZE = 0.1f; //0.08f;
-static const float BUTTON_OFFSET = 0.265f;
+static const CGFloat BUTTON_SIZE = 0.1f; //0.08f;
+static const CGFloat BUTTON_OFFSET = 0.265f;
+
+static const NSInteger ITEM_WIDTH = 220;
 
 #endif /* Rivers_AppSpecificValues_h */

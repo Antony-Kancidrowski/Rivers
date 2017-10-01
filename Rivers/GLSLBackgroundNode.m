@@ -56,6 +56,7 @@
 - (void)setup:(SCNNode*)parentNode {
     
     [self createMesh];
+    [self setGLSLShader:_shaderName];
     
     [super setup:parentNode];
 }
@@ -67,10 +68,24 @@
     plane.heightSegmentCount = 10;
     
     [self setGeometry:plane];
+}
+
+- (void)animate {
+    
+    SCNAction *custom = [SCNAction customActionWithDuration:2 * M_PI actionBlock:^(SCNNode* node, CGFloat elapsedtime) {
+        
+        intensity = 0.6f + (0.2f * cosf(elapsedtime) * sinf(elapsedtime * 4.0f));
+    }];
+    
+    
+    [self runAction:[SCNAction repeatActionForever:custom]];
+}
+
+- (void)setGLSLShader:(NSString *)name {
     
     // Read the shaders source from the two files.
-    NSURL *vertexShaderURL   = [[NSBundle mainBundle] URLForResource:_shaderName withExtension:@"vert"];
-    NSURL *fragmentShaderURL = [[NSBundle mainBundle] URLForResource:_shaderName withExtension:@"frag"];
+    NSURL *vertexShaderURL   = [[NSBundle mainBundle] URLForResource:name withExtension:@"vert"];
+    NSURL *fragmentShaderURL = [[NSBundle mainBundle] URLForResource:name withExtension:@"frag"];
     NSString *vertexShader   = [[NSString alloc] initWithContentsOfURL:vertexShaderURL
                                                               encoding:NSUTF8StringEncoding
                                                                  error:NULL];
@@ -112,11 +127,13 @@
                forSymbol:@"normalTransform"
                  options:nil];
     
+    SCNPlane *plane = (SCNPlane *)self.geometry;
+    
     [plane.firstMaterial handleBindingOfSymbol:@"resolution"
-                                       usingBlock:^(unsigned int programID,
-                                                    unsigned int location,
-                                                    SCNNode *renderedNode,
-                                                    SCNRenderer *renderer)
+                                    usingBlock:^(unsigned int programID,
+                                                 unsigned int location,
+                                                 SCNNode *renderedNode,
+                                                 SCNRenderer *renderer)
      {
          glUniform2f(location, resolution.width, resolution.height);
      }];
@@ -141,10 +158,10 @@
     
     // Bind a bool to switch between using a texture (see below) and a solid color (see above)
     [plane.firstMaterial handleBindingOfSymbol:@"time"
-                                        usingBlock:^(unsigned int programID,
-                                                     unsigned int location,
-                                                     SCNNode *renderedNode,
-                                                     SCNRenderer *renderer)
+                                    usingBlock:^(unsigned int programID,
+                                                 unsigned int location,
+                                                 SCNNode *renderedNode,
+                                                 SCNRenderer *renderer)
      {
          shaderTime += (1.0 / kPreferredFrameRate);
          
@@ -153,17 +170,6 @@
     
     // Make the plane use the custom shaders
     plane.firstMaterial.program = program;
-}
-
-- (void)animate {
-    
-    SCNAction *custom = [SCNAction customActionWithDuration:2 * M_PI actionBlock:^(SCNNode* node, CGFloat elapsedtime) {
-        
-        intensity = 0.6f + (0.2f * cosf(elapsedtime) * sinf(elapsedtime * 4.0f));
-    }];
-    
-    
-    [self runAction:[SCNAction repeatActionForever:custom]];
 }
 
 @end

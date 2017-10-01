@@ -22,6 +22,7 @@ typedef NS_ENUM(NSInteger, GridMenuStyle) {
 @optional
 - (void)gridMenu:(GridMenuViewController *)gridMenu willDismissWithSelectedItem:(GridMenuItem *)item atIndex:(NSInteger)itemIndex;
 - (void)gridMenuWillDismiss:(GridMenuViewController *)gridMenu;
+- (void)contextMenu;
 @end
 
 

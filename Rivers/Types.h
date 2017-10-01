@@ -75,6 +75,22 @@ typedef NS_ENUM(NSInteger, GameType)
 
 //-------------------------------------------------------------
 
+typedef NS_ENUM(gsUDWORD, ThemeType) {
+    
+    
+    WoodTheme,
+    Wood2Theme,
+    CloudsTheme,
+    MarbleTheme,
+    Marble2Theme,
+    PlasticTheme,
+    GoldTheme,
+    SteelTheme,
+    CopperTheme
+};
+
+//-------------------------------------------------------------
+
 #ifdef __BLOCKS__
 typedef void (^dispatch_block_float_t)(CGFloat value);
 #endif

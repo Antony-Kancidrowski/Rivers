@@ -14,6 +14,7 @@
 @optional
 - (void)colorizeWithColor:(id)color;
 - (void)animate;
+- (void)setGLSLShader:(NSString *)name;
 @end
 
 @interface BackgroundNode : ActorNode <BackgroundProtocol>

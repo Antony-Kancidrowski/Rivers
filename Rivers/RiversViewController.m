@@ -8,16 +8,21 @@
 
 #import "RiversViewController.h"
 
+#import "AppSpecificValues.h"
 #import "Configuration.h"
 #import "DebugOptions.h"
 
 #import "GameCenterManager.h"
 #import "SoundManager.h"
 
+#import "ThemeManager.h"
+#import "Theme.h"
+
 #import "AppSpecificValues.h"
 #import "Configuration.h"
 
 #import "MathHelper.h"
+#import "Types.h"
 
 @interface RiversViewController ()
 {
@@ -314,6 +319,8 @@
     NSArray *items = @[
                        [[GridMenuItem alloc] initWithType:MENU_ITEM_IMAGE withImage:[UIImage imageNamed:@"dm_enter"] title:@"General" dismisses:YES],
                        [[GridMenuItem alloc] initWithType:MENU_ITEM_IMAGE withImage:[UIImage imageNamed:@"dm_pause"] title:@"Pause" dismisses:YES],
+                       [[GridMenuItem alloc] initWithType:MENU_ITEM_IMAGE withImage:[UIImage imageNamed:@"dm_context"] title:@"Shaders" dismisses:YES],
+                       [[GridMenuItem alloc] initWithType:MENU_ITEM_IMAGE withImage:[UIImage imageNamed:@"dm_cube"] title:@"Themes" dismisses:YES],
                        [[GridMenuItem alloc] initWithType:MENU_ITEM_IMAGE withImage:[UIImage imageNamed:@"dm_reset"] title:@"Reset" dismisses:YES],
                        [[GridMenuItem alloc] initWithType:MENU_ITEM_IMAGE withImage:[UIImage imageNamed:@"dm_back"] title:@"Back" dismisses:YES]
                        ];
@@ -382,7 +389,7 @@
             
             av.bounces = NO;
             av.itemFont = [UIFont boldSystemFontOfSize:14];
-            av.itemSize = CGSizeMake(220, 40);
+            av.itemSize = CGSizeMake(ITEM_WIDTH, 40);
             av.animationDuration = 0.2;
             
             UILabel *header = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 44)];
@@ -407,15 +414,87 @@
             
         case 2:
         {
-            // TODO:
+            NSArray *items =  @[
+                                [[GridMenuItem alloc] initWithType:MENU_ITEM_TEXT title:@"Blue Cells" dismisses:NO action:^ { [self.background setGLSLShader:@"blueCellsShader"];  }],
+                                [[GridMenuItem alloc] initWithType:MENU_ITEM_TEXT title:@"Blue Swirl" dismisses:NO action:^ { [self.background setGLSLShader:@"blueSwirlShader"]; }],
+                                [[GridMenuItem alloc] initWithType:MENU_ITEM_TEXT title:@"Bubble" dismisses:NO action:^ { [self.background setGLSLShader:@"bubbleShader"];  }],
+                                [[GridMenuItem alloc] initWithType:MENU_ITEM_TEXT title:@"Clouds" dismisses:NO action:^ { [self.background setGLSLShader:@"cloudsShader"];  }],
+                                [[GridMenuItem alloc] initWithType:MENU_ITEM_TEXT title:@"Tile" dismisses:NO action:^ { [self.background setGLSLShader:@"tileShader"]; }],
+                                [[GridMenuItem alloc] initWithType:MENU_ITEM_TEXT title:@"Tunnel" dismisses:NO action:^ { [self.background setGLSLShader:@"tunnelShader"];  }],
+                                [[GridMenuItem alloc] initWithType:MENU_ITEM_TEXT title:@"Voronoi" dismisses:NO action:^ { [self.background setGLSLShader:@"voronoiShader"]; }]
+                                ];
+            
+            NSInteger numberOfOptions = [items count];
+            
+            GridMenuViewController *av = [[GridMenuViewController alloc] initWithItems:[items subarrayWithRange:NSMakeRange(0, numberOfOptions)]];
+            av.title = NSLocalizedString(@"SHADERS", nil);
+            
+            av.itemFont = [UIFont boldSystemFontOfSize:14];
+            av.itemSize = CGSizeMake(ITEM_WIDTH, 40);
+            av.animationDuration = 0.2;
+            
+            UILabel *header = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 44)];
+            header.text = NSLocalizedString(av.title, nil);
+            header.font = [UIFont boldSystemFontOfSize:18];
+            header.backgroundColor = [UIColor blackColor];
+            header.textColor = [UIColor grayColor];
+            header.textAlignment = NSTextAlignmentCenter;
+            av.headerView = header;
+            
+            av.menuStyle = GridMenuStyleList;
+            
+            [av showInViewController:self center:CGPointMake(self.view.bounds.size.width/2.f, self.view.bounds.size.height/2.f)];
         }
             break;
             
         case 3:
         {
-            // TODO:
+            NSArray *items =  @[
+                                [[GridMenuItem alloc] initWithType:MENU_ITEM_TEXT title:@"Copper" dismisses:NO action:^ { [[ThemeManager sharedThemeManager] setThemeByIdentifier:CopperTheme]; }],
+                                [[GridMenuItem alloc] initWithType:MENU_ITEM_TEXT title:@"Clouds" dismisses:NO action:^ { [[ThemeManager sharedThemeManager] setThemeByIdentifier:CloudsTheme]; }],
+                                [[GridMenuItem alloc] initWithType:MENU_ITEM_TEXT title:@"Gold" dismisses:NO action:^ { [[ThemeManager sharedThemeManager] setThemeByIdentifier:GoldTheme]; }],
+                                [[GridMenuItem alloc] initWithType:MENU_ITEM_TEXT title:@"Marble" dismisses:NO action:^ { [[ThemeManager sharedThemeManager] setThemeByIdentifier:MarbleTheme]; }],
+                                [[GridMenuItem alloc] initWithType:MENU_ITEM_TEXT title:@"Marble II" dismisses:NO action:^ { [[ThemeManager sharedThemeManager] setThemeByIdentifier:Marble2Theme]; }],
+                                [[GridMenuItem alloc] initWithType:MENU_ITEM_TEXT title:@"Plastic" dismisses:NO action:^ { [[ThemeManager sharedThemeManager] setThemeByIdentifier:PlasticTheme]; }],
+                                [[GridMenuItem alloc] initWithType:MENU_ITEM_TEXT title:@"Steel" dismisses:NO action:^ { [[ThemeManager sharedThemeManager] setThemeByIdentifier:SteelTheme]; }],
+                                [[GridMenuItem alloc] initWithType:MENU_ITEM_TEXT title:@"Wood" dismisses:NO action:^ { [[ThemeManager sharedThemeManager] setThemeByIdentifier:WoodTheme]; }],
+                                [[GridMenuItem alloc] initWithType:MENU_ITEM_TEXT title:@"Wood II" dismisses:NO action:^ { [[ThemeManager sharedThemeManager] setThemeByIdentifier:Wood2Theme]; }]
+                                ];
+            
+            NSInteger numberOfOptions = [items count];
+            
+            GridMenuViewController *av = [[GridMenuViewController alloc] initWithItems:[items subarrayWithRange:NSMakeRange(0, numberOfOptions)]];
+            av.title = NSLocalizedString(@"THEMES", nil);
+            
+            av.itemFont = [UIFont boldSystemFontOfSize:14];
+            av.itemSize = CGSizeMake(ITEM_WIDTH, 40);
+            av.animationDuration = 0.2;
+            
+            UILabel *header = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 44)];
+            header.text = NSLocalizedString(av.title, nil);
+            header.font = [UIFont boldSystemFontOfSize:18];
+            header.backgroundColor = [UIColor blackColor];
+            header.textColor = [UIColor grayColor];
+            header.textAlignment = NSTextAlignmentCenter;
+            av.headerView = header;
+            
+            av.menuStyle = GridMenuStyleList;
+            
+            [av showInViewController:self center:CGPointMake(self.view.bounds.size.width/2.f, self.view.bounds.size.height/2.f)];
         }
             break;
+        
+        case 4:
+        {
+            // TODO:
+        }
+        break;
+        
+        case 5:
+        {
+            // TODO:
+        }
+        break;
             
         default:
             break;

@@ -19,5 +19,6 @@
 - (instancetype)init NS_UNAVAILABLE;
 
 - (void)animate;
+- (void)setGLSLShader:(NSString *)name;
 
 @end
