@@ -428,6 +428,7 @@
             
             GridMenuViewController *av = [[GridMenuViewController alloc] initWithItems:[items subarrayWithRange:NSMakeRange(0, numberOfOptions)]];
             av.title = NSLocalizedString(@"SHADERS", nil);
+            av.delegate = self;
             
             av.itemFont = [UIFont boldSystemFontOfSize:14];
             av.itemSize = CGSizeMake(ITEM_WIDTH, 40);
@@ -444,6 +445,8 @@
             av.menuStyle = GridMenuStyleList;
             
             [av showInViewController:self center:CGPointMake(self.view.bounds.size.width/2.f, self.view.bounds.size.height/2.f)];
+            
+            newMenu = YES;
         }
             break;
             
@@ -465,6 +468,7 @@
             
             GridMenuViewController *av = [[GridMenuViewController alloc] initWithItems:[items subarrayWithRange:NSMakeRange(0, numberOfOptions)]];
             av.title = NSLocalizedString(@"THEMES", nil);
+            av.delegate = self;
             
             av.itemFont = [UIFont boldSystemFontOfSize:14];
             av.itemSize = CGSizeMake(ITEM_WIDTH, 40);
@@ -481,6 +485,8 @@
             av.menuStyle = GridMenuStyleList;
             
             [av showInViewController:self center:CGPointMake(self.view.bounds.size.width/2.f, self.view.bounds.size.height/2.f)];
+            
+            newMenu = YES;
         }
             break;
         
